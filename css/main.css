@@ -1,0 +1,1092 @@
+/* Font de google */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300&family=Vollkorn:wght@400;600&display=swap');
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
+    font-size: 15px;
+}
+
+/* Estilos del body */
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+/* Estilos del contenedor principal (header, main y footer) */
+.mainContent{
+    height:100vh;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 10fr 0.1fr;
+
+    /* Estructura por áreas */
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+}
+
+/* Estilos del header */
+.header{
+    grid-area: header;
+
+    width: auto;
+    height: auto;
+    background-color:#1b3039;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    padding: 0.5rem;
+}
+
+.header .logo{
+    margin-top: 0.35rem;
+}
+
+.header .logo img{
+    cursor: grab;
+    width: auto;
+    height: 4rem;
+
+    transition: all 0.2s;
+}
+
+.header .logo img:hover{
+    transform: scale(1.4);
+    transition: all 0.3s;
+}
+
+/* header - barra de navegación */
+.header .navLinks{
+    list-style: none;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    height: auto;
+
+    margin-inline-start: 2.5rem;
+    margin-inline-end: 2.5rem;
+    padding: 1rem;
+
+    gap: 2rem;
+}
+
+.header .navLinks li{
+    transition: all 0.3s; /* la animacióm regresa */
+
+}
+
+.header .navLinks li:hover{
+    transform: scale(1.4);
+    transition: all 0.2s; /* animación de zoom */
+}
+
+
+.header .navLinks li a{    
+    font-size: 13px;
+    cursor: grab;
+    color: white;
+    text-decoration: none;
+}
+
+.header .navLinks li a:hover{ 
+    color: crimson;
+    border-top: 2px solid crimson;
+    border-bottom: 2px solid crimson;
+    opacity: 75%;
+}
+
+
+
+/* Estilos de main */
+main{
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+            
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+main .imgMain{
+    height:100%;
+}
+
+
+/* imagen - main */
+main .imgMain img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+/* en la versión mobile la escondemos */
+.imgMain{
+    display: none;
+}
+
+
+/* título - main*/
+main div{
+    width: 100%;
+    height: 100%;
+}
+
+main .titulo{
+    display: flex;
+    flex-flow: row wrap;
+    
+    justify-content: left;
+    align-items: center;
+    position: sticky;
+    top: 0px; 
+    z-index: 1;
+}
+
+main h1{ 
+    padding: 0.5rem;
+    padding-left: 1rem;
+
+}
+
+
+main .titulo h1{
+    background-color: rgb(220, 20, 60, 100);
+    color: white;
+
+    font-size: 18px;
+    backdrop-filter: blur(10px);
+    height:auto;
+    width: 100%;
+}
+
+
+/* Bloque - Padre */
+.blockPadre{
+    height: auto;
+    width: auto;
+    font-size: 1px;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.2fr 0.05fr 0.15fr 0.05fr 0.15fr 0.05fr ;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Bloques - Hijos */
+.blockHijo{
+    width: auto;
+    font-size: 1px;
+    height: auto;
+    gap: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* contenedor de imagen*/
+.blockHijo .imagePNG{
+    width: 100%;
+    height: auto;
+
+}
+
+.imagePNG{
+    padding-top: 0.5rem;
+}
+
+.imagePNG img{
+    width: 100%;
+    height: 17rem; 
+    
+}
+
+.disco4{
+    transition: 0.6s;
+}
+.disco4:hover{
+    transition: 0.4s;
+    transform: scale(0.8);
+}
+
+.salirConVida{
+    transition: 0.6s;
+}
+.salirConVida:hover{
+    transition: 0.4s;
+    transform: scale(0.8);
+}
+
+.juanes506a{
+    transition: 0.6s;
+}
+.juanes506:hover{
+    transition: 0.4s;
+    transform: scale(0.8);
+}
+
+.imageInfo{
+    width: 100%;
+    height: 100%;
+    
+    margin-block-end: 1.5rem;
+    letter-spacing: 0px;
+    word-spacing: 5px;
+    font-size: 1px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    
+    align-content: center;
+    text-align: center;    
+}
+
+/* contenedor de texto */
+.imageInfo div{
+    width: 100%; 
+    height: auto;
+    
+    display: flex;
+    flex-flow: column nowrap;
+
+    text-align: center;
+    padding: 2rem 3rem;
+    border: #1b3039 solid 0.75px;
+    box-shadow: 0 0 25px #1b3039;
+    backdrop-filter: blur(10px);
+    
+    background-color: aliceblue;
+    margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+  
+    gap: 0.75rem;
+}
+
+.imageInfoM{
+    width: 100%;
+    height: auto;
+    
+    margin-block-end: 1.5rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imageInfoM img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Info 1 */
+.spanItalic{
+    font-size: 15px;
+    font-style: italic;
+}
+
+h2{
+    font-size: 15px;
+}
+h2 span{    
+    font-size: 15px;
+}
+
+
+p{
+    font-size: 12.5px;
+    margin-inline-start: 0.4rem;
+    margin-inline-end: 0.4rem;
+}
+
+#pSpan1{
+    font-size: 12.5px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}
+
+#spanDisplayBlockBoldItalic{
+    font-size: 12.5px;
+    display: block;
+    font-weight:bold;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Info 2 */
+.pSpan2{
+    font-size: 12.5px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* ícono de morat */
+#amongText{
+    width: auto;
+    height: 2rem;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+#amongText:hover{
+    transition: 0.4;
+    transform: rotate(360deg) scale(1.5);
+}
+
+
+
+/* Estilos de footer */
+footer{
+    grid-area: footer;
+
+    background-color: crimson;
+    
+    color: whitesmoke;
+
+    height: 100%;
+    width: 100%;    
+}
+
+.mid{
+    text-align: center;
+    font-size: 12.5px;
+    text-transform: uppercase;
+}
+
+/* redes sociales y gifts */
+.redesSocialesGifts{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;   
+    width: auto;
+    height: auto;
+    padding: 3rem;
+    gap: 2.5rem;
+}
+
+
+/* gifts */
+.redesSocialesGifts .gifts{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+    height: auto;
+}
+
+/* redes sociales */
+.redesSocialesGifts .rs{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;   
+    width: auto;
+    height: auto;
+}
+
+.gifts .enlacesGifts{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.25rem;    
+}
+
+.gifts h3{
+    margin-top: 0.5rem;
+}
+
+/* enlaces */
+.rs .enlacesRedes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.25rem;    
+}
+
+
+.rs img{
+    width: 2rem;
+    height: 2rem;
+}
+
+
+/* calendario */
+.calendario a{
+    cursor: grab;
+}
+.calendario a:hover{
+    opacity: 85%;
+}
+.calendario img{
+    transform: 0.1s;
+}
+.calendario img:hover{
+    transform: scale(0.8);
+    transition: 0.2s;
+}
+#calendario{
+    width: 3rem;
+    height: 2.5rem;
+}
+
+/* fotos */
+.fotos a{
+    cursor: grab;
+}
+.fotos a:hover{
+    opacity: 85%;
+}
+.fotos img{
+    transform: 0.1s;
+}
+.fotos img:hover{
+    transform: scale(0.8);
+    transition: 0.2s;
+}
+#galeria{
+    width: 4.25rem;
+    height: 3.25rem;
+}
+
+/* facebook */
+.facebook a{
+    cursor: grab;
+}
+.facebook a:hover{
+    opacity: 55%;
+}
+.enlacesRedes .facebook img{
+    transition: 0.1s;
+}
+.enlacesRedes .facebook img:hover{
+    transform: scale(1.35);
+    transition: 0.2s;
+}
+
+/* twitter */
+.twitter a{
+    cursor: grab;
+}
+.twitter a:hover{
+    opacity: 55%;
+}
+.enlacesRedes .twitter{
+    transform: 0.1s;
+}
+.enlacesRedes .twitter img:hover{
+    transform: scale(1.35);
+    transition: 0.2s;
+}
+
+/* instagram */
+.instagram a{
+    cursor: grab;
+}
+.instagram a:hover{
+    opacity: 55%;
+}
+.enlacesRedes .instagram{
+    transform: 0.1s;
+}
+.enlacesRedes .instagram img:hover{
+    transform: scale(1.35);
+    transition: 0.2s;
+}
+
+/* youtube */
+.youtube a{
+    cursor: grab;
+}
+.youtube a:hover{
+    opacity: 55%;
+}
+.enlacesRedes .youtube{
+    transform: 0.1s;
+}
+.enlacesRedes .youtube img:hover{
+    transform: scale(1.35);
+    transition: 0.2s;
+}
+
+/* spotify */
+.spotify a{
+    cursor: grab;
+}
+.spotify a:hover{
+    opacity: 55%;
+}
+.enlacesRedes .spotify{
+    transform: 0.1s;
+}
+.enlacesRedes .spotify img:hover{
+    transform: scale(1.35);
+    transition: 0.2s;
+}
+
+
+
+/* Botón ir Arriba */
+.itemFixed{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    margin: 4px 6.5px 3px 0px;
+    padding: 1px;
+}
+
+.fixed .Arriba img{
+    cursor: grab;
+    width: auto;
+    height: 2.5rem;
+    transition: all 0.3s;
+    background-color: rgba(39, 188, 211, 0.9);
+    border-radius: 90%;
+    opacity: .8;
+}
+
+.fixed .Arriba img:hover{
+    transform: scale(0.75);
+}
+
+/* Términos y condiciones */
+.footerEnd{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(40, 40, 40);
+    padding: 1.5rem;
+    gap: 1rem;  
+}
+
+
+.footerEnd .uno span{
+    display: block;
+    border-bottom:1px solid whitesmoke;
+    padding: 0.5rem;
+}
+
+/* mq: TABLET */
+@media screen and (min-width: 600px){
+
+    /* header - logo */
+    .header .logo{
+        margin-top: 0.2rem;
+    }
+    .header .logo img{
+        height: 5.25rem;
+    }
+    /* header - barra de navegación */
+    
+    .header .navLinks{
+        justify-content: center;
+        align-items: center;
+
+        margin-inline-start: 4.75rem ;        
+        margin-inline-end: 4.75rem;
+        
+    }
+    .header .navLinks li a{    
+        font-size: 14.25px;
+    }
+
+
+    /* Estilos de main */
+    main .imgMain{
+        display: block;
+    }
+
+    /* título - main*/
+    main h1{
+        padding-inline-start: 5.5rem ; 
+    }
+
+    /* Sin  modificaciones en el Bloque Padre */
+        
+    /* Bloque Hijo */
+    /* contenedor de imagen*/
+    .blockHijo .imagePNG{
+        width: 38rem;
+        height: auto;
+    }
+
+    .imagePNG img{
+        width: 38rem;
+        height: 17rem;
+    }
+
+    /* contenedor de info*/
+    .imageInfo div{
+        justify-content: center;
+        align-items: center;
+
+        width: 38rem;
+        height: 17rem;
+    }
+
+    .imageInfoM{
+        padding: 3rem;
+    }
+
+    /* FOOTER */
+    .gifts .enlacesGifts{
+        gap: 1.75rem;    
+    }
+    
+    /* enlaces */
+    .rs .enlacesRedes{
+        gap: 2.75rem;    
+    }
+
+
+    .footerEnd{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+
+        background-color: rgb(40, 40, 40);
+        padding: 1.5rem;
+        gap: 1rem;  
+    }
+
+    .footerEnd .uno span{
+        border-bottom: none;    
+    }
+}
+
+/* mq de escritorio */
+@media screen and (min-width: 1024px) {
+    .header{    
+        padding: 0.225rem;
+        gap: 0rem;
+        
+        flex-flow: row nowrap;  
+        justify-content: space-around;
+    }
+        
+    .header .logo{
+        margin-top: 0.3rem;
+        margin-left: 0.5rem;
+    }
+    .header .logo img{
+        height: 5.5rem;
+    }
+    
+    /* header - barra de navegación */
+    .header .navLinks{ 
+        justify-content: space-around;
+        
+        width: auto;
+        height: auto;
+
+        margin-inline-start: 4.75rem ;        
+        margin-inline-end: 4.75rem;
+        padding: 0.5rem;
+        gap:2rem;
+    }    
+    .header .navLinks li a{    
+        font-size: 15px;
+        margin-inline-start: 0.4rem ;        
+        margin-inline-end: 0.4rem;
+    }
+
+
+    main h1{
+        padding-inline-start: 12rem ; 
+    }    
+
+    /* Bloque - Padre */
+    .blockPadre{
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr;
+   
+        justify-items: center;
+        align-content: center;
+    }
+    
+    /* Bloques - Hijos */
+    .blockHijo{
+        width: 100%;
+        height: 100%;
+        
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .dos{
+        flex-direction: row-reverse;
+    }
+
+    /* contenedor de imagen*/
+    .blockHijo .imagePNG{
+        width: 100%;
+        height: auto;
+    }
+
+    .imagePNG img{
+        width: 37.5rem;
+        height: 18rem;
+    }
+
+    
+    /* Animaciones y transiciones */
+    .disco4:hover{
+        transform: skew(10deg, -10deg) scale(0.8);
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    }
+    
+
+    .salirConVida:hover{
+        transform:skew(-10deg, 10deg) scale(0.8);
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    }
+
+    .juanes506:hover{
+        transform:skew(10deg, -10deg) scale(0.8);
+        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+    }
+    
+    .pngUno img{
+        box-shadow: 1rem 1rem 7.5px lightblue, -1rem -1rem 7.5px burlywood;
+    }
+    
+    .pngDos img{
+        box-shadow: 1rem 1rem 7.5px rgba(226, 90, 90, 0.822), -1rem -1rem 7.5px greenyellow;
+    }
+    
+    .pngTres img{
+        box-shadow: 1rem 1rem 7.5px rgb(56, 55, 55), -1rem -1rem 7.5px rgb(197, 151, 95);
+    }
+
+
+    /* contenedor de info*/
+    .imageInfo div{
+        width: 37.5rem;
+        height: 18rem;
+        
+        justify-content: center;
+        
+        background-color: aliceblue;
+        margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+        border: #1b3039 solid 0.75px;
+    } 
+        
+    .imageInfo{        
+        margin-block-end: 0rem;
+    }
+
+    /* m de Morat desaparece */
+    .imageInfoM{
+        display: none;
+    }
+
+    /* FOOTER */
+    .redesSocialesGifts{
+        display: flex;
+        flex-flow: row wrap;
+        
+        justify-content: center;
+        align-items: center;   
+
+        width: auto;
+        height: auto;
+        gap: 12rem;
+    }
+
+    .gifts .enlacesGifts{
+        gap: 1.75rem;    
+    }
+    
+    /* enlaces */
+    .rs .enlacesRedes{
+        gap: 3.75rem;    
+    }   
+}
+
+
+
+/* BANDA */
+.BANDA{
+    background: url(https://i.pinimg.com/564x/ce/04/ca/ce04ca38c9a0cfe12ba5ba99f90ac904.jpg);
+    background-position: center;
+    display: flex;
+    flex-flow: column nowrap;
+    color: whitesmoke;
+    padding-bottom:55rem;
+}
+
+.tittleBanda{
+    transition: 0.4s;
+}
+.tittleBanda:hover{
+    color: red;
+    transform: scale(0.9);
+    transition: 0.2s;
+}
+
+.biografia{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    align-items: left;
+    
+    padding-inline-start: 0.5rem;
+    padding-inline-end: 0.5rem;
+}
+
+.tittleBanda{
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.content{
+    background-color: #040404d9;
+    font-size: 1rem; 
+    padding: 2rem 1rem 2rem 1rem;
+    letter-spacing: 0rem;
+    word-spacing: 0.25rem;
+}
+
+.contentFotos{
+    margin-top: 2rem ;
+}
+
+
+/* Contenedor de Integrantes */
+.integrantesDeBanda{
+    color: whitesmoke;
+
+    width: 100%;
+    height: 140rem;
+
+    
+    list-style: none;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    align-items: center;
+}
+/* Integrantes */
+.integranteUno{
+    background: url(https://i.pinimg.com/564x/61/61/e1/6161e1c70809c12b67354d7a9108cd8a.jpg) center no-repeat;
+    background-size: 100% 100%;
+}
+.integranteDos{
+
+    background: url(https://i.pinimg.com/564x/c5/ce/15/c5ce151fa4cd1428d096e08d9aa52cf2.jpg)center no-repeat;
+    background-size: 100% 100%;
+}
+.integranteTres{
+    background: url(https://i.pinimg.com/564x/90/41/74/9041748f1eb2e12794e319eae43b5f82.jpg)
+    center no-repeat;
+    background-size: 100% 100%;
+}
+.integranteCuatro{
+    background: url(https://i.pinimg.com/564x/39/c4/85/39c485007e8cc87814a3c7ac3a251c83.jpg)center no-repeat;
+    background-size: 100% 100%;
+    
+}
+
+/* Tamaño de cada integrante */
+.integrantesDeBanda li{
+    width: 100%;
+    object-fit: cover;
+
+    position: relative;
+    height: 35rem;
+    background-size: cover;
+}
+/* Información de cada integrante superpuesta */
+.integranteInfo{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+}
+.contentFotos .integrantesDeBanda .integranteInfo{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    padding: 2.25rem;
+    background-color: rgba(10,10,10,.8);
+    z-index: 2;
+}
+.nombre{
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    font-size: larger;
+}
+.integranteInfo em{   
+    display: block;
+}
+
+/* mq tablet */
+@media screen and (min-width: 800px){
+    .biografia{        
+        padding-inline-start: 3.5rem;
+        padding-inline-end: 3.5rem;
+    }
+
+    .integrantesDeBanda{
+        width: auto;
+        height: 100%;
+
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+    }
+}
+
+/* mq escritorio */
+@media screen and (min-width: 1024px){
+    .biografia{        
+        padding-inline-start: 7.5rem;
+        padding-inline-end: 7.5rem;
+    }
+}
+
+/* CONCIERTOS */
+
+/* Bloque - Padre Conciertos*/
+.blockPadreC div{
+    height: auto;
+    width: auto;
+
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* contenedor de imagen*/
+.blockPadreC .imagePNGC{
+    width: 100%;
+    height: auto;
+}
+
+
+
+.imagePNGC{
+    padding-top: 0.5rem;
+}
+
+.imagePNGC img{
+    width: 100%;
+    height: 17rem; 
+}
+
+/* Animaciones y transiciones */
+
+.disco4C{
+    transition: 0.6s;
+}
+
+.disco4C:hover{
+    transition: 0.4s;
+    transform: scale(0.8);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+/* ícono mundo */
+#iconoMundo{
+    width: auto;
+    height: 3.25rem;
+    object-fit: cover;
+    transition: 0.3s;
+    
+}
+#iconoMundo:hover{
+    transition: 0.4;
+    transform: rotate(360deg) scale(1.4);
+}
+
+/* contenedor de texto */
+.imageMundo abbr{
+    text-decoration: none;
+}
+
+abbr a{
+    text-decoration: none;
+    list-style: none;
+    color:black
+}
+
+.texto h2{
+    transition: 1s;
+}
+
+.texto h2:hover{
+    transition: 0.5s;
+    transform: scale(0.8);
+    color:red
+}
+
+.imageMundo .texto{
+    text-align: center;
+    border: #1b3039 solid 0.75px;
+    box-shadow: 0 0 25px #1b3039;
+    
+    background-color: aliceblue;
+    margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+}
+
+
+
+
+
