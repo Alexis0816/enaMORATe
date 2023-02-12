@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Vollkorn', serif;
-    font-size: 15px;
+    font-size: 17px;
 }
 
 /* Estilos del body */
@@ -156,6 +156,7 @@ main .titulo{
     
     justify-content: left;
     align-items: center;
+    
     position: sticky;
     top: 0px; 
     z-index: 1;
@@ -173,7 +174,7 @@ main .titulo h1{
     color: white;
 
     font-size: 18px;
-    backdrop-filter: blur(10px);
+
     height:auto;
     width: 100%;
 }
@@ -183,7 +184,7 @@ main .titulo h1{
 .blockPadre{
     height: auto;
     width: auto;
-    font-size: 1px;
+    font-size: 20px;
     padding: 0.25rem 1rem 0.25rem 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -200,7 +201,6 @@ main .titulo h1{
 /* Bloques - Hijos */
 .blockHijo{
     width: auto;
-    font-size: 1px;
     height: auto;
     gap: 1rem;
     display: flex;
@@ -242,7 +242,7 @@ main .titulo h1{
     transform: scale(0.8);
 }
 
-.juanes506a{
+.juanes506{
     transition: 0.6s;
 }
 .juanes506:hover{
@@ -257,7 +257,7 @@ main .titulo h1{
     margin-block-end: 1.5rem;
     letter-spacing: 0px;
     word-spacing: 5px;
-    font-size: 1px;
+
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -270,19 +270,18 @@ main .titulo h1{
 .imageInfo div{
     width: 100%; 
     height: auto;
+
+    background-color: aliceblue;
+    border: #1b3039 solid 0.75px;
+    box-shadow: 0 0 25px #1b3039;
     
     display: flex;
     flex-flow: column nowrap;
 
     text-align: center;
-    padding: 2rem 3rem;
-    border: #1b3039 solid 0.75px;
-    box-shadow: 0 0 25px #1b3039;
-    backdrop-filter: blur(10px);
     
-    background-color: aliceblue;
     margin: 0.05rem 0.05rem 0.05rem 0.05rem;
-  
+    padding: 2rem 3rem;
     gap: 0.75rem;
 }
 
@@ -322,31 +321,23 @@ h2 span{
 
 
 p{
-    font-size: 12.5px;
+    font-size: 14.5px;
     margin-inline-start: 0.4rem;
     margin-inline-end: 0.4rem;
 }
 
-#pSpan1{
-    font-size: 12.5px;
+.pSpan{
+    font-size: 14.5px;
+    font-style: italic;
     font-weight: bold;
-    text-decoration: underline;
-    text-decoration-style: dotted;
 }
 
 #spanDisplayBlockBoldItalic{
-    font-size: 12.5px;
+    font-size: 14.5px;
     display: block;
     font-weight:bold;
     font-style: italic;
     text-align: center;
-}
-
-/* Info 2 */
-.pSpan2{
-    font-size: 12.5px;
-    font-style: italic;
-    font-weight: bold;
 }
 
 /* ícono de morat */
@@ -573,11 +564,12 @@ footer{
 .fixed .Arriba img{
     cursor: grab;
     width: auto;
-    height: 2.5rem;
+    height: 3rem;
     transition: all 0.3s;
     background-color: rgba(39, 188, 211, 0.9);
     border-radius: 90%;
     opacity: .8;
+    z-index: 2;
 }
 
 .fixed .Arriba img:hover{
@@ -588,21 +580,32 @@ footer{
 .footerEnd{
     display: flex;
     flex-flow: column nowrap;
+    
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    text-transform: uppercase;
+
+    word-spacing: 0.3rem;
+
     background-color: rgb(40, 40, 40);
     padding: 1.5rem;
-    gap: 1rem;  
+    gap: 2rem;  
 }
-
 
 .footerEnd .uno span{
     display: block;
-    border-bottom:1px solid whitesmoke;
-    padding: 0.5rem;
+    border-top:1px solid whitesmoke;
+    padding: 0.75rem;
 }
+
+
+.footerEnd .dos span{
+    display: block;
+    border-top:1px solid whitesmoke;
+    padding: 0.75rem;    
+}
+
+
 
 /* mq: TABLET */
 @media screen and (min-width: 600px){
@@ -680,7 +683,11 @@ footer{
     .footerEnd{
         display: flex;
         flex-flow: row wrap;
+
         justify-content: space-around;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
 
         background-color: rgb(40, 40, 40);
         padding: 1.5rem;
@@ -688,7 +695,11 @@ footer{
     }
 
     .footerEnd .uno span{
-        border-bottom: none;    
+        text-align: left; 
+    }
+
+    .footerEnd .dos span{
+        text-align: right;
     }
 }
 
@@ -739,7 +750,7 @@ footer{
         display: grid;
         grid-template-columns: auto;
         grid-template-rows: 0.2fr 0.2fr 0.2fr;
-   
+
         justify-items: center;
         align-content: center;
     }
@@ -849,15 +860,17 @@ footer{
 /* BANDA */
 .BANDA{
     background: url(https://i.pinimg.com/564x/ce/04/ca/ce04ca38c9a0cfe12ba5ba99f90ac904.jpg);
+
     background-position: center;
+
     display: flex;
     flex-flow: column nowrap;
     color: whitesmoke;
-    padding-bottom:55rem;
+
 }
 
 .tittleBanda{
-    transition: 0.4s;
+    transition: 0.3s;
 }
 .tittleBanda:hover{
     color: red;
@@ -900,16 +913,15 @@ footer{
     color: whitesmoke;
 
     width: 100%;
-    height: 140rem;
+    height: 144rem;
 
-    
     list-style: none;
 
     display: flex;
     flex-flow: column nowrap;
+
     justify-content: center;
     align-items: center;
-
     align-items: center;
 }
 /* Integrantes */
@@ -939,7 +951,7 @@ footer{
     object-fit: cover;
 
     position: relative;
-    height: 35rem;
+    height: 36rem;
     background-size: cover;
 }
 /* Información de cada integrante superpuesta */
@@ -970,7 +982,10 @@ footer{
 }
 
 /* mq tablet */
-@media screen and (min-width: 800px){
+@media screen and (min-width: 800px){ 
+    .BANDA{
+        padding-bottom: 60rem;
+    }
     .biografia{        
         padding-inline-start: 3.5rem;
         padding-inline-end: 3.5rem;
@@ -988,7 +1003,10 @@ footer{
 }
 
 /* mq escritorio */
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px){   
+    .BANDA{
+        padding-bottom: 75rem;
+    }   
     .biografia{        
         padding-inline-start: 7.5rem;
         padding-inline-end: 7.5rem;
@@ -1020,24 +1038,20 @@ footer{
     height: auto;
 }
 
-
-
 .imagePNGC{
     padding-top: 0.5rem;
 }
 
 .imagePNGC img{
     width: 100%;
-    height: 17rem; 
+    height: 25rem; 
 }
 
 /* Animaciones y transiciones */
-
-.disco4C{
+.worldTour2023{
     transition: 0.6s;
 }
-
-.disco4C:hover{
+.worldTour2023:hover{
     transition: 0.4s;
     transform: scale(0.8);
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
@@ -1046,14 +1060,14 @@ footer{
 /* ícono mundo */
 #iconoMundo{
     width: auto;
-    height: 3.25rem;
+    height: 4rem;
     object-fit: cover;
     transition: 0.3s;
     
 }
 #iconoMundo:hover{
     transition: 0.4;
-    transform: rotate(360deg) scale(1.4);
+    transform: rotate(360deg) scale(1.35);
 }
 
 /* contenedor de texto */
@@ -1068,7 +1082,7 @@ abbr a{
 }
 
 .texto h2{
-    transition: 1s;
+    transition: 0.35s;
 }
 
 .texto h2:hover{
