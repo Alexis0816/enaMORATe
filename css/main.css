@@ -1116,6 +1116,10 @@ footer{
 }
 
 .blockPadreC div h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: 30px;
 }
 
@@ -1123,7 +1127,7 @@ footer{
 /* Eventos: guía de conciertos */
 .blockPadreC .eventos2023{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     
     justify-content:center;
     align-items: center;
@@ -1138,7 +1142,7 @@ footer{
 .blockPadreC .eventos2023 .eventos{
     width: auto;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
 
     justify-content:center;
     align-items: center;
@@ -1193,6 +1197,7 @@ footer{
     }
 
     .blockPadreC .eventos2023 .eventos{
+        flex-flow: row nowrap;
         gap: 2rem;
     }
 
@@ -1219,6 +1224,7 @@ footer{
     }
     
     .blockPadreC .eventos2023 .eventos{
+        flex-flow: row nowrap;
         gap: 10rem;
     }
 
