@@ -1040,6 +1040,7 @@ footer{
     align-items: center;
     list-style: none;
     text-decoration: none;
+    gap: 1rem;
 }
 
 /* contenedor de imagen*/
@@ -1054,7 +1055,7 @@ footer{
 
 .imagePNGC img{
     width: 100%;
-    height: 25rem; 
+    height: 20rem; 
 }
 
 /* Animaciones y transiciones */
@@ -1110,7 +1111,68 @@ abbr a{
     margin: 0.05rem 0.05rem 0.05rem 0.05rem;
 }
 
+/* Eventos: guía de conciertos */
+
+.blockPadreC .eventos2023{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.5rem;
+}
+
+.blockPadreC .eventos2023 .eventos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    gap: 2.25rem;
+    border-bottom :2px solid black;
+}
+
+.eventos div strong{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+}
 
 
+.eventos .comprar{
+    font-weight: bold;
+    border: 1.5px solid black;
+}
 
 
+/* mq tablet */
+@media screen and (min-width: 800px){ 
+    .blockPadreC .eventos2023{
+        gap: 2.5rem;
+    }
+
+    .eventos p{
+        font-size: 17px;
+    }
+
+    .eventos div{
+        width: auto;
+        height: 100%;
+        flex-flow: row nowrap;
+        gap: 1.25rem;
+    }
+}
+
+/* mq escritorio */
+@media screen and (min-width: 1024px){ 
+    .eventos p{
+        font-size: 20px;
+    }
+    
+    .blockPadreC .eventos2023{
+        gap: 3rem;
+    }
+    
+    .blockPadreC .eventos2023 .eventos{
+        gap: 12.5rem;
+    }
+
+    .eventos div{
+        gap: 2rem;
+    }
+}
