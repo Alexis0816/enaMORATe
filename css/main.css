@@ -1026,6 +1026,7 @@ footer{
 
 /* CONCIERTOS */
 /* Bloque - Padre Conciertos*/
+
 .blockPadreC div{
     height: auto;
     width: auto;
@@ -1036,8 +1037,11 @@ footer{
     
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    align-items: center; /* afecta a todos */
+    align-content: center;
+    justify-items: center;
+
     list-style: none;
     text-decoration: none;
     gap: 1rem;
@@ -1071,29 +1075,21 @@ footer{
 /* ícono mundo */
 #iconoMundo{
     width: auto;
-    height: 4rem;
+    height: 3.25rem;
     object-fit: cover;
     transition: 0.3s;
     
 }
 #iconoMundo:hover{
     transition: 0.4;
-    transform: rotate(360deg) scale(1.35);
+    transform: rotate(360deg) scale(1.3);
 }
 
 /* contenedor de texto */
-.imageMundo abbr{
-    text-decoration: none;
-}
-
-abbr a{
-    text-decoration: none;
-    list-style: none;
-    color:black
-}
 
 .texto h2{
     transition: 0.35s;
+    font-size: 30px;
 }
 
 .texto h2:hover{
@@ -1106,25 +1102,52 @@ abbr a{
     text-align: center;
     border: #1b3039 solid 0.75px;
     box-shadow: 0 0 25px #1b3039;
-    
+
     background-color: aliceblue;
     margin: 0.05rem 0.05rem 0.05rem 0.05rem;
 }
 
-/* Eventos: guía de conciertos */
+.blockPadreC .imageMundo{
+    padding-bottom: 1.5rem;
+}
 
+.blockPadreC .imageMundo img{
+    margin-top: 1rem;
+}
+
+.blockPadreC div h3{
+    font-size: 30px;
+}
+
+
+/* Eventos: guía de conciertos */
 .blockPadreC .eventos2023{
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    
+    justify-content:center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+    text-align: center;
     gap: 0.5rem;
+    padding-top: 4rem;
 }
 
 .blockPadreC .eventos2023 .eventos{
+    width: auto;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    gap: 2.25rem;
-    border-bottom :2px solid black;
+
+    justify-content:center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+    gap: 1rem;
+
+    border-top :2px solid black;
 }
 
 .eventos div strong{
@@ -1135,15 +1158,42 @@ abbr a{
 
 
 .eventos .comprar{
+    width: auto;
+
     font-weight: bold;
+    color: whitesmoke;
     border: 1.5px solid black;
+    background-color: black;
+    list-style: none;
+}
+
+
+.comprar a{
+    text-decoration: none;
+    list-style: none;
+    color: whitesmoke;
+}
+
+
+.comprar a p{
+    transition: 0.2s;
+}
+
+.comprar a p:hover{
+    transition: 0.25s;
+    transform: scale(1.1);
+    color: crimson;
 }
 
 
 /* mq tablet */
-@media screen and (min-width: 800px){ 
+@media screen and (min-width: 750px){ 
     .blockPadreC .eventos2023{
         gap: 2.5rem;
+    }
+
+    .blockPadreC .eventos2023 .eventos{
+        gap: 2rem;
     }
 
     .eventos p{
@@ -1169,7 +1219,7 @@ abbr a{
     }
     
     .blockPadreC .eventos2023 .eventos{
-        gap: 12.5rem;
+        gap: 10rem;
     }
 
     .eventos div{
