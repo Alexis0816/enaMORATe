@@ -165,7 +165,6 @@ main .titulo{
 main h1{ 
     padding: 0.5rem;
     padding-left: 1rem;
-
 }
 
 
@@ -1024,40 +1023,49 @@ footer{
 
 
 
+
+
+
+
 /* CONCIERTOS */
-/* Bloque - Padre Conciertos*/
+/* Tamaño de contenedores adaptativos / pantalla adaptativa */
 
 .blockPadreC div{
+    height: auto;
+    width: auto;
+}
+
+/* CONTENEDOR NO-EVENTOS */
+.blockPadreC .noEventos {
     height: auto;
     width: auto;
 
     padding: 0.25rem 1rem 0.25rem 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    
+
     display: flex;
     flex-flow: column nowrap;
     justify-content:center;
-    align-items: center; /* afecta a todos */
+    align-items: center; 
     align-content: center;
     justify-items: center;
 
-    list-style: none;
-    text-decoration: none;
-    gap: 1rem;
+    gap: 1.75rem;
 }
 
-/* contenedor de imagen*/
-.blockPadreC .imagePNGC{
-    width: 100%;
+/* CONTENEDOR DE IMAGEN-CONCIERTOS*/
+
+.noEventos .imagePNGC{
+    width: auto;
     height: auto;
 }
 
-.imagePNGC{
-    padding-top: 0.5rem;
+.noEventos .imagePNGC{
+    padding-top: 0.75rem;
 }
 
-.imagePNGC img{
+.noEventos .imagePNGC img{
     width: 100%;
     height: 20rem; 
 }
@@ -1072,33 +1080,41 @@ footer{
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
 }
 
+
+/* CONTENEDOR DE ÍCONO-MUNDO */
+.noEventos .imageMundo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ícono mundo */
 #iconoMundo{
     width: auto;
     height: 3.25rem;
     object-fit: cover;
     transition: 0.3s;
-    
 }
+
 #iconoMundo:hover{
     transition: 0.4;
     transform: rotate(360deg) scale(1.3);
 }
 
-/* contenedor de texto */
 
-.texto h2{
-    transition: 0.35s;
-    font-size: 30px;
+/* CONTENEDOR DE TEXTO ÍCONO-MUNDO */
+.noEventos .textoMundo{
+    width: auto;
+    height: auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.texto h2:hover{
-    transition: 0.5s;
-    transform: scale(0.8);
-    color:red
-}
-
-.imageMundo .texto{
+.noEventos .textoMundo .texto{
     text-align: center;
     border: #1b3039 solid 0.75px;
     box-shadow: 0 0 25px #1b3039;
@@ -1107,61 +1123,101 @@ footer{
     margin: 0.05rem 0.05rem 0.05rem 0.05rem;
 }
 
-.blockPadreC .imageMundo{
-    padding-bottom: 1.5rem;
+.noEventos .textoMundo .texto h2{
+    transition: 0.35s;
+    font-size: 30px;
+    margin: 0.5rem;
 }
 
-.blockPadreC .imageMundo img{
-    margin-top: 1rem;
+.noEventos .textoMundo .texto h2:hover{
+    transition: 0.5s;
+    transform: scale(0.8);
+    color:red
 }
 
-.blockPadreC div h3{
+
+/* CONTENEDOR GIRA */
+.noEventos .gira{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.noEventos .gira h3{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.noEventos .gira{
+    margin: 1.5rem 0rem 3rem 0rem;
 }
 
 
-/* Eventos: guía de conciertos */
-.blockPadreC .eventos2023{
+/* CONTENEDOR NO-EVENTOS */
+.blockPadreC .siEventos {
+    height: auto;
+    width: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items: center; /* afecta a todos */
+    align-content: center;
+    justify-items: center;
+    
+    gap: 1.5rem; /* igual 1*/
+    padding-bottom: 3rem;
+}
+
+.siEventos .eventos2023{
+    width: 400px;
+    height: auto;
+    
     display: flex;
     flex-flow: column nowrap;
     
-    justify-content:center;
+    justify-content: space-around;
     align-items: center;
     justify-items: center;
-    align-content: center;
+    align-content: space-around;
 
-    text-align: center;
-    gap: 0.5rem;
-    padding-top: 4rem;
+    gap: 1.25rem; /* separa eventos*/
+    border-top :0.25px solid #00000064;
+    padding-top: 1.5rem; /* igual 1*/
 }
 
-.blockPadreC .eventos2023 .eventos{
-    width: auto;
+.eventos2023 p{
+    text-transform: uppercase;
+    font-size: 17.5px;
+}
+
+.siEventos .eventos2023 .placeDate{
     display: flex;
     flex-flow: column nowrap;
 
-    justify-content:center;
+    justify-content: space-around;
     align-items: center;
     justify-items: center;
-    align-content: center;
-
-    gap: 1rem;
-
-    border-top :2px solid black;
+    align-content: space-around;
+    
+    gap: 0.25rem; /* separa la date y place */
 }
 
-.eventos div strong{
+.eventos2023 .placeDate strong{
     display: flex;
-    flex-flow: row nowrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
 }
 
 
-.eventos .comprar{
+.siEventos .eventos2023 .comprar{
+    background-color: black;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.eventos2023 .comprar{
     width: auto;
 
     font-weight: bold;
@@ -1171,13 +1227,10 @@ footer{
     list-style: none;
 }
 
-
 .comprar a{
     text-decoration: none;
-    list-style: none;
     color: whitesmoke;
 }
-
 
 .comprar a p{
     transition: 0.2s;
@@ -1189,46 +1242,91 @@ footer{
     color: crimson;
 }
 
+.comprar p{
+    margin: 0.25rem 0.75rem;
+    padding: 0.25rem;
+}
+
 
 /* mq tablet */
 @media screen and (min-width: 750px){ 
-    .blockPadreC .eventos2023{
-        gap: 2.5rem;
+    #iconoMundo{
+        height: 3.75rem;
     }
 
-    .blockPadreC .eventos2023 .eventos{
-        flex-flow: row nowrap;
-        gap: 2rem;
+    .noEventos .textoMundo .texto h2{
+        font-size: 35px;
     }
 
-    .eventos p{
-        font-size: 17px;
+    .noEventos .gira h3{
+        font-size: 30px;
     }
 
-    .eventos div{
-        width: auto;
-        height: 100%;
-        flex-flow: row nowrap;
-        gap: 1.25rem;
+    .blockPadreC .siEventos {        
+        gap: 3.5rem; /* igual 1*/
+    }
+    
+    .siEventos .eventos2023{
+        width: 575px;
+        gap: 1.75rem; /* separa eventos*/
+    
+        padding-top: 3.5rem; /* igual 1*/
+    }
+
+    .eventos2023 p{
+        font-size: 20.5px;
+    }
+
+    .siEventos .eventos2023 .placeDate{        
+        gap: 0.4rem; /* separa la date y place */
+    }
+
+    .eventos2023 .placeDate strong{
+        gap: 0.75rem;
     }
 }
 
 /* mq escritorio */
 @media screen and (min-width: 1024px){ 
-    .eventos p{
-        font-size: 20px;
-    }
     
-    .blockPadreC .eventos2023{
-        gap: 3rem;
-    }
-    
-    .blockPadreC .eventos2023 .eventos{
-        flex-flow: row nowrap;
-        gap: 10rem;
+    #iconoMundo{
+        height: 4.25rem;
     }
 
-    .eventos div{
-        gap: 2rem;
+    .eventos p{
+        font-size: 22.5px;
     }
+    
+
+    .blockPadreC .siEventos {        
+        gap: 3.5rem; 
+    }
+
+    .siEventos .eventos2023{
+        width: 1000px;
+    
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+    
+        gap: 1.25rem; /* separa eventos*/
+        padding-top: 3.5rem; /* igual 1*/
+    }
+
+    .siEventos .eventos2023 .placeDate{
+        flex-flow: row nowrap;
+    
+        justify-content: center;
+        
+        gap: 0.25rem; /* separa la date y place */
+    }
+    
+    .eventos2023 .placeDate strong{
+        gap: 0.75rem;
+        border-right: 1px solid black;
+        padding-right: 1rem;
+    }
+    
 }
