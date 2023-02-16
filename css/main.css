@@ -1168,8 +1168,6 @@ footer{
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-
-    padding-bottom: 3.5rem;
 }
 
 /* ícono mundo */
@@ -1198,6 +1196,8 @@ footer{
     justify-items: center;
     
     gap: 1.5rem; /* igual 1*/
+
+    padding-top: 3.25rem;
     padding-bottom: 3rem;
 }
 
