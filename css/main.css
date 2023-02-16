@@ -1116,27 +1116,6 @@ footer{
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
 }
 
-/* CONTENEDOR DE ÍCONO-MUNDO */
-.noEventos .imageMundo{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ícono mundo */
-#iconoMundo{
-    width: auto;
-    height: 3.25rem;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-#iconoMundo:hover{
-    transition: 0.4;
-    transform: rotate(360deg) scale(1.3);
-}
-
 /* CONTENEDOR DE TEXTO ÍCONO-MUNDO */
 .noEventos .textoMundo{
     display: flex;
@@ -1180,7 +1159,30 @@ footer{
 }
 
 .noEventos .gira{
-    margin: 1.5rem 0rem 3rem 0rem;
+    margin: 1.5rem 0rem 0rem 0rem;
+}
+
+/* CONTENEDOR DE ÍCONO-MUNDO */
+.noEventos .imageMundo{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 3.5rem;
+}
+
+/* ícono mundo */
+#iconoMundo{
+    width: auto;
+    height: 3.25rem;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+#iconoMundo:hover{
+    transition: 0.4;
+    transform: rotate(360deg) scale(1.3);
 }
 
 /* CONTENEDOR NO-EVENTOS */
@@ -1326,6 +1328,11 @@ footer{
         height: 4.25rem;
     }
 
+    #iconoMundo:hover{
+        transition: 0.4;
+        transform: rotate(360deg) scale(1.2);
+    }
+    
     .noEventos .imagePNGC img{
         height: 23rem; 
     }
