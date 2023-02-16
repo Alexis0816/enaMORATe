@@ -165,6 +165,7 @@ main .titulo{
 main h1{ 
     padding: 0.5rem;
     padding-left: 1rem;
+
 }
 
 
@@ -1023,20 +1024,36 @@ footer{
 
 
 
-
-
-
-
 /* CONCIERTOS */
-/* Tamaño de contenedores adaptativos / pantalla adaptativa */
+/* Bloque - Padre Conciertos*/
 
 .blockPadreC div{
     height: auto;
     width: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items: center; /* afecta a todos */
+    align-content: center;
+    justify-items: center;
+    
+    text-align: center;
+
+    list-style: none;
+    text-decoration: none;
+    gap: 1.5rem;
+}
+
+.blockHijoC{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 /* CONTENEDOR NO-EVENTOS */
-.blockPadreC .noEventos {
+.blockHijoC .noEventos {
     height: auto;
     width: auto;
 
@@ -1067,7 +1084,7 @@ footer{
 
 .noEventos .imagePNGC img{
     width: 100%;
-    height: 20rem; 
+    height: 17rem; 
 }
 
 /* Animaciones y transiciones */
@@ -1079,7 +1096,6 @@ footer{
     transform: scale(0.8);
     -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
 }
-
 
 /* CONTENEDOR DE ÍCONO-MUNDO */
 .noEventos .imageMundo{
@@ -1102,12 +1118,8 @@ footer{
     transform: rotate(360deg) scale(1.3);
 }
 
-
 /* CONTENEDOR DE TEXTO ÍCONO-MUNDO */
 .noEventos .textoMundo{
-    width: auto;
-    height: auto;
-
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -1115,7 +1127,6 @@ footer{
 }
 
 .noEventos .textoMundo .texto{
-    text-align: center;
     border: #1b3039 solid 0.75px;
     box-shadow: 0 0 25px #1b3039;
 
@@ -1135,7 +1146,6 @@ footer{
     color:red
 }
 
-
 /* CONTENEDOR GIRA */
 .noEventos .gira{
     display: flex;
@@ -1154,9 +1164,8 @@ footer{
     margin: 1.5rem 0rem 3rem 0rem;
 }
 
-
 /* CONTENEDOR NO-EVENTOS */
-.blockPadreC .siEventos {
+.blockHijoC .siEventos {
     height: auto;
     width: auto;
 
@@ -1172,7 +1181,7 @@ footer{
 }
 
 .siEventos .eventos2023{
-    width: 400px;
+    width: 100%;
     height: auto;
     
     display: flex;
@@ -1187,6 +1196,7 @@ footer{
     border-top :0.25px solid #00000064;
     padding-top: 1.5rem; /* igual 1*/
 }
+
 
 .eventos2023 p{
     text-transform: uppercase;
@@ -1254,6 +1264,10 @@ footer{
         height: 3.75rem;
     }
 
+    .noEventos .imagePNGC img{
+        height: 20rem; 
+    }
+
     .noEventos .textoMundo .texto h2{
         font-size: 35px;
     }
@@ -1267,7 +1281,7 @@ footer{
     }
     
     .siEventos .eventos2023{
-        width: 575px;
+        width: 500px;
         gap: 1.75rem; /* separa eventos*/
     
         padding-top: 3.5rem; /* igual 1*/
@@ -1291,6 +1305,10 @@ footer{
     
     #iconoMundo{
         height: 4.25rem;
+    }
+
+    .noEventos .imagePNGC img{
+        height: 23rem; 
     }
 
     .eventos p{
@@ -1330,3 +1348,123 @@ footer{
     }
     
 }
+
+
+
+/* Eventos: guía de conciertos */
+/* .blockPadreC .eventos2023{
+    display: flex;
+    flex-flow: column nowrap;
+    
+    justify-content:center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+    text-align: center;
+    gap: 0.5rem;
+    padding-top: 4rem;
+}
+
+.blockPadreC .eventos2023 .eventos{
+    width: auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content:center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+    gap: 1rem;
+
+    border-top :2px solid black;
+}
+
+.eventos div strong{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.5rem;
+}
+
+
+.eventos .comprar{
+    width: auto;
+
+    font-weight: bold;
+    color: whitesmoke;
+    border: 1.5px solid black;
+    background-color: black;
+    list-style: none;
+}
+
+
+.comprar a{
+    text-decoration: none;
+    list-style: none;
+    color: whitesmoke;
+}
+
+
+.comprar a p{
+    transition: 0.2s;
+}
+
+.comprar a p:hover{
+    transition: 0.25s;
+    transform: scale(1.1);
+    color: crimson;
+} */
+
+
+/* mq tablet */
+/* @media screen and (min-width: 750px){ 
+    #iconoMundo{
+        height: 3.75rem;
+    }
+
+    .blockPadreC .eventos2023{
+        gap: 2.5rem;
+    }
+
+    .blockPadreC .eventos2023 .eventos{
+        flex-flow: row nowrap;
+        gap: 2rem;
+    }
+
+    .eventos p{
+        font-size: 17px;
+    }
+
+    .eventos div{
+        width: auto;
+        height: 100%;
+        flex-flow: row nowrap;
+        gap: 1.25rem;
+    }
+} */
+
+/* mq escritorio */
+/* @media screen and (min-width: 1024px){ 
+
+    #iconoMundo{
+        height: 4.25rem;
+    }
+
+    .eventos p{
+        font-size: 20px;
+    }
+    
+    .blockPadreC .eventos2023{
+        gap: 3rem;
+    }
+    
+    .blockPadreC .eventos2023 .eventos{
+        flex-flow: row nowrap;
+        gap: 10rem;
+    }
+
+    .eventos div{
+        gap: 2rem;
+    }
+} */
