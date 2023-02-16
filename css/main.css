@@ -119,7 +119,7 @@ main{
             
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
     
     justify-content: center;
     align-items: center;
@@ -286,8 +286,6 @@ main .titulo h1{
     
     display: flex;
     flex-flow: column nowrap;
-
-    text-align: center;
     
     margin: 0.05rem 0.05rem 0.05rem 0.05rem;
     padding: 2rem 3rem;
@@ -767,7 +765,7 @@ footer{
         gap: 2rem;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 0.2fr 0.2fr 0.2fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
 
         justify-items: center;
         align-content: center;
@@ -776,7 +774,7 @@ footer{
     
     /* Bloques - Hijos */
     .blockHijo{
-        width: auto;
+        width: auto;    
         height: 100%;
         
         flex-flow: row nowrap;
