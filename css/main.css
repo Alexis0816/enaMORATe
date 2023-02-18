@@ -893,12 +893,10 @@ footer{
     background-image: url("../img/fondo_banda.jpg");
     background-position: center;
 
-    color: #f5f5f5f1;
+    color: aliceblue;
 
     display: flex;
-    flex-flow: column nowrap;
-
-    gap:2rem;
+    flex-flow: column nowrap;   
 }
 
 
@@ -907,6 +905,10 @@ footer{
     /* centro todo el bloque de texto */
     max-width: 1210px; 
     margin: 0 auto;
+
+    /* desenfoque */
+    box-shadow: 0 0 1rem #222;
+    backdrop-filter: blur(5px);
 }
 
 .blockHijoB .content{
@@ -927,6 +929,11 @@ footer{
     justify-items: center;
     align-content: center;
     
+}
+
+.biografia{
+    color: whitesmoke;
+    padding: 2rem 3rem;
 }
 
 /* Título de la BANDA */
@@ -955,7 +962,7 @@ footer{
     height: auto;
     width: auto;
 
-    background-color: #040404d9;
+    background-color: rgba(5, 5, 5, 0.75);
     padding: 1.75rem 1rem 1.75rem 1rem;
     letter-spacing: 0rem;
     word-spacing: 0.25rem;
@@ -1026,6 +1033,7 @@ footer{
     justify-content: center;
     justify-items: center;
     align-content: center;
+    backdrop-filter: blur(0.25rem);
 }
 .contentFotos .integrantesDeBanda .integranteInfo{
     width: 100%;
