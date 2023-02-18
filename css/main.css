@@ -906,10 +906,6 @@ footer{
     /* centro todo el bloque de texto */
     max-width: 1210px; 
     margin: 0 auto;
-
-    /* desenfoque */
-    box-shadow: 0 0 1rem #222;
-    backdrop-filter: blur(5px);
 }
 
 .blockHijoB .content{
@@ -934,7 +930,6 @@ footer{
 
 .biografia{
     color: whitesmoke;
-    padding: 0.5rem 0.75rem;
 }
 
 /* Título de la BANDA */
@@ -963,7 +958,7 @@ footer{
     height: auto;
     width: auto;
 
-    background-color: rgba(5, 5, 5, 0.75);
+    background-color: rgba(5, 5, 5, 0.782);
     padding: 1.75rem 1rem 1.75rem 1rem;
     letter-spacing: 0rem;
     word-spacing: 0.25rem;
@@ -1034,7 +1029,8 @@ footer{
     justify-content: center;
     justify-items: center;
     align-content: center;
-    backdrop-filter: blur(0.25rem);
+    /* Desenfoque */
+    backdrop-filter: blur(0.2rem);
 }
 .contentFotos .integrantesDeBanda .integranteInfo{
     width: 100%;
