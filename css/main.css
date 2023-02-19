@@ -430,127 +430,50 @@ footer{
     gap: 1.25rem;    
 }
 
-
 .rs img{
     width: 2rem;
     height: 2rem;
 }
 
 
-/* calendario */
-.calendario a{
+/* calendario, fotos */
+.calendario a, .fotos a{
     cursor: grab;
 }
-.calendario a:hover{
+.calendario a:hover, .fotos a:hover{
     opacity: 85%;
 }
-.calendario img{
+.calendario img, .fotos img{
     transform: 0.1s;
 }
-.calendario img:hover{
+.calendario img:hover, .fotos img:hover{
     transform: scale(0.8);
     transition: 0.2s;
 }
+
 #calendario{
     width: 3rem;
     height: 2.5rem;
-}
-
-/* fotos */
-.fotos a{
-    cursor: grab;
-}
-.fotos a:hover{
-    opacity: 85%;
-}
-.fotos img{
-    transform: 0.1s;
-}
-.fotos img:hover{
-    transform: scale(0.8);
-    transition: 0.2s;
 }
 #galeria{
     width: 4.25rem;
     height: 3.25rem;
 }
 
-/* facebook */
-.facebook a{
+/* facebook, twitter, instagram, youtube, spotify */
+.facebook a, .twitter a, .instagram a, .youtube a, .spotify a{
     cursor: grab;
 }
-.facebook a:hover{
+.facebook a:hover, .twitter a:hover, .instagram a:hover, .youtube a:hover, .spotify a:hover{
     opacity: 55%;
 }
-.enlacesRedes .facebook img{
+.facebook img, .twitter img, .instagram img, .youtube img, .spotify img{
     transition: 0.1s;
 }
-.enlacesRedes .facebook img:hover{
+.facebook img:hover, .twitter img:hover, .instagram img:hover, .youtube img:hover, .spotify img:hover{
     transform: scale(1.35);
     transition: 0.2s;
 }
-
-/* twitter */
-.twitter a{
-    cursor: grab;
-}
-.twitter a:hover{
-    opacity: 55%;
-}
-.enlacesRedes .twitter{
-    transform: 0.1s;
-}
-.enlacesRedes .twitter img:hover{
-    transform: scale(1.35);
-    transition: 0.2s;
-}
-
-/* instagram */
-.instagram a{
-    cursor: grab;
-}
-.instagram a:hover{
-    opacity: 55%;
-}
-.enlacesRedes .instagram{
-    transform: 0.1s;
-}
-.enlacesRedes .instagram img:hover{
-    transform: scale(1.35);
-    transition: 0.2s;
-}
-
-/* youtube */
-.youtube a{
-    cursor: grab;
-}
-.youtube a:hover{
-    opacity: 55%;
-}
-.enlacesRedes .youtube{
-    transform: 0.1s;
-}
-.enlacesRedes .youtube img:hover{
-    transform: scale(1.35);
-    transition: 0.2s;
-}
-
-/* spotify */
-.spotify a{
-    cursor: grab;
-}
-.spotify a:hover{
-    opacity: 55%;
-}
-.enlacesRedes .spotify{
-    transform: 0.1s;
-}
-.enlacesRedes .spotify img:hover{
-    transform: scale(1.35);
-    transition: 0.2s;
-}
-
-
 
 /* Botón ir Arriba */
 .itemFixed{
@@ -562,7 +485,7 @@ footer{
     padding: 1px;
 }
 
-.fixed .Arriba img{
+.fixed .Arriba .itemFixed{
     cursor: grab;
     width: auto;
     height: 2.25rem;
@@ -573,9 +496,10 @@ footer{
     z-index: 2;
 }
 
-.fixed .Arriba img:hover{
+.fixed .Arriba .itemFixed:hover{
     transform: scale(0.75);
 }
+
 
 /* Términos y condiciones */
 .footerEnd{
@@ -591,36 +515,26 @@ footer{
 
     background-color: rgb(40, 40, 40);
     padding: 1rem;
-    gap: 1.75rem;  
+    gap: 1.5rem;  
 }
 
 .footerEnd span{
-    font-size: 14.5px;
+    font-size: 12.5px;
 }
 
 .footerEnd strong{
-    font-size: 14.5px;
+    font-size: 12.5px;
 }
 
-
-.footerEnd .uno span{
+.footerEnd span{
     display: block;
     border-top:1px solid whitesmoke;
     padding: 0.5rem;
 }
 
 
-.footerEnd .dos span{
-    display: block;
-    border-top:1px solid whitesmoke;
-    padding: 0.5rem;    
-}
-
-
-
 /* mq: TABLET */
 @media screen and (min-width: 750px){
-
     /* header - logo */
     .header .logo{
         margin-top: 0.2rem;
@@ -628,20 +542,16 @@ footer{
     .header .logo img{
         height: 5.25rem;
     }
-    /* header - barra de navegación */
-    
-    .header .navLinks{
-        justify-content: center;
-        align-items: center;
 
+    /* header - barra de navegación */
+    .header .navLinks{
         margin-inline-start: 4.75rem ;        
         margin-inline-end: 4.75rem;
-        
     }
+
     .header .navLinks li a{    
         font-size: 14.25px;
     }
-
 
     /* Estilos de main */
     main .imgMain{
@@ -692,15 +602,7 @@ footer{
 
 
     .footerEnd{
-        display: flex;
         flex-flow: row wrap;
-
-        justify-content: space-around;
-        justify-items: center;
-        align-items: center;
-        align-content: center;
-
-        background-color: rgb(40, 40, 40);
         padding: 1.5rem;
         gap: 1rem;  
     }
@@ -733,12 +635,7 @@ footer{
     }
     
     /* header - barra de navegación */
-    .header .navLinks{ 
-        justify-content: space-around;
-        
-        width: auto;
-        height: auto;
-
+    .header .navLinks{
         margin-inline-start: 4.75rem ;        
         margin-inline-end: 4.75rem;
         padding: 0.5rem;
@@ -760,7 +657,7 @@ footer{
         gap: 2rem;
         display: grid;
         grid-template-columns: auto;
-        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
 
         justify-items: center;
         align-content: center;
@@ -1029,9 +926,8 @@ footer{
     justify-content: center;
     justify-items: center;
     align-content: center;
-
- 
 }
+
 .contentFotos .integrantesDeBanda .integranteInfo{
     width: 100%;
     height: 30%;
@@ -1081,7 +977,6 @@ footer{
 
 
 
-
 /* CONCIERTOS */
 /* Bloque - Padre Conciertos*/
 
@@ -1123,7 +1018,6 @@ footer{
 }
 
 /* CONTENEDOR DE IMAGEN-CONCIERTOS*/
-
 .noEventos .imagePNGC{
     width: auto;
     height: auto;
@@ -1408,4 +1302,116 @@ footer{
 }
 
 
+
 /* TIENDA */
+.blockPadreT div{
+    height: auto;
+    width: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items: center; /* afecta a todos */
+    align-content: center;
+    justify-items: center;
+    
+    text-align: center;
+
+    list-style: none;
+    text-decoration: none;
+    gap: 1.5rem;
+}
+
+/* CONTENEDOR NO-EVENTOS */
+.blockHijoT .uno {
+    height: auto;
+    width: auto;
+
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:center;
+    align-items: center; 
+    align-content: center;
+    justify-items: center;
+
+    gap: 1.75rem;
+}
+
+/* CONTENEDOR DE IMAGEN-CONCIERTOS*/
+
+.uno .imagePNGT{
+    width: auto;
+    height: auto;
+}
+
+.uno .imagePNGT{
+    padding-top: 0.75rem;
+}
+
+.uno .imagePNGT img{  
+    width: 100%;
+    height: 18rem; 
+}
+
+/* Animaciones y transiciones */
+.shop2023{
+    transition: 0.6s;
+}
+.shop2023:hover{
+    transition: 0.4s;
+    transform: scale(0.8);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+/* CONTENEDOR DE TEXTO ÍCONO-MUNDO */
+.uno .textoShop{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.uno .textoShop .texto{
+    border: #1b3039 solid 0.75px;
+    box-shadow: 0 0 25px #1b3039;
+
+    background-color: aliceblue;
+    margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+}
+
+.uno .textoShop .texto h2{
+    transition: 0.35s;
+    font-size: 30px;
+    margin: 0.5rem;
+}
+
+.uno .textoShop .texto h2:hover{
+    transition: 0.5s;
+    transform: scale(0.8);
+    color:red
+}
+
+/* CONTENEDOR DE ÍCONO-MUNDO */
+.uno .imageShop{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ícono mundo */
+#iconoShop{
+    width: auto;
+    height: 3.25rem;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+#iconoShop:hover{
+    transition: 0.4;
+    transform: scale(1.3);
+}
