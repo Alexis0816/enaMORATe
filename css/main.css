@@ -1669,27 +1669,178 @@ footer{
 
 
 /* GALERÍA */
+/* .GALERIA{
+    height: 100%;
+} */
+
+.GALERIA .blockPadreG .blockAllG .blockHijoG div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Presentación de la GALERÍA */
 section{
     display: flex;
     justify-content: center;
     justify-items: center;
-   
+
     width: auto;
-    height: 430px;
+    height: 400px;
 }
 
 section img{
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
-    opacity: .9;
+    opacity: .95;
     transition: 0.5s;
 }
 
 section img:hover{
     cursor:grab;
-    width: 200px;
+    width: 175px;
     opacity: 1;
     filter: contrast(110%);
 }
 
+
+.blockPadreG{
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.blockAllG{
+    height: 100%;
+    width: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+
+    align-items: center;
+}
+
+.textoGaleria{
+    padding: 2rem 0rem 0.5rem 0rem;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.textoGaleria h2, h3{
+    width: auto;
+    font-size: 22.5px;
+    text-align: center;
+
+    transition: 0.2s;
+    border-bottom: 1.5px dashed black;
+}
+
+.textoGaleria h3{ 
+    font-size: 20px;
+}
+
+.textoGaleria h2:hover, h3:hover{
+    color: crimson;
+    transform: scale(1.1);
+    transition: 0.3s;
+
+    border-bottom: 3px solid crimson;
+}
+
+/* Hijo - Integrantes */
+.blockHijoG{
+    height: 100%;
+    display: grid; 
+}
+
+.blockAllG .integrantes{
+    height: 195vh;
+    margin: 0rem 2rem 2rem 2rem;
+    gap: 1.25rem;
+    padding-bottom: 1.5rem;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 23.5% 26% 23.5% 26%;
+}
+
+.integrantes, .img-uno, .img-dos, .img-tres, .img-cuatro, .img-cinco, .img-seis, .img-siete{
+    width: 100%;
+    height: auto;
+
+    transition: 0.5s;
+}
+
+.integrantes, .img-uno img, .img-dos img, .img-tres img, .img-cuatro img, .img-cinco img, .img-seis img, .img-siete img{
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+
+    opacity: .8;
+    transition: 0.2s;
+    filter: grayscale(100%);
+    
+    border-radius: 10px;
+}
+
+.integrantes, .img-uno img:hover, .img-dos img:hover, .img-tres img:hover, .img-cuatro img:hover, .img-cinco img:hover, .img-seis img:hover, .img-siete img:hover{
+    cursor:grab;
+    opacity: 1;
+    filter: contrast(110%);
+    transform: scale(0.975);
+    transition: 0.3s;
+} 
+
+/* Ítems de main - img */
+.blockAllG .integrantes .img-tres, .img-cuatro, .img-siete{
+    display: none; /* No se muestra la imagen */
+}
+
+
+/* mq de tablet */
+@media screen and (min-width: 600px){
+    .blockAllG .integrantes .img-siete{
+        display: block; /* No se muestra la imagen */
+    }
+    
+    .blockAllG .integrantes{    
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3,33%);
+    }
+    .img-siete{
+        grid-column: span 2;
+    }
+}
+
+
+/* mq de escritorio */
+
+@media screen and (min-width: 1024px) {
+    .blockAllG .integrantes .img-tres, .img-cuatro, .img-siete{
+        display: block;
+    }
+    
+    .blockAllG .integrantes{    
+        grid-template-columns:
+        repeat(4,1fr);
+        grid-template-rows: 27% 27% 22% 22%;
+    }
+
+    .img-cuatro{
+        grid-column: span 2;
+    }
+
+    .img-tres{
+        grid-column: span 2;
+    }
+
+    .img-siete{
+        grid-column: span 4;
+        grid-row: span 2;
+    }
+}
