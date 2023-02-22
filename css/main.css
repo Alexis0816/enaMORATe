@@ -1657,10 +1657,208 @@ footer{
 
 
 /* MÚSICA */
+.blockPadreM{
+    display: flex;
+    flex-flow: column nowrap;
+
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 4rem;
+}
+
+.blockPadreM .blockAllM{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.blockAllM .blockHijoM{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 74% 24%;
+
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    gap: 0.25rem;
+}
 
 
+/* Contenedor imagen de cada disco */
+.blockHijoM .imageBlock{
+    width: 10rem;
+    height: auto;
+    object-fit: cover; 
 
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
 
+/* Imagen de cada disco */
+.blockHijoM .imageBlock img{
+    border-radius: 0.75rem;
+    width:22.5rem;
+    height: auto;
+    object-fit: cover;    
+
+    opacity: .8;
+    filter: blur(2px);
+    transition: 0.2s;
+}
+
+/* Animaciones de cada disco */
+.blockHijoM .imageBlock  img:hover{
+    cursor:grab;
+    width: 325px;
+    border-radius: 5rem;
+    border: 0.15rem groove black;
+    opacity: 1;
+    filter: contrast(120%);
+    transition: 0.4s;
+}
+
+/* Contenedor de enlaces a Listas de Youtube/Spotify */
+.blockHijoM .imageBlock .contentYS{
+    display: flex;
+    flex-flow: row nowrap;
+    
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.contentYS a{
+    text-decoration: none;
+}
+
+.contentYS a h2{
+    width: auto;
+    height: auto;
+    padding: 0.25rem;
+    margin: 0.1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+
+    color: black;
+    text-align: center;
+}
+
+.contentYS a .youtubeDisco, .spotifyDisco{
+    margin: 0.5rem;
+    transition: 0.2s;
+}
+
+.contentYS a .youtubeDisco:hover{
+    color: crimson;
+    transform: scale(1.1);
+    transition: 0.2s;
+    filter: contrast(120%);
+}
+
+.contentYS a .spotifyDisco:hover{
+    color:chartreuse;
+    transform: scale(1.1);
+    transition: 0.2s;
+    filter: contrast(120%);
+}
+
+/* mq tablet */
+@media screen and (min-width: 750px){     
+    /* Contenedor imagen de cada disco */
+    .blockHijoM .imageBlock{
+        width: 10rem;
+    }
+
+    /* Imagen de cada disco */
+    .blockHijoM .imageBlock img{
+        width:27.5rem;
+    }
+
+    /* Animaciones de cada disco */
+    .blockHijoM .imageBlock  img:hover{
+        width: 400px;
+    }
+}
+
+/* mq escritorio 1*/
+@media screen and (min-width: 1024px){ 
+    .blockPadreM{
+        padding-top: 0.5rem;
+        padding-bottom: 3rem;
+    }
+    
+    .blockPadreM .blockAllM{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50% 50%;
+
+        gap: 0rem;
+    }
+
+    .contentYS a .youtubeDisco, .spotifyDisco{
+        filter: blur(1px);
+    }
+
+    .contentYS a .youtubeDisco:hover{
+        border-style: solid;
+    }
+    
+    .contentYS a .spotifyDisco:hover{
+        border-style: solid;
+    }
+
+    /* Contenedor imagen de cada disco */
+    .blockHijoM .imageBlock{
+        width: 10rem;
+        filter: blur(1px);
+    }
+
+    /* Imagen de cada disco */
+    .blockHijoM .imageBlock img{
+        width:25rem;
+        filter: sepia(75%);
+    }
+
+    /* Animaciones de cada disco */
+    .blockHijoM .imageBlock:hover{
+        filter: contrast(120%);
+    }
+
+    .blockHijoM .imageBlock  img:hover{
+        width: 400px;
+    }
+}
+
+/* mq escritorio 2*/
+@media screen and (min-width: 1140px){
+    .blockPadreM .blockAllM{
+        gap: 0rem;
+    }
+
+    /* Contenedor imagen de cada disco */
+    .blockHijoM .imageBlock{
+        width: 10rem;
+    }
+
+    /* Imagen de cada disco */
+    .blockHijoM .imageBlock img{
+        width:30rem;
+    }
+
+    .blockHijoM .imageBlock  img:hover{
+        width: 425px;
+    }
+}
 
 /* CURIOSIDADES */
 
@@ -1669,10 +1867,6 @@ footer{
 
 
 /* GALERÍA */
-/* .GALERIA{
-    height: 100%;
-} */
-
 .GALERIA .blockPadreG .blockAllG .blockHijoG div img{
     width: 100%;
     height: 100%;
@@ -1806,7 +2000,6 @@ section img:hover{
     display: none; /* No se muestra la imagen */
 }
 
-
 /* mq de tablet */
 @media screen and (min-width: 600px){
     .GALERIA section{
@@ -1834,9 +2027,7 @@ section img:hover{
     }
 }
 
-
 /* mq de escritorio */
-
 @media screen and (min-width: 1024px) {
     .textoGaleria h2, h3{
         font-size: 26.5px;
@@ -1846,7 +2037,7 @@ section img:hover{
         font-size: 24px;
     }
 
-    .blockAllG .integrantes .img-tres, .img-cuatro, .img-siete{
+    .blockAllG .integrantes .img-tres, .img-cuatro{
         display: block;
     }
     
