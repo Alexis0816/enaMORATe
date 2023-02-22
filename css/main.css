@@ -531,7 +531,7 @@ footer{
 
 .footerEnd span{
     display: block;
-    border-top:1.75px solid rgba(128, 0, 45, 0.75);
+    border-top:1.75px solid rgba(128, 0, 45, 0.45);
     padding: 0.5rem;
 }
 
@@ -589,7 +589,7 @@ footer{
         height: 17rem;
         gap: 1.5rem;
 
-        padding: 1rem 4rem;
+        padding: 1rem 3rem;
     }
 
     .imageInfoM{
@@ -1576,8 +1576,13 @@ footer{
         font-size: 35px;
     }
 
+    .content .containImg{
+        height: 24.5rem;
+    }
+
     .content .containImg img{  
-        height: 35rem; 
+        width: 35rem;
+        height: 25rem; 
     }
 
     .content .general{
@@ -1628,9 +1633,26 @@ footer{
     }
 }
 
-@media screen and (min-width: 1095px){ 
+/* mq escritorio 2*/
+@media screen and (min-width: 1140px){
     .blockHijoT .content .contentAllBlock{
-        gap:12.5rem;
+        flex-flow: row nowrap;
+        gap:7rem;
+    }  
+
+    .content .containImg{
+        height: 29.5rem;
+    }
+    
+    
+    .content .containImg img{  
+        width: 35rem;
+        height: 30rem; 
+    }
+    
+
+    .blockHijoT .content .content7AllBlock{
+        gap:25rem;
     }
 }
 
