@@ -1804,6 +1804,14 @@ section img:hover{
 
 /* mq de tablet */
 @media screen and (min-width: 600px){
+    .textoGaleria h2, h3{
+        font-size: 24.5px;
+    }
+    
+    .textoGaleria h3{ 
+        font-size: 22px;
+    }
+
     .blockAllG .integrantes .img-siete{
         display: block; /* No se muestra la imagen */
     }
@@ -1821,6 +1829,14 @@ section img:hover{
 /* mq de escritorio */
 
 @media screen and (min-width: 1024px) {
+    .textoGaleria h2, h3{
+        font-size: 26.5px;
+    }
+    
+    .textoGaleria h3{ 
+        font-size: 24px;
+    }
+
     .blockAllG .integrantes .img-tres, .img-cuatro, .img-siete{
         display: block;
     }
