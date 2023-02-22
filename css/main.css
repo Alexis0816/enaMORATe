@@ -527,7 +527,7 @@ footer{
 
 .footerEnd span{
     display: block;
-    border-top:1px solid whitesmoke;
+    border-top:1.75px solid rgba(128, 0, 45, 0.75);
     padding: 0.5rem;
 }
 
@@ -1407,6 +1407,7 @@ footer{
 }
 
 .content .contentBlock .contentLink{
+
     text-decoration: none;
     list-style: none;
 
@@ -1551,7 +1552,7 @@ footer{
 }
 
 
-/* mq escritorio */
+/* mq escritorio 1*/
 @media screen and (min-width: 1024px){ 
     #iconoShop{
         height: 4.25rem;
@@ -1590,6 +1591,12 @@ footer{
 
     .content .general{
         display: block;
+    }
+}
+
+@media screen and (min-width: 1095px){ 
+    .blockHijoT .content .contentAllBlock{
+        gap:12.5rem;
     }
 }
 
