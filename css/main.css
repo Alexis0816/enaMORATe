@@ -1702,7 +1702,7 @@ footer{
 /* Imagen de cada disco */
 .blockHijoM .imageBlock img{
     border-radius: 0.75rem;
-    width:22.5rem;
+    width:15.5rem;
     height: auto;
     object-fit: cover;    
 
@@ -1714,7 +1714,7 @@ footer{
 /* Animaciones de cada disco */
 .blockHijoM .imageBlock  img:hover{
     cursor:grab;
-    width: 325px;
+    width: 215px;
     border-radius: 5rem;
     border: 0.15rem groove black;
     opacity: 1;
@@ -1771,6 +1771,21 @@ footer{
     transition: 0.2s;
     filter: contrast(120%);
 }
+
+
+
+/* mq teléfono / adaptación 2 */
+@media screen and (min-width: 400px){     
+    /* Imagen de cada disco */
+    .blockHijoM .imageBlock img{
+        width:22.5rem;
+    }
+    /* Animaciones de cada disco */
+    .blockHijoM .imageBlock  img:hover{
+        width: 300px;
+    }
+}
+
 
 /* mq tablet */
 @media screen and (min-width: 750px){     
