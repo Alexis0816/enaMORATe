@@ -1299,8 +1299,7 @@ footer{
 }
 
 /* mq escritorio */
-@media screen and (min-width: 1024px){ 
-    
+@media screen and (min-width: 1024px){
     #iconoMundo{
         height: 4.25rem;
     }
@@ -1657,6 +1656,70 @@ footer{
 
 
 /* MÚSICA */
+
+.slider{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    justify-items: center;
+
+    width: auto;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slider ul{
+    display: flex;
+    animation: cambio 14s infinite alternate linear;
+    width: 400%;
+    height: auto;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .8;
+    filter: grayscale();
+    transition: 0.4s;
+}
+
+
+.slider img:hover{
+    transform: scale(1.1);
+    opacity: 2;
+    filter: contrast(125%);
+    transition: 0.5s;
+    cursor: grab;
+}
+
+
+/* Animación prolongada de presentación Música */
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+/* Escondemos el slide en la versión mobile */
+.slider{
+    display: none;
+}
+/* ---------------------------------------- */
+
 .blockPadreM{
     display: flex;
     flex-flow: column nowrap;
@@ -1789,6 +1852,10 @@ footer{
 
 /* mq tablet */
 @media screen and (min-width: 750px){     
+    .slider{
+        display: flex;
+    }
+
     /* Contenedor imagen de cada disco */
     .blockHijoM .imageBlock{
         width: 10rem;
@@ -1807,6 +1874,10 @@ footer{
 
 /* mq escritorio 1*/
 @media screen and (min-width: 1024px){ 
+    .slider{
+        height: 525px;
+    }
+
     .blockPadreM{
         padding-top: 0.5rem;
         padding-bottom: 3rem;
