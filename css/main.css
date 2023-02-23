@@ -61,7 +61,7 @@ body {
 }
 
 .header .logo img:hover{
-    transform: scale(1.4);
+    transform: scale(1.3);
     transition: all 0.3s;
 }
 
@@ -74,6 +74,9 @@ body {
 
     justify-content: space-around;
     align-items: center;
+    align-content: center;
+    justify-items: center;
+
     width: auto;
     height: auto;
 
@@ -554,8 +557,8 @@ footer{
 
     /* header - barra de navegación */
     .header .navLinks{
-        margin-inline-start: 4.75rem ;        
-        margin-inline-end: 4.75rem;
+        margin-inline-start: 9.5rem;
+        margin-inline-end: 9.5rem;
     }
 
     .header .navLinks li a{    
@@ -592,7 +595,7 @@ footer{
         align-items: center;
 
         width: 38rem;
-        height: 17rem;
+        /*       */
         gap: 1.5rem;
 
         padding: 1rem 3rem;
@@ -648,17 +651,17 @@ footer{
     
     /* header - barra de navegación */
     .header .navLinks{
-        margin-inline-start: 4.75rem ;        
-        margin-inline-end: 4.75rem;
+        margin-inline-start: 12rem;        
+        margin-inline-end: 12rem;
         padding: 0.5rem;
         gap:2rem;
     }    
+
     .header .navLinks li a{    
         font-size: 15px;
         margin-inline-start: 0.4rem ;        
         margin-inline-end: 0.4rem;
     }
-
 
     main h1{
         padding-inline-start: 12rem ; 
@@ -757,7 +760,7 @@ footer{
     .imageInfo div{
         width: 28rem;
         height: 22rem;
-        gap: 1.25rem;
+        gap: 0.9rem;
         padding: 1rem 1.5rem;
 
         justify-content: center;
@@ -843,7 +846,7 @@ footer{
     max-width: 1210px; 
     margin: 0 auto;
 
-           /* Desenfoque */
+    /* Desenfoque */
     backdrop-filter: blur(0.2rem);
 }   
 
@@ -917,6 +920,8 @@ footer{
 
 
 /* Contenedor de Integrantes */
+
+
 .integrantesDeBanda{
     color: whitesmoke;
 
@@ -931,24 +936,23 @@ footer{
 /* Integrantes */
 .integranteUno{
     background: url(https://arritmo.es/wp-content/uploads/2022/09/DSC_9502-1.jpg) center no-repeat;
-    background-size: 100% 100%;
+
     background-size: cover;
 }
 
 .integranteDos{
     background: url(https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/NZLDD5VFBRLDTCQLYSVVX4NAVY.jpg)center no-repeat;
-    background-size: 100% 100%;
+
     background-size: cover;
 }
 .integranteTres{
     background: url(https://i.pinimg.com/736x/35/4e/56/354e56def4d962b41334eef28633cf52.jpg)
     center no-repeat;
-    background-size: 100% 100%;
+
     background-size: cover;
 }
 .integranteCuatro{
     background: url(https://conciertosperu.com.pe/wp-content/uploads/2022/12/DSC7816-scaled.jpg)center no-repeat;
-    background-size: 100% 100%;
     background-size: cover;
 }
 
@@ -965,6 +969,12 @@ footer{
     justify-content: center;
     justify-items: center;
     align-content: center;
+}
+
+/* Reseteo por Bootstrap */
+.contentFotos ul{
+    padding-left: 0rem;
+    margin-bottom: 0rem;
 }
 
 .contentFotos .integrantesDeBanda .integranteInfo{
@@ -1680,6 +1690,9 @@ footer{
     animation: cambio 14s infinite alternate linear;
     width: 400%;
     height: auto;
+
+    /* Reseteo Bootstrap */
+    padding-left: 0rem;
 }
 
 .slider li{
