@@ -509,7 +509,7 @@ footer{
 .fixed .Arriba .itemFixed{
     cursor: grab;
     width: auto;
-    height: 2.25rem;
+    height: 3.25rem;
     transition: all 0.3s;
     background-color: rgba(39, 188, 211, 0.9);
     border-radius: 90%;
