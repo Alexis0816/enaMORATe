@@ -32,6 +32,15 @@ body {
     "footer footer footer";
 }
 
+.mainContent .header nav div button{
+    border-radius: 0.5rem;
+    border: 2px solid rgba(0, 0, 0, 0.75);
+}
+.mainContent .header nav div .navbar-toggler{
+    color: #1b3039;
+    background-color: rgb(220, 20, 60, 0.65);
+}
+
 /* Estilos del header */
 .header{
     grid-area: header;
