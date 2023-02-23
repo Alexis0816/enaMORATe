@@ -131,6 +131,12 @@ main .imgMain img{
     height: 100%;
 
     object-fit: cover;
+    transition: 0.5s;
+}
+
+main .imgMain img:hover{
+    filter: contrast(120%);
+    transition: 0.3s;
 }
 
 /* en la versión mobile la escondemos */
@@ -1077,6 +1083,7 @@ footer{
 }
 
 .imagePNGC:hover{
+    filter: contrast(110%);
     box-shadow: -15px -10px 15px rgba(0, 0, 0, 50);
     transition: 0.4s;
     transform: scale(0.8);
