@@ -1,2178 +1,2108 @@
+@charset "UTF-8";
 /* Font de google */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300&family=Vollkorn:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300&family=Vollkorn:wght@400;600&display=swap");
 
-/* Reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Vollkorn', serif;
-    font-size: 17px;
-}
-
-/* Estilos del body */
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Vollkorn', serif;
+  font-size: 17px;
+}
 
-
-/* Estilos del contenedor principal (header, main y footer) */
-.mainContent{
-    height:100vh;
-
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.1fr 10fr 0.1fr;
-
-    /* Estructura por áreas */
-    grid-template-areas: 
-    "header header header"
+.mainContent {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 10fr 0.1fr;
+  /* Estructura por áreas */
+  grid-template-areas: "header header header"
     "main main main"
     "footer footer footer";
 }
 
-.mainContent .header nav div button{
-    border-radius: 0.5rem;
-    border: 2px solid rgba(0, 0, 0, 0.75);
-}
-.mainContent .header nav div .navbar-toggler{
-    color: #1b3039;
-    background-color: rgba(220, 20, 60, 0.8);
+/* Estilos del header-general */
+.header {
+  grid-area: header;
+  width: auto;
+  height: auto;
+  background-color: #1b3039;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem;
 }
 
-/* Estilos del header */
-.header{
-    grid-area: header;
+.header .logo a img {
+  cursor: grab;
+  width: auto;
+  height: 4rem;
+  transition: all 0.2s;
+}
 
-    width: auto;
+.header .logo a img:hover {
+  transform: scale(1.3);
+  transition: all 0.3s;
+}
+
+.header nav div button {
+  border-radius: 0.5rem;
+  border: 2px solid rgba(0, 0, 0, 0.75);
+}
+
+.header nav div .navbar-toggler {
+  color: #1b3039;
+  background-color: rgba(220, 20, 60, 0.8);
+}
+
+.header nav div div .navLinks {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  width: auto;
+  height: auto;
+  margin-inline-start: 2.5rem;
+  margin-inline-end: 2.5rem;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.header nav div div .navLinks li {
+  transition: all 0.3s;
+  /* la animacióm regresa */
+}
+
+.header nav div div .navLinks li:hover {
+  transform: scale(1.4);
+  transition: all 0.2s;
+  /* animación de zoom */
+}
+
+.header nav div div .navLinks li a {
+  font-size: 13px;
+  cursor: grab;
+  color: white;
+  text-decoration: none;
+}
+
+.header nav div div .navLinks li a:hover {
+  color: crimson;
+  border-top: 2px solid crimson;
+  border-bottom: 2px solid crimson;
+  opacity: 75%;
+}
+
+/* Estilos de home */
+main {
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+main div {
+  width: 100%;
+  height: 100%;
+}
+
+main .imgMain {
+  display: none;
+}
+
+main .imgMain img {
+  /* tener cuidado con la imagen principal de cada html*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+main .imgMain img:hover {
+  filter: contrast(120%);
+  transition: 0.3s;
+}
+
+main .titulo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
+main .titulo h1 {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  background-color: crimson;
+  color: white;
+  font-size: 18px;
+  height: auto;
+  width: 100%;
+}
+
+main .blockPadre {
+  /* Bloque - Padre */
+  height: auto;
+  width: auto;
+  font-size: 20px;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  /* Bloques - Hijos */
+}
+
+main .blockPadre .blockHijo {
+  width: auto;
+  height: auto;
+  gap: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  /* contenedor de imagen*/
+}
+
+main .blockPadre .blockHijo .imagePNG {
+  width: 100%;
+  height: auto;
+  padding-top: 0.5rem;
+}
+
+main .blockPadre .blockHijo .imagePNG img {
+  width: 100%;
+  height: 17rem;
+}
+
+main .blockPadre .blockHijo .imagePNG .debiSuponerlo {
+  transition: 0.6s;
+}
+
+main .blockPadre .blockHijo .imagePNG .debiSuponerlo:hover {
+  transition: 0.4s;
+  transform: scale(0.8);
+}
+
+main .blockPadre .blockHijo .imagePNG .disco4 {
+  transition: 0.6s;
+}
+
+main .blockPadre .blockHijo .imagePNG .disco4:hover {
+  transition: 0.4s;
+  transform: scale(0.8);
+}
+
+main .blockPadre .blockHijo .imagePNG .salirConVida {
+  transition: 0.6s;
+}
+
+main .blockPadre .blockHijo .imagePNG .salirConVida:hover {
+  transition: 0.4s;
+  transform: scale(0.8);
+}
+
+main .blockPadre .blockHijo .imagePNG .juanes506 {
+  transition: 0.6s;
+}
+
+main .blockPadre .blockHijo .imagePNG .juanes506:hover {
+  transition: 0.4s;
+  transform: scale(0.8);
+}
+
+main .blockPadre .blockHijo .imageInfo {
+  width: 100%;
+  height: 100%;
+  margin-block-end: 1.5rem;
+  letter-spacing: 0px;
+  word-spacing: 2.5px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+main .blockPadre .blockHijo .imageInfo div {
+  width: 100%;
+  height: auto;
+  background-color: aliceblue;
+  border: #1b3039 solid 0.75px;
+  box-shadow: 0 0 25px #1b3039;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  margin: 0.025rem 0.025rem 0.025rem 0.025rem;
+  padding: 1rem 1.5rem;
+  /* Padding para los contenedores de texto */
+  gap: 0.75rem;
+}
+
+main .blockPadre .blockHijo .imageInfo div h2 {
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+main .blockPadre .blockHijo .imageInfo div .spanItalic {
+  font-size: 15px;
+  font-style: italic;
+}
+
+main .blockPadre .blockHijo .imageInfo div p {
+  font-size: 14.5px;
+  margin-inline-start: 0.4rem;
+  margin-inline-end: 0.4rem;
+}
+
+main .blockPadre .blockHijo .imageInfo div p .pSpan {
+  font-size: 14.5px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+main .blockPadre .blockHijo .imageInfo div #spanDisplayBlockBoldItalic {
+  font-size: 14.5px;
+  display: block;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+}
+
+main .blockPadre .blockHijo .imageInfoM {
+  width: 100%;
+  height: auto;
+  margin-block-end: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* M de morat */
+  /* ícono de morat */
+}
+
+main .blockPadre .blockHijo .imageInfoM img {
+  width: 100%;
+  height: 100%;
+}
+
+main .blockPadre .blockHijo .imageInfoM #amongText {
+  width: auto;
+  height: 2rem;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+main .blockPadre .blockHijo .imageInfoM #amongText:hover {
+  transition: 0.4;
+  transform: rotate(360deg) scale(1.5);
+}
+
+/* Estilos del footer-general */
+footer {
+  grid-area: footer;
+  background-color: crimson;
+  color: whitesmoke;
+  height: 100%;
+  width: 100%;
+  /* Enlace Interno - Head */
+}
+
+footer .redesSocialesGifts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 1.25rem;
+  gap: 2rem;
+  /* gifts */
+}
+
+footer .redesSocialesGifts .gifts {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  width: auto;
+  height: auto;
+}
+
+footer .redesSocialesGifts .gifts .mid {
+  text-align: center;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.25rem;
+  /* calendario, fotos */
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .calendario a {
+  cursor: grab;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .calendario a:hover {
+  opacity: 85%;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .calendario a img {
+  transform: 0.1s;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .calendario a img:hover {
+  transform: scale(0.8);
+  transition: 0.2s;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .calendario a #calendario {
+  width: 3rem;
+  height: 2.5rem;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .fotos a {
+  cursor: grab;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .fotos a:hover {
+  opacity: 85%;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .fotos a img {
+  transform: 0.1s;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .fotos a img:hover {
+  transform: scale(0.8);
+  transition: 0.2s;
+}
+
+footer .redesSocialesGifts .gifts .enlacesGifts .fotos a #galeria {
+  width: 4.25rem;
+  height: 3.25rem;
+}
+
+footer .redesSocialesGifts .rs {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  width: auto;
+  height: auto;
+}
+
+footer .redesSocialesGifts .rs .mid {
+  text-align: center;
+  font-size: 12.5px;
+  text-transform: uppercase;
+}
+
+footer .redesSocialesGifts .rs .enlacesRedes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+footer .redesSocialesGifts .rs .enlacesRedes .redes a {
+  cursor: grab;
+}
+
+footer .redesSocialesGifts .rs .enlacesRedes .redes a:hover {
+  opacity: 55%;
+}
+
+footer .redesSocialesGifts .rs .enlacesRedes .redes a img {
+  transition: 0.1s;
+  width: 2rem;
+  height: 2rem;
+}
+
+footer .redesSocialesGifts .rs .enlacesRedes .redes a img:hover {
+  transform: scale(1.35);
+  transition: 0.2s;
+}
+
+footer .fixed .Arriba .itemFixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 4px 6.5px 3px 0px;
+  padding: 1px;
+  cursor: grab;
+  width: auto;
+  height: 3.25rem;
+  transition: all 0.3s;
+  background-color: rgba(39, 188, 211, 0.9);
+  border-radius: 90%;
+  opacity: .8;
+  z-index: 2;
+}
+
+footer .fixed .Arriba .itemFixed:hover {
+  transform: scale(0.75);
+}
+
+footer .footerEnd {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 12.5px;
+  word-spacing: 0.3rem;
+  background-color: #282828;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+footer .footerEnd p strong {
+  font-size: 12.5px;
+}
+
+footer .footerEnd p span {
+  font-size: 12.5px;
+  display: block;
+  border-top: 1.75px solid rgba(128, 0, 45, 0.45);
+  padding: 0.5rem;
+}
+
+/* Estilos del main-BANDA */
+.BANDA {
+  height: auto;
+  width: auto;
+  background-image: url("../img/fondo_banda.jpg");
+  background-position: center;
+  color: aliceblue;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+}
+
+.BANDA .blockPadreB {
+  /* centro todo el bloque de texto */
+  max-width: 1210px;
+  margin: 0 auto;
+  /* Desenfoque */
+  backdrop-filter: blur(0.2rem);
+}
+
+.BANDA .blockPadreB .blockHijoB .content {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.BANDA .blockPadreB .blockHijoB .content .biografia {
+  height: auto;
+  width: auto;
+  color: whitesmoke;
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  align-content: center;
+}
+
+.BANDA .blockPadreB .blockHijoB .content .biografia .tittleBanda {
+  /* Título de la BANDA */
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 4.5rem;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+.BANDA .blockPadreB .blockHijoB .content .biografia .tittleBanda:hover {
+  color: red;
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+
+.BANDA .blockPadreB .blockHijoB .content .biografia .contentBiografia {
+  height: auto;
+  width: auto;
+  background-color: rgba(5, 5, 5, 0.782);
+  padding: 1.75rem 1rem 1.75rem 1rem;
+  letter-spacing: 0rem;
+  word-spacing: 0.25rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  padding-inline-start: 0.5rem;
+  padding-inline-end: 0.5rem;
+}
+
+.BANDA .blockPadreB .blockHijoB .content .biografia .contentBiografia p {
+  height: auto;
+  width: auto;
+  margin-inline-start: 0.4rem;
+  margin-inline-end: 0.4rem;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 0.9rem;
+}
+
+.BANDA .contentFotos .integrantesDeBanda {
+  color: whitesmoke;
+  width: 100%;
+  height: 144rem;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 0rem;
+  margin-bottom: 0rem;
+}
+
+.BANDA .contentFotos .integrantesDeBanda li {
+  width: 100%;
+  position: relative;
+  height: 36rem;
+}
+
+.BANDA .contentFotos .integrantesDeBanda .integrante .integranteUno {
+  background: url(https://arritmo.es/wp-content/uploads/2022/09/DSC_9502-1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.BANDA .contentFotos .integrantesDeBanda .integrante .integranteDos {
+  background: url(https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/NZLDD5VFBRLDTCQLYSVVX4NAVY.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.BANDA .contentFotos .integrantesDeBanda .integrante .integranteTres {
+  background: url(https://i.pinimg.com/736x/35/4e/56/354e56def4d962b41334eef28633cf52.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.BANDA .contentFotos .integrantesDeBanda .integrante .integranteCuatro {
+  background: url(https://conciertosperu.com.pe/wp-content/uploads/2022/12/DSC7816-scaled.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.BANDA .contentFotos .integrantesDeBanda .integrante .integranteInfo {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  padding: 2.25rem;
+  background-color: rgba(10, 10, 10, 0.8);
+  z-index: 2;
+}
+
+.BANDA .contentFotos .integrantesDeBanda .integrante .integranteInfo .nombre {
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.BANDA .contentFotos .integrantesDeBanda .integrante .integranteInfo .nombre em {
+  display: block;
+}
+
+main .blockPadreC div {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  gap: 1.5rem;
+}
+
+main .blockPadreC .blockHijoC .noEventos {
+  height: auto;
+  width: auto;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 1.75rem;
+}
+
+main .blockPadreC .blockHijoC .noEventos .imagePNGC {
+  width: auto;
+  height: 15rem;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 15px 10px 15px black;
+  transition: 0.6s;
+  cursor: grab;
+}
+
+main .blockPadreC .blockHijoC .noEventos .imagePNGC:hover {
+  filter: contrast(110%);
+  box-shadow: -15px -10px 15px black;
+  transition: 0.4s;
+  transform: scale(0.8);
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+main .blockPadreC .blockHijoC .noEventos .imagePNGC img {
+  width: 100%;
+  height: 16rem;
+}
+
+main .blockPadreC .blockHijoC .noEventos .imagePNGC img:hover {
+  cursor: grab;
+}
+
+main .blockPadreC .blockHijoC .noEventos .textoIcono {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .blockPadreC .blockHijoC .noEventos .textoIcono .texto {
+  border: #1b3039 solid 0.75px;
+  box-shadow: 0 0 25px #1b3039;
+  background-color: aliceblue;
+  margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+}
+
+main .blockPadreC .blockHijoC .noEventos .textoIcono .texto h2 {
+  transition: 0.35s;
+  font-size: 30px;
+  margin: 0.5rem;
+}
+
+main .blockPadreC .blockHijoC .noEventos .textoIcono .texto h2:hover {
+  transition: 0.5s;
+  transform: scale(0.8);
+  color: red;
+}
+
+main .blockPadreC .blockHijoC .noEventos .gira {
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 1.5rem;
+}
+
+main .blockPadreC .blockHijoC .noEventos .gira h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+}
+
+main .blockPadreC .blockHijoC .noEventos .imageMundo {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .blockPadreC .blockHijoC .noEventos .imageMundo #iconoMundo {
+  width: auto;
+  height: 3.25rem;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+main .blockPadreC .blockHijoC .noEventos .imageMundo #iconoMundo:hover {
+  cursor: grab;
+  transition: 0.4;
+  transform: rotate(360deg) scale(1.3);
+}
+
+main .blockPadreC .blockHijoC .siEventos {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 1.5rem;
+  padding-top: 3.25rem;
+  padding-bottom: 3rem;
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  align-content: space-around;
+  gap: 1.25rem;
+  /* separa eventos*/
+  border-top: 0.25px solid rgba(0, 0, 0, 0.392);
+  padding-top: 1.5rem;
+  /* igual 1*/
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 .placeDate {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  align-content: space-around;
+  gap: 0.25rem;
+  /* separa date y place */
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 .placeDate p {
+  text-transform: uppercase;
+  font-size: 17.5px;
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 .placeDate p strong {
+  display: flex;
+  gap: 0.4rem;
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar {
+  background-color: black;
+  display: flex;
+  flex-flow: column nowrap;
+  width: auto;
+  font-weight: bold;
+  color: whitesmoke;
+  border: 1.5px solid black;
+  background-color: black;
+  list-style: none;
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar a p {
+  transition: 0.2s;
+  margin: 0.25rem 0.75rem;
+  padding: 0.25rem;
+}
+
+main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar a p:hover {
+  transition: 0.25s;
+  transform: scale(1.1);
+  color: crimson;
+}
+
+main .blockPadreC .imageInfoM {
+  margin-block-end: 1.5rem;
+  padding: 1rem;
+  /* M de morat */
+  /* ícono de morat */
+}
+
+main .blockPadreC .imageInfoM img {
+  width: 100%;
+  height: 100%;
+}
+
+main .blockPadreC .imageInfoM #amongText {
+  width: auto;
+  height: 2rem;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+main .blockPadreC .imageInfoM #amongText:hover {
+  transition: 0.4;
+  transform: rotate(360deg) scale(1.5);
+}
+
+main .blockPadreT div {
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  list-style: none;
+  text-decoration: none;
+  gap: 1rem;
+}
+
+main .blockPadreT .blockHijoT .presentation {
+  height: auto;
+  width: auto;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 1.5rem;
+}
+
+main .blockPadreT .blockHijoT .presentation .imagePNGT {
+  width: auto;
+  height: 15rem;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 15px 10px 15px black;
+  cursor: grab;
+  transition: 0.6s;
+}
+
+main .blockPadreT .blockHijoT .presentation .imagePNGT:hover {
+  box-shadow: -15px -10px 15px black;
+  transition: 0.4s;
+  transform: scale(0.85);
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+main .blockPadreT .blockHijoT .presentation .imagePNGT img {
+  width: 100%;
+  height: 16rem;
+}
+
+main .blockPadreT .blockHijoT .presentation .imagePNGT img:hover {
+  cursor: grab;
+}
+
+main .blockPadreT .blockHijoT .presentation .textoIcono .texto {
+  border: #1b3039 solid 0.75px;
+  box-shadow: 0 0 25px #1b3039;
+  background-color: aliceblue;
+  margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+}
+
+main .blockPadreT .blockHijoT .presentation .textoIcono .texto h2 {
+  transition: 0.35s;
+  font-size: 30px;
+  margin: 0.5rem;
+}
+
+main .blockPadreT .blockHijoT .presentation .textoIcono .texto h2:hover {
+  transition: 0.5s;
+  transform: scale(0.8);
+  color: red;
+}
+
+main .blockPadreT .blockHijoT .presentation .imageShop {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop {
+  width: auto;
+  height: 3.25rem;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop:hover {
+  cursor: grab;
+  transition: 0.4;
+  transform: scale(1.3);
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLink {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+  justify-items: center;
+  align-content: space-around;
+  gap: 0.25rem;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLink a {
+  text-decoration: none;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLink a h2 {
+  color: #1d1d61;
+  border-bottom: 1.5px solid #1d1d61;
+  transition: 0.2s;
+  font-size: 25px;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLink a h2:hover {
+  font-weight: bolder;
+  color: rgba(0, 0, 255, 0.8);
+  border-bottom: 3.5px solid rgba(0, 0, 255, 0.8);
+  transform: scale(1.1);
+  transition: 0.15s;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg {
+  position: relative;
+  height: 19.5rem;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0px 15px 25px black;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg:hover img {
+  transform: scale(1.3);
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg img {
+  width: 100%;
+  height: 20rem;
+  transition: 0.5s ease-out;
+  object-fit: cover;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg:hover .capa {
+  opacity: 1;
+  visibility: visible;
+  cursor: grab;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg:hover .capa h3 {
+  margin-top: 100px;
+  margin-bottom: 15px;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg .capa {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  background-color: rgba(0, 103, 123, 0.7);
+  transition: 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg .capa h3 {
+  transition: 0.4s;
+  font-weight: 400px;
+  margin-bottom: 120px;
+  margin-top: 30px;
+}
+
+main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg .capa p {
+  font-size: 20px;
+  word-spacing: 0.25rem;
+  width: 100%;
+  max-width: 180px;
+  margin-top: 5px;
+  margin-bottom: 75px;
+  transition: 0.4s;
+}
+
+main .blockPadreT .blockHijoT .imageInfoM {
+  margin-block-end: 1.5rem;
+  padding: 1rem;
+  /* M de morat */
+  /* ícono de morat */
+}
+
+main .blockPadreT .blockHijoT .imageInfoM img {
+  width: 100%;
+  height: 100%;
+}
+
+main .blockPadreT .blockHijoT .imageInfoM #amongText {
+  width: auto;
+  height: 2rem;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+main .blockPadreT .blockHijoT .imageInfoM #amongText:hover {
+  transition: 0.4;
+  transform: rotate(360deg) scale(1.5);
+}
+
+main .blockPadreT .blockHijoT .general {
+  display: none;
+}
+
+main .slider {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  justify-items: center;
+  width: auto;
+  height: 300px;
+  overflow: hidden;
+  display: none;
+}
+
+main .slider ul {
+  display: flex;
+  animation: cambio 12s infinite alternate linear;
+  width: 400%;
+  height: auto;
+  padding-left: 0rem;
+}
+
+main .slider ul li {
+  width: 100%;
+  list-style: none;
+}
+
+main .slider ul li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .8;
+  filter: grayscale(100%);
+  transition: 0.4s;
+}
+
+main .slider ul li img:hover {
+  transform: scale(1.05);
+  opacity: 2;
+  filter: contrast(125%);
+  transition: 0.5s;
+  cursor: grab;
+}
+
+@keyframes cambio {
+  0% {
+    margin-left: 0;
+  }
+
+  20% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+
+  100% {
+    margin-left: -300%;
+  }
+}
+
+main .blockPadreM {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+}
+
+main .blockPadreM .blockAllM {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .blockPadreM .blockAllM .blockHijoM {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 74% 24%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  gap: 0.25rem;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .imageBlock {
+  width: 10rem;
+  height: auto;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .imageBlock img {
+  border-radius: 0.75rem;
+  width: 15.5rem;
+  height: auto;
+  object-fit: cover;
+  opacity: .8;
+  filter: blur(2px);
+  transition: 0.2s;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
+  cursor: grab;
+  width: 225px;
+  border-radius: 5rem;
+  border: 0.15rem groove black;
+  opacity: 1;
+  filter: contrast(120%);
+  transition: 0.4s;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a {
+  text-decoration: none;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco {
+  margin: 0.5rem;
+  transition: 0.2s;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover {
+  color: crimson;
+  transform: scale(1.1);
+  transition: 0.2s;
+  filter: contrast(120%);
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco {
+  margin: 0.5rem;
+  transition: 0.2s;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
+  color: chartreuse;
+  transform: scale(1.1);
+  transition: 0.2s;
+  filter: contrast(120%);
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a h2 {
+  width: auto;
+  height: auto;
+  padding: 0.25rem;
+  margin: 0.1rem;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  color: black;
+  text-align: center;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM {
+  width: 100%;
+  height: auto;
+  margin-block-end: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText {
+  width: auto;
+  height: 2rem;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover {
+  transition: 0.4;
+  transform: rotate(360deg) scale(1.5);
+}
+
+.GALERIA section {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: auto;
+  height: 400px;
+  display: none;
+}
+
+.GALERIA section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .95;
+  transition: 0.5s;
+}
+
+.GALERIA section img:hover {
+  cursor: grab;
+  width: 175px;
+  opacity: 1;
+  filter: contrast(110%);
+}
+
+.GALERIA .blockPadreG {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.GALERIA .blockPadreG .blockAllG {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.GALERIA .blockPadreG .blockAllG .textoGaleria {
+  padding: 2rem 0rem 0.5rem 0rem;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.GALERIA .blockPadreG .blockAllG .textoGaleria .hGaleria {
+  width: auto;
+  font-size: 22.5px;
+  text-align: center;
+  transition: 0.2s;
+  border-bottom: 1.5px dashed black;
+}
+
+.GALERIA .blockPadreG .blockAllG .textoGaleria .hGaleria:hover {
+  color: crimson;
+  transform: scale(1.1);
+  transition: 0.3s;
+  border-bottom: 3px solid crimson;
+}
+
+.GALERIA .blockPadreG .blockAllG .textoGaleria #h3Galeria {
+  font-size: 20px;
+}
+
+.GALERIA .blockPadreG .blockAllG .imageInfoM {
+  width: 100%;
+  height: auto;
+  margin-block-end: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  /* M de morat */
+  /* ícono de morat */
+}
+
+.GALERIA .blockPadreG .blockAllG .imageInfoM img {
+  width: 100%;
+  height: 100%;
+}
+
+.GALERIA .blockPadreG .blockAllG .imageInfoM #amongText {
+  width: auto;
+  height: 2rem;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.GALERIA .blockPadreG .blockAllG .imageInfoM #amongText:hover {
+  transition: 0.4;
+  transform: rotate(360deg) scale(1.5);
+}
+
+.GALERIA .blockPadreG .blockAllG .blockHijoG {
+  height: 100%;
+  display: grid;
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes {
+  height: 195vh;
+  gap: 1.25rem;
+  margin: 0rem 2rem 4rem 2rem;
+  padding-inline-end: 0.8rem;
+  padding-inline-start: 0.8rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: 23.5% 26% 23.5% 26%;
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes .containImg {
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes .containImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .8;
+  transition: 0.2s;
+  filter: grayscale(100%);
+  border-radius: 10px;
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes .containImg img:hover {
+  cursor: grab;
+  opacity: 1;
+  filter: contrast(110%);
+  transform: scale(0.975);
+  transition: 0.3s;
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes #img-tres {
+  display: none;
+  /* No se muestra la imagen */
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes #img-cuatro {
+  display: none;
+  /* No se muestra la imagen */
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes #img-siete {
+  display: none;
+  /* No se muestra la imagen */
+}
+
+/* HOME */
+/* mq tablet */
+@media screen and (min-width: 750px) {
+
+  /* header - logo */
+  .header .logo {
+    margin-top: 0.2rem;
+  }
+
+  .header .logo a img {
+    height: 5.25rem;
+  }
+
+  .header nav div div .navLinks {
+    margin-inline-start: 9.5rem;
+    margin-inline-end: 9.5rem;
+  }
+
+  .header nav div div .navLinks li a {
+    font-size: 14.25px;
+  }
+
+  /* Estilos de main */
+  main .imgMain {
+    display: block;
+  }
+
+  main .titulo h1 {
+    padding-inline-start: 5rem;
+  }
+
+  main .blockPadre .blockHijo .imagePNG {
+    width: 38rem;
     height: auto;
-    background-color:#1b3039;
+  }
 
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    
-    padding: 0.5rem;
-}
+  main .blockPadre .blockHijo .imagePNG img {
+    width: 38rem;
+    height: 17rem;
+  }
 
-.header .logo{
-    margin-top: 0.35rem;
-}
-
-.header .logo img{
-    cursor: grab;
-    width: auto;
-    height: 4rem;
-
-    transition: all 0.2s;
-}
-
-.header .logo img:hover{
-    transform: scale(1.3);
-    transition: all 0.3s;
-}
-
-/* header - barra de navegación */
-.header .navLinks{
-    list-style: none;
-
-    display: flex;
-    flex-flow: row wrap;
-
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-
-    width: auto;
-    height: auto;
-
-    margin-inline-start: 2.5rem;
-    margin-inline-end: 2.5rem;
-    padding: 1rem;
-
-    gap: 2rem;
-}
-
-.header .navLinks li{
-    transition: all 0.3s; /* la animacióm regresa */
-
-}
-
-.header .navLinks li:hover{
-    transform: scale(1.4);
-    transition: all 0.2s; /* animación de zoom */
-}
-
-
-.header .navLinks li a{    
-    font-size: 13px;
-    cursor: grab;
-    color: white;
-    text-decoration: none;
-}
-
-.header .navLinks li a:hover{ 
-    color: crimson;
-    border-top: 2px solid crimson;
-    border-bottom: 2px solid crimson;
-    opacity: 75%;
-}
-
-
-
-/* Estilos de main */
-main{
-    grid-area: main;
-    height: 100%;
-    width: 100%;
-            
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; /* tener cuidado con la imagen principal de cada html*/
-    
+  main .blockPadre .blockHijo .imageInfo div {
     justify-content: center;
     align-items: center;
-}
+    width: 38rem;
+    gap: 1.5rem;
+    padding: 3rem;
+    padding: 1rem 3rem;
+  }
 
-/* imagen - main */
-main .imgMain img{
-    width: 100%;
-    height: 100%;
+  main .blockPadre .blockHijo .imageInfoM {
+    padding: 3rem;
+  }
 
-    object-fit: cover;
-    transition: 0.5s;
-}
+  /* Estilos de footer */
+  footer .redesSocialesGifts .gifts .enlacesGifts {
+    gap: 1.75rem;
+  }
 
-main .imgMain img:hover{
-    filter: contrast(120%);
-    transition: 0.3s;
-}
+  footer .redesSocialesGifts .rs .enlacesRedes {
+    gap: 2.75rem;
+  }
 
-/* en la versión mobile la escondemos */
-.imgMain{
-    display: none;
-}
-
-
-/* título - main*/
-main div{
-    width: 100%;
-    height: 100%;
-}
-
-main .titulo{
-    display: flex;
+  footer .footerEnd {
     flex-flow: row wrap;
-    
-    justify-content: left;
-    align-items: center;
-    
-    position: sticky;
-    top: 0px; 
-    z-index: 1;
-}
-
-main h1{ 
-    padding: 0.5rem;
-    padding-left: 1rem;
-}
-
-
-main .titulo h1{
-    background-color: rgb(220, 20, 60, 100);
-    color: white;
-
-    font-size: 18px;
-
-    height:auto;
-    width: 100%;
-}
-
-
-/* Bloque - Padre */
-.blockPadre{
-    height: auto;
-    width: auto;
-    font-size: 20px;
-    padding: 0.25rem 1rem 0.25rem 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto ;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-/* Bloques - Hijos */
-.blockHijo{
-    width: auto;
-    height: auto;
+    padding: 1.5rem;
     gap: 1rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-content: center;
-}
-
-/* contenedor de imagen*/
-.blockHijo .imagePNG{
-    width: 100%;
-    height: auto;
-
-}
-
-.imagePNG{
-    padding-top: 0.5rem;
-}
-
-.imagePNG img{
-    width: 100%;
-    height: 17rem; 
-    
-}
-
-/* Animaciones: Noticias */
-.debiSuponerlo{
-    transition: 0.6s;
-}
-.debiSuponerlo:hover{
-    transition: 0.4s;
-    transform: scale(0.8);
-}
-
-.disco4{
-    transition: 0.6s;
-}
-.disco4:hover{
-    transition: 0.4s;
-    transform: scale(0.8);
-}
-
-.salirConVida{
-    transition: 0.6s;
-}
-.salirConVida:hover{
-    transition: 0.4s;
-    transform: scale(0.8);
-}
-
-.juanes506{
-    transition: 0.6s;
-}
-.juanes506:hover{
-    transition: 0.4s;
-    transform: scale(0.8);
-}
-
-.imageInfo{
-    width: 100%;
-    height: 100%;
-    
-    margin-block-end: 1.5rem;
-    letter-spacing: 0px;
-    word-spacing: 5px;
-
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    
-    align-content: center;
-    text-align: center;    
-}
-
-/* contenedor de texto */
-.imageInfo div{
-    width: 100%; 
-    height: auto;
-
-    background-color: aliceblue;
-    border: #1b3039 solid 0.75px;
-    box-shadow: 0 0 25px #1b3039;
-    
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    
-    margin: 0.025rem 0.025rem 0.025rem 0.025rem;
-    padding: 1rem 1.5rem; /* Padding para los contenedores de texto */
-    gap: 0.75rem;
-}
-
-.imageInfoM{
-    width: 100%;
-    height: auto;
-    
-    margin-block-end: 1.5rem;
-    padding: 1rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    
-    justify-content: center;
-    align-items: center;
-}
-
-
-.imageInfoM img{
-    width: 100%;
-    height: 100%;
-}
-
-
-/* Info 1 */
-.spanItalic{
-    font-size: 15px;
-    font-style: italic;
-}
-
-h2{
-    font-size: 15px;
-}
-h2 span{    
-    font-size: 15px;
-}
-
-
-p{
-    font-size: 14.5px;
-    margin-inline-start: 0.4rem;
-    margin-inline-end: 0.4rem;
-}
-
-.pSpan{
-    font-size: 14.5px;
-    font-style: italic;
-    font-weight: bold;
-}
-
-#spanDisplayBlockBoldItalic{
-    font-size: 14.5px;
-    display: block;
-    font-weight:bold;
-    font-style: italic;
-    text-align: center;
-}
-
-/* ícono de morat */
-#amongText{
-    width: auto;
-    height: 2rem;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-#amongText:hover{
-    transition: 0.4;
-    transform: rotate(360deg) scale(1.5);
-}
-
-
-
-/* Estilos de footer */
-footer{
-    grid-area: footer;
-
-    background-color: crimson;
-    
-    color: whitesmoke;
-    
-    height: 100%;
-    width: 100%;    
-}
-
-.mid{
-    text-align: center;
-    font-size: 12.5px;
-    text-transform: uppercase;
-}
-
-/* redes sociales y gifts */
-.redesSocialesGifts{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;   
-    width: auto;
-    height: auto;
-    padding: 1.25rem;
-    gap: 2rem;
-}
-
-
-/* gifts */
-.redesSocialesGifts .gifts{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25rem;
-    width: auto;
-    height: auto;
-}
-
-/* redes sociales */
-.redesSocialesGifts .rs{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.25rem;   
-    width: auto;
-    height: auto;
-}
-
-.gifts .enlacesGifts{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1.25rem;    
-}
-
-.gifts h3{
-    margin-top: 0.5rem;
-}
-
-/* enlaces */
-.rs .enlacesRedes{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 1.25rem;    
-}
-
-.rs img{
-    width: 2rem;
-    height: 2rem;
-}
-
-
-/* calendario, fotos */
-.calendario a, .fotos a{
-    cursor: grab;
-}
-.calendario a:hover, .fotos a:hover{
-    opacity: 85%;
-}
-.calendario img, .fotos img{
-    transform: 0.1s;
-}
-.calendario img:hover, .fotos img:hover{
-    transform: scale(0.8);
-    transition: 0.2s;
-}
-
-#calendario{
-    width: 3rem;
-    height: 2.5rem;
-}
-#galeria{
-    width: 4.25rem;
-    height: 3.25rem;
-}
-
-/* facebook, twitter, instagram, youtube, spotify */
-.facebook a, .twitter a, .instagram a, .youtube a, .spotify a{
-    cursor: grab;
-}
-.facebook a:hover, .twitter a:hover, .instagram a:hover, .youtube a:hover, .spotify a:hover{
-    opacity: 55%;
-}
-.facebook img, .twitter img, .instagram img, .youtube img, .spotify img{
-    transition: 0.1s;
-}
-.facebook img:hover, .twitter img:hover, .instagram img:hover, .youtube img:hover, .spotify img:hover{
-    transform: scale(1.35);
-    transition: 0.2s;
-}
-
-/* Botón ir Arriba */
-.itemFixed{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-
-    margin: 4px 6.5px 3px 0px;
-    padding: 1px;
-}
-
-.fixed .Arriba .itemFixed{
-    cursor: grab;
-    width: auto;
-    height: 3.25rem;
-    transition: all 0.3s;
-    background-color: rgba(39, 188, 211, 0.9);
-    border-radius: 90%;
-    opacity: .8;
-    z-index: 2;
-}
-
-.fixed .Arriba .itemFixed:hover{
-    transform: scale(0.75);
-}
-
-
-/* Términos y condiciones */
-.footerEnd{
-    display: flex;
-    flex-flow: column nowrap;
-    
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    
-    font-size: 12.5px;
-    word-spacing: 0.3rem;
-
-    background-color: rgb(40, 40, 40);
-    padding: 1rem;
-    gap: 1.5rem;  
-}
-
-.footerEnd span{
-    font-size: 12.5px;
-}
-
-.footerEnd strong{
-    font-size: 12.5px;
-}
-
-.footerEnd span{
-    display: block;
-    border-top:1.75px solid rgba(128, 0, 45, 0.45);
-    padding: 0.5rem;
-}
-
-
-/* mq: TABLET */
-@media screen and (min-width: 750px){
-    /* header - logo */
-    .header .logo{
-        margin-top: 0.2rem;
-    }
-    .header .logo img{
-        height: 5.25rem;
-    }
-
-    /* header - barra de navegación */
-    .header .navLinks{
-        margin-inline-start: 9.5rem;
-        margin-inline-end: 9.5rem;
-    }
-
-    .header .navLinks li a{    
-        font-size: 14.25px;
-    }
-
-    /* Estilos de main */
-    main .imgMain{
-        display: block;
-    }
-
-    /* título - main*/
-    main h1{
-        padding-inline-start: 5.5rem ; 
-    }
-
-    /* Sin  modificaciones en el Bloque Padre */
-        
-    /* Bloque Hijo */
-    /* contenedor de imagen*/
-    .blockHijo .imagePNG{
-        width: 38rem;
-        height: auto;
-    }
-
-    .imagePNG img{
-        width: 38rem;
-        height: 17rem;
-    }
-
-    /* contenedor de info*/
-    .imageInfo div{
-        justify-content: center;
-        align-items: center;
-
-        width: 38rem;
-        /*       */
-        gap: 1.5rem;
-
-        padding: 1rem 3rem;
-    }
-
-    .imageInfoM{
-        padding: 3rem;
-    }
-
-    /* FOOTER */
-    .gifts .enlacesGifts{
-        gap: 1.75rem;    
-    }
-    
-    /* enlaces */
-    .rs .enlacesRedes{
-        gap: 2.75rem;    
-    }
-
-
-    .footerEnd{
-        flex-flow: row wrap;
-        padding: 1.5rem;
-        gap: 1rem;  
-    }
-
-    .footerEnd .uno span{
-        text-align: left; 
-    }
-
-    .footerEnd .dos span{
-        text-align: right;
-    }
+  }
+
+  footer .footerEnd .uno span {
+    text-align: left;
+  }
+
+  footer .footerEnd .dos span {
+    text-align: right;
+  }
 }
 
 /* mq de escritorio  1*/
 @media screen and (min-width: 1024px) {
-    .header{    
-        padding: 0.225rem;
-        gap: 0rem;
-        
-        flex-flow: row nowrap;  
-        justify-content: space-around;
-    }
-        
-    .header .logo{
-        margin-top: 0.3rem;
-        margin-left: 0.5rem;
-    }
-    .header .logo img{
-        height: 5.5rem;
-    }
-    
+  .header {
+    padding: 0.225rem;
+    gap: 0rem;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  .header .logo {
+    margin-top: 0.3rem;
+    margin-left: 0.5rem;
+  }
+
+  .header .logo img {
+    height: 5.5rem;
+  }
+
+  .header nav div div .navLinks {
     /* header - barra de navegación */
-    .header .navLinks{
-        margin-inline-start: 12rem;        
-        margin-inline-end: 12rem;
-        padding: 0.5rem;
-        gap:2rem;
-    }    
+    margin-inline-start: 12rem;
+    margin-inline-end: 12rem;
+    padding: 0.5rem;
+    gap: 2rem;
+  }
 
-    .header .navLinks li a{    
-        font-size: 15px;
-        margin-inline-start: 0.4rem ;        
-        margin-inline-end: 0.4rem;
-    }
+  .header nav div div .navLinks li a {
+    font-size: 15px;
+    margin-inline-start: 0.4rem;
+    margin-inline-end: 0.4rem;
+  }
 
-    main h1{
-        padding-inline-start: 12rem ; 
-    }    
+  main .titulo h1 {
+    padding-inline-start: 12rem;
+  }
 
+  main .blockPadre {
     /* Bloque - Padre */
-    .blockPadre{
-        width: auto;
-        height: auto;
-
-        gap: 2rem;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
-
-        justify-items: center;
-        align-content: center;
-        gap: 1rem;
-        padding-top: 1.5rem;
-    }   
-        
+    width: auto;
+    height: auto;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    justify-items: center;
+    align-content: center;
+    gap: 1rem;
+    padding-top: 1.5rem;
     /* Bloques - Hijos */
-    .blockHijo{
-        width: auto;    
-        height: auto;
-        
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        justify-items: center;
+  }
 
-        gap: 2rem;
-    }
-
-    /* contenedor de imagen*/
-    .blockHijo .imagePNG{
-        width: 100%;
-        height: auto;
-    }
-    
-
-    .imagePNG img{
-        width: 28rem;
-        height: 22rem;
-    }
-    
-    .uno{
-        flex-direction: row-reverse;
-    }
-    .tres{
-        flex-direction: row-reverse;
-    }
-    
-    /* Animaciones y transiciones */
-    .debiSuponerlo:hover{
-        transform: skew(10deg, -10deg) scale(0.8);
-        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-    }
-
-
-    .disco4:hover{
-        transform: skew(-10deg, 10deg) scale(0.8);
-        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-    }
-    
-
-    .salirConVida:hover{
-        transform:skew(10deg, -10deg) scale(0.8);
-        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-    }
-
-    .juanes506:hover{
-        transform:skew(-10deg, 10deg) scale(0.8);
-        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-    }
-    
-    .pngCuatro img{
-        box-shadow: 1rem 1rem 7.5px rgba(128, 0, 128, 0.627), -1rem -1rem 7.5px rgba(128, 128, 128, 0.753);
-    }
-
-    .pngUno img{
-        box-shadow: 1rem -1rem 7.5px lightblue,-1rem 1rem 7.5px burlywood;
-    }
-    
-    .pngDos img{
-        box-shadow: 1rem 1rem 7.5px rgba(226, 90, 90, 0.822), -1rem -1rem 7.5px greenyellow;
-    }
-    
-    .pngTres img{
-        box-shadow: -1rem 1rem 7.5px rgba(56, 55, 55, 0.901), 1rem -1rem 7.5px rgb(197, 151, 95);
-    }
-
-
+  main .blockPadre .blockHijo {
+    width: auto;
+    height: auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 2rem;
     /* contenedor de info*/
-    .imageInfo div{
-        width: 28rem;
-        height: 22rem;
-        gap: 0.9rem;
-        padding: 1rem 1.5rem;
+  }
 
-        justify-content: center;
-        
-        background-color: aliceblue;
-        margin: 0.05rem 0.05rem 0.05rem 0.05rem;
-        border: #1b3039 solid 0.75px;
-    } 
-    
-        
-    .imageInfo{        
-        margin-block-end: 0rem;
-    }
+  main .blockPadre .blockHijo .imagePNG {
+    /* contenedor de imagen*/
+    width: 100%;
+    height: auto;
+    /* Animaciones y transiciones */
+  }
 
-    /* FOOTER */
-    .redesSocialesGifts{
-        display: flex;
-        flex-flow: row wrap;
-        
-        justify-content: center;
-        align-items: center;   
+  main .blockPadre .blockHijo .imagePNG img {
+    width: 28rem;
+    height: 22rem;
+  }
 
-        width: auto;
-        height: auto;
-        gap: 12rem;
-    }
+  main .blockPadre .blockHijo .imagePNG .debiSuponerlo:hover {
+    transform: skew(10deg, -10deg) scale(0.8);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+  }
 
-    .gifts .enlacesGifts{
-        gap: 1.75rem;    
-    }
-    
+  main .blockPadre .blockHijo .imagePNG .disco4:hover {
+    transform: skew(-10deg, 10deg) scale(0.8);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+  }
+
+  main .blockPadre .blockHijo .imagePNG .salirConVida:hover {
+    transform: skew(10deg, -10deg) scale(0.8);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+  }
+
+  main .blockPadre .blockHijo .imagePNG .juanes506:hover {
+    transform: skew(-10deg, 10deg) scale(0.8);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+  }
+
+  main .blockPadre .blockHijo .imagePNG .pngCuatro img {
+    box-shadow: 1rem 1rem 7.5px rgba(128, 0, 128, 0.627), -1rem -1rem 7.5px rgba(128, 128, 128, 0.753);
+  }
+
+  main .blockPadre .blockHijo .imagePNG .pngUno img {
+    box-shadow: 1rem -1rem 7.5px lightblue, -1rem 1rem 7.5px burlywood;
+  }
+
+  main .blockPadre .blockHijo .imagePNG .pngDos img {
+    box-shadow: 1rem 1rem 7.5px rgba(226, 90, 90, 0.822), -1rem -1rem 7.5px greenyellow;
+  }
+
+  main .blockPadre .blockHijo .imagePNG .pngTres img {
+    box-shadow: -1rem 1rem 7.5px rgba(56, 55, 55, 0.901), 1rem -1rem 7.5px #c5975f;
+  }
+
+  main .blockPadre .blockHijo .imageInfo {
+    margin-block-end: 0rem;
+  }
+
+  main .blockPadre .blockHijo .imageInfo div {
+    width: 28rem;
+    height: 22rem;
+    gap: 0.9rem;
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    background-color: aliceblue;
+    margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+    border: #1b3039 solid 0.75px;
+  }
+
+  main .blockPadre .uno {
+    flex-direction: row-reverse;
+  }
+
+  main .blockPadre .tres {
+    flex-direction: row-reverse;
+  }
+
+  footer .redesSocialesGifts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    gap: 12rem;
     /* enlaces */
-    .rs .enlacesRedes{
-        gap: 3.75rem;    
-    }   
+  }
+
+  footer .redesSocialesGifts .gifts .enlacesGifts {
+    gap: 1.75rem;
+  }
+
+  footer .redesSocialesGifts .rs .enlacesRedes {
+    gap: 3.75rem;
+  }
 }
 
 /* mq de escritorio  2*/
-@media screen and (min-width: 1140px){ 
-    .blockPadre{
-        gap: 1rem;
-    }   
-        
-    /* Bloques - Hijos */
-    .blockHijo{
-        gap: 3.75rem;
-    }    
+@media screen and (min-width: 1140px) {
+  main .blockPadre {
+    gap: 1rem;
+  }
 
-    .imagePNG img{
-        width: 35rem;
-        height: 22rem;
-    }
-
+  main .blockPadre .blockHijo {
+    gap: 3.75rem;
     /* contenedor de info*/
-    .imageInfo div{
-        width: 35rem;
-        height: 22rem;
-        gap: 1.5rem;
+  }
 
-        padding: 1rem 3.25rem;
-    }
+  main .blockPadre .blockHijo .imagePNG img {
+    width: 35rem;
+    height: 22rem;
+  }
+
+  main .blockPadre .blockHijo .imageInfo div {
+    width: 35rem;
+    height: 22rem;
+    gap: 1.5rem;
+    padding: 1rem 3.25rem;
+  }
 }
-
 
 /* BANDA */
-.BANDA{
-    height: auto;
-    width: auto;
-    background-image: url("../img/fondo_banda.jpg");
-    background-position: center;
-
-    color: aliceblue;
-
-    display: flex;
-    flex-flow: column nowrap;   
-    gap: 2rem;
-}
-
-
-/* título - main*/
-.blockPadreB{   
-    /* centro todo el bloque de texto */
-    max-width: 1210px; 
-    margin: 0 auto;
-
-    /* Desenfoque */
-    backdrop-filter: blur(0.2rem);
-}   
-
-.blockHijoB .content{
-    display: flex;
-    flex-flow: column nowrap;
-    
-    padding-inline-start: 1rem;
-    padding-inline-end: 1rem;
-}
-
-
-.content .biografia{
-    height: auto;
-    width: auto;
-    color: whitesmoke;
-    
-    display: flex;
-    flex-flow: row wrap;
-    justify-items: center;
-    align-content: center;
-    
-}
-
-/* Título de la BANDA */
-.biografia .tittleBanda{
-    height: auto;
-    width: auto;
-    
-    display: flex;
-    flex-flow: row wrap;
-
-    font-size: 4.5rem;
-    font-weight: bolder;
-}
-
-.biografia .tittleBanda{
-    transition: 0.3s;
-}
-
-.biografia .tittleBanda:hover{
-    color: red;
-    transform: scale(0.9);
-    transition: 0.2s;
-}
-
-.biografia .contentBiografia{
-    height: auto;
-    width: auto;
-
-    background-color: rgba(5, 5, 5, 0.782);
-    padding: 1.75rem 1rem 1.75rem 1rem;
-    letter-spacing: 0rem;
-    word-spacing: 0.25rem;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 1rem;
-    
-    padding-inline-start: 0.5rem;
-    padding-inline-end: 0.5rem;
-}
-
-.contentBiografia p{
-    height: auto;
-    width: auto;
-
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 0.9rem;
-}
-
-
-/* Contenedor de Integrantes */
-
-
-.integrantesDeBanda{
-    color: whitesmoke;
-
-    width: 100%;
-    height: 144rem;
-
-    list-style: none;
-
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-/* Reseteo por Bootstrap */
-.contentFotos .integrantesDeBanda{
-    padding-left: 0rem;
-    margin-bottom: 0rem;
-}
-
-/* Integrantes */
-.integranteUno{
-    background: url(https://arritmo.es/wp-content/uploads/2022/09/DSC_9502-1.jpg) center no-repeat;
-
-    background-size: cover;
-}
-
-.integranteDos{
-    background: url(https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/NZLDD5VFBRLDTCQLYSVVX4NAVY.jpg)center no-repeat;
-
-    background-size: cover;
-}
-.integranteTres{
-    background: url(https://i.pinimg.com/736x/35/4e/56/354e56def4d962b41334eef28633cf52.jpg)
-    center no-repeat;
-
-    background-size: cover;
-}
-.integranteCuatro{
-    background: url(https://conciertosperu.com.pe/wp-content/uploads/2022/12/DSC7816-scaled.jpg)center no-repeat;
-    background-size: cover;
-}
-
-/* Tamaño de cada integrante */
-.integrantesDeBanda li{
-    width: 100%;
-    position: relative;
-    height: 36rem;
-}
-/* Información de cada integrante superpuesta */
-.integranteInfo{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-}
-
-.contentFotos .integrantesDeBanda .integranteInfo{
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    bottom: 0;
-    padding: 2.25rem;
-    background-color: rgba(10,10,10,.8);
-    z-index: 2;
-}
-.nombre{
-    text-transform: uppercase;
-    padding-bottom: 1rem;
-    font-weight: bold;
-    font-size: larger;
-}
-.integranteInfo em{   
-    display: block;
-}
-
-
-
 /* mq tablet */
-@media screen and (min-width: 800px){ 
-    .biografia{        
-        padding-inline-start: 3.5rem;
-        padding-inline-end: 3.5rem;
-    }
+@media screen and (min-width: 800px) {
+  .BANDA .blockPadreB .blockHijoB .content .biografia {
+    padding-inline-start: 3.5rem;
+    padding-inline-end: 3.5rem;
+  }
 
-    .integrantesDeBanda{
-        width: auto;
-        height: auto;
-
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        align-items: center;
-    }
+  .BANDA .contentFotos .integrantesDeBanda {
+    width: auto;
+    height: auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+  }
 }
 
 /* mq escritorio */
-@media screen and (min-width: 1024px){   
-    .biografia{        
-        padding-inline-start: 7.5rem;
-        padding-inline-end: 7.5rem;
-    }
+@media screen and (min-width: 1024px) {
+  .BANDA .blockPadreB .blockHijoB .content .biografia {
+    padding-inline-start: 7.5rem;
+    padding-inline-end: 7.5rem;
+  }
 }
-
-
 
 /* CONCIERTOS */
-/* Bloque - Padre Conciertos*/
-.blockPadreC div{
-    height: auto;
-    width: auto;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content:center;
-    align-items: center; /* afecta a todos */
-    align-content: center;
-    justify-items: center;
-    
-    text-align: center;
-
-    list-style: none;
-    text-decoration: none;
-    gap: 1.5rem;
-}
-
-/* CONTENEDOR NO-EVENTOS */
-.blockHijoC .noEventos {
-    height: auto;
-    width: auto;
-
-    padding: 0.25rem 1rem 0.25rem 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content:center;
-    align-items: center; 
-    align-content: center;
-    justify-items: center;
-
-    gap: 1.75rem;
-}
-
-/* CONTENEDOR DE IMAGEN-CONCIERTOS*/
-.noEventos .imagePNGC{
-    width: auto;
-    height: 15rem;
-
-    overflow: hidden;
-    object-fit: cover;
-
-    border-radius: 6px;
-    box-shadow: 15px 10px 15px rgba(0, 0, 0, 50);
-    cursor:grab;
-}
-
-.noEventos .imagePNGC img{  
-    width: 100%;
-    height: 16rem; 
-}
-
-/* Animaciones y transiciones */
-.imagePNGC{
-    transition: 0.6s;
-}
-
-.noEventos .imagePNGC img:hover{
-    cursor:grab;
-}
-
-.imagePNGC:hover{
-    filter: contrast(110%);
-    box-shadow: -15px -10px 15px rgba(0, 0, 0, 50);
-    transition: 0.4s;
-    transform: scale(0.8);
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-}
-
-/* CONTENEDOR DE TEXTO ÍCONO-MUNDO */
-.noEventos .textoMundo, .presentation .textoShop{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.noEventos .textoMundo .texto, .presentation .textoShop .texto{
-    border: #1b3039 solid 0.75px;
-    box-shadow: 0 0 25px #1b3039;
-
-    background-color: aliceblue;
-    margin: 0.05rem 0.05rem 0.05rem 0.05rem;
-}
-
-.noEventos .textoMundo .texto h2, .presentation .textoShop .texto h2{
-    transition: 0.35s;
-    font-size: 30px;
-    margin: 0.5rem;
-}
-
-.noEventos .textoMundo .texto h2:hover, .presentation .textoShop .texto h2:hover{
-    transition: 0.5s;
-    transform: scale(0.8);
-    color:red
-}
-
-/* CONTENEDOR GIRA */
-.noEventos .gira{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.noEventos .gira h3{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 25px;
-}
-
-.noEventos .gira{
-    margin: 1.5rem 0rem 0rem 0rem;
-}
-
-/* CONTENEDOR DE ÍCONO - MUNDO/TIENDA */
-.noEventos .imageMundo, .presentation .imageShop{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ícono mundo */
-#iconoMundo, #iconoShop{
-    width: auto;
-    height: 3.25rem;
-    object-fit: cover;
-    transition: 0.3s;
-}
-
-#iconoMundo:hover{
-    cursor: grab;
-    transition: 0.4;
-    transform: rotate(360deg) scale(1.3);
-}
-
-/* CONTENEDOR SÍ-EVENTOS */
-.blockHijoC .siEventos, .blockHijoT .content {    
-    height: auto;
-    width: auto;
-
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content:center;
-    align-items: center; /* afecta a todos */
-    align-content: center;
-    justify-items: center;
-    
-    gap: 1.5rem; /* igual 1*/
-}
-
-.blockHijoC .siEventos{
-    padding-top: 3.25rem;
-    padding-bottom: 3rem;
-}
-
-.siEventos .eventos2023, .content .contentBlock{
-    width: 100%;
-    height: auto;
-    
-    display: flex;
-    flex-flow: column nowrap;
-    
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-    align-content: space-around;
-
-    gap: 1.25rem; /* separa eventos*/
-}
-
-.siEventos .eventos2023{   
-    border-top :0.25px solid #00000064;
-    padding-top: 1.5rem; /* igual 1*/
-}
-
-
-.eventos2023 p{
-    text-transform: uppercase;
-    font-size: 17.5px;
-}
-
-.siEventos .eventos2023 .placeDate{
-    display: flex;
-    flex-flow: column nowrap;
-
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-    align-content: space-around;
-    
-    gap: 0.25rem; /* separa la date y place */
-}
-
-.eventos2023 .placeDate strong{
-    display: flex;
-    gap: 0.4rem;
-}
-
-
-.siEventos .eventos2023 .comprar{
-    background-color: black;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-.eventos2023 .comprar{
-    width: auto;
-
-    font-weight: bold;
-    color: whitesmoke;
-    border: 1.5px solid black;
-    background-color: black;
-    list-style: none;
-}
-
-.comprar a{
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.comprar a p{
-    transition: 0.2s;
-}
-
-.comprar a p:hover{
-    transition: 0.25s;
-    transform: scale(1.1);
-    color: crimson;
-}
-
-.comprar p{
-    margin: 0.25rem 0.75rem;
-    padding: 0.25rem;
-}
-
-
 /* mq tablet */
-@media screen and (min-width: 750px){ 
-    #iconoMundo{
-        height: 3.75rem;
-    }
+@media screen and (min-width: 750px) {
+  main .blockPadreC .blockHijoC .noEventos .imagePNGC {
+    height: 19rem;
+  }
 
-    .noEventos .imagePNGC{
-        height: 19rem; 
-    }
+  main .blockPadreC .blockHijoC .noEventos .imagePNGC img {
+    height: 20rem;
+  }
 
-    .noEventos .imagePNGC img{
-        height: 20rem; 
-    }
+  main .blockPadreC .blockHijoC .noEventos .textoIcono .texto h2 {
+    font-size: 35px;
+  }
 
-    .noEventos .textoMundo .texto h2{
-        font-size: 35px;
-    }
+  main .blockPadreC .blockHijoC .noEventos .gira h3 {
+    font-size: 30px;
+  }
 
-    .noEventos .gira h3{
-        font-size: 30px;
-    }
+  main .blockPadreC .blockHijoC .noEventos .imageMundo #iconoMundo {
+    height: 3.75rem;
+  }
 
-    .blockPadreC .siEventos {        
-        gap: 3.5rem; /* igual 1*/
-    }
-    
-    .siEventos .eventos2023{
-        width: 500px;
-        gap: 1.75rem; /* separa eventos*/
-    
-        padding-top: 3.5rem; /* igual 1*/
-    }
+  main .blockPadreC .blockHijoC .siEventos .eventos2023 {
+    width: 500px;
+    gap: 1.75rem;
+    padding-top: 3.5rem;
+  }
 
-    .eventos2023 p{
-        font-size: 20.5px;
-    }
+  main .blockPadreC .blockHijoC .siEventos .eventos2023 p {
+    font-size: 20.5px;
+  }
 
-    .siEventos .eventos2023 .placeDate{        
-        gap: 0.4rem; /* separa la date y place */
-    }
-
-    .eventos2023 .placeDate strong{
-        gap: 0.75rem;
-    }
+  main .blockPadreC .imageInfoM {
+    padding: 3rem;
+  }
 }
 
 /* mq escritorio */
-@media screen and (min-width: 1024px){
-    #iconoMundo{
-        height: 4.25rem;
-    }
+@media screen and (min-width: 1024px) {
+  main .blockPadreC .blockHijoC .noEventos .imagePNGC {
+    height: 23rem;
+  }
 
-    #iconoMundo:hover{
-        transition: 0.4;
-        transform: rotate(360deg) scale(1.2);
-    }
-    
-    .noEventos .imagePNGC{
-        height: 23rem; 
-    }
+  main .blockPadreC .blockHijoC .noEventos .imagePNGC img {
+    height: 24rem;
+  }
 
-    .noEventos .imagePNGC img{
-        height: 24rem; 
-    }
+  main .blockPadreC .blockHijoC .noEventos .textoIcono .texto h2 {
+    font-size: 35px;
+  }
 
-    .eventos p{
-        font-size: 22.5px;
-    }
-    
+  main .blockPadreC .blockHijoC .noEventos .gira h3 {
+    font-size: 30px;
+  }
 
-    .blockPadreC .siEventos {        
-        gap: 3.5rem; 
-    }
+  main .blockPadreC .blockHijoC .noEventos .imageMundo #iconoMundo {
+    height: 4.25rem;
+  }
 
-    .siEventos .eventos2023{
-        width: 1000px;
-    
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-        align-content: center;
-    
-        gap: 1.25rem; /* separa eventos*/
-        padding-top: 3.5rem; /* igual 1*/
-    }
+  main .blockPadreC .blockHijoC .noEventos .imageMundo #iconoMundo:hover {
+    transition: 0.4;
+    transform: rotate(360deg) scale(1.2);
+  }
 
-    .siEventos .eventos2023 .placeDate{
-        flex-flow: row nowrap;
-    
-        justify-content: center;
-        
-        gap: 0.25rem; /* separa la date y place */
-    }
-    
-    .eventos2023 .placeDate strong{
-        gap: 0.75rem;
-        border-right: 1px solid black;
-        padding-right: 1rem;
-    }
-    
+  main .blockPadreC .blockHijoC .siEventos {
+    gap: 3.5rem;
+    /* igual 1*/
+  }
+
+  main .blockPadreC .blockHijoC .siEventos .eventos2023 {
+    width: 1000px;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    gap: 1.25rem;
+    /* separa eventos*/
+    padding-top: 3.5rem;
+    /* igual 1*/
+  }
+
+  main .blockPadreC .blockHijoC .siEventos .eventos2023 .placeDate {
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 0.25rem;
+    /* separa la date y place */
+  }
+
+  main .blockPadreC .blockHijoC .siEventos .eventos2023 .placeDate p {
+    font-size: 22.5px;
+    margin-inline-start: 0.4rem;
+    margin-inline-end: 0.4rem;
+  }
+
+  main .blockPadreC .blockHijoC .siEventos .eventos2023 .placeDate p strong {
+    gap: 0.75rem;
+    border-right: 1px solid black;
+    padding-right: 1rem;
+  }
 }
-
-
-
 
 /* TIENDA */
-.blockPadreT div{
-    height: auto;
-    width: auto;
+/* mq tablet */
+@media screen and (min-width: 750px) {
+  main .blockPadreT .blockHijoT .presentation .imagePNGT {
+    height: 19rem;
+  }
 
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content:center;
-    align-items: center; /* afecta a todos */
-    align-content: center;
-    justify-items: center;
-    
-    text-align: center;
+  main .blockPadreT .blockHijoT .presentation .imagePNGT img {
+    height: 20rem;
+  }
 
-    list-style: none;
-    text-decoration: none;
-    gap: 1rem;
+  main .blockPadreT .blockHijoT .presentation .textoIcono .texto h2 {
+    font-size: 35px;
+  }
+
+  main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop {
+    height: 3.75rem;
+  }
+
+  main .blockPadreT .blockHijoT .presentation .imageInfoM {
+    padding: 3rem;
+    margin-block-end: 1.5rem;
+  }
+
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg {
+    height: 26.5rem;
+  }
+
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg img {
+    width: 32.5rem;
+    height: 28rem;
+  }
+
+  main .blockPadreT .blockHijoT .content .imageInfoM {
+    padding: 3rem;
+  }
 }
 
-/* CONTENEDOR DE PRESENTACIÓN / TIENDA */
-.blockHijoT .presentation {
+/* mq escritorio 1*/
+@media screen and (min-width: 1024px) {
+  main .blockPadreT .blockHijoT .presentation {
     height: auto;
     width: auto;
-
     padding: 0.25rem 1rem 0.25rem 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-
     display: flex;
     flex-flow: column nowrap;
-    justify-content:center;
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     align-content: center;
     justify-items: center;
-
     gap: 1.5rem;
-}
+  }
 
-/* CONTENEDOR DE IMAGEN-TIENDA*/
-.presentation .imagePNGT{
-    width: auto;
-    height: 15rem;
+  main .blockPadreT .blockHijoT .presentation .imagePNGT {
+    height: 24rem;
+  }
 
-    overflow: hidden;
-    object-fit: cover;
+  main .blockPadreT .blockHijoT .presentation .imagePNGT img {
+    height: 25rem;
+  }
 
-    border-radius: 6px;
-    box-shadow: 15px 10px 15px rgba(0, 0, 0, 50);
-    cursor:grab;
-}
+  main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop {
+    height: 4.25rem;
+  }
 
-.presentation .imagePNGT img{  
-    width: 100%;
-    height: 16rem; 
-}
-
-/* Animaciones y transiciones */
-.imagePNGT{
-    transition: 0.6s;
-}
-
-.presentation .imagePNGT img:hover{
-    cursor:grab;
-}
-
-.imagePNGT:hover{
-    box-shadow: -15px -10px 15px rgba(0, 0, 0, 50);
-    transition: 0.4s;
-    transform: scale(0.85);
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
-}
-
-
-/* ícono shop */
-#iconoShop:hover{
+  main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop:hover {
     transition: 0.4;
-    transform: scale(1.3);
-    cursor:grab;
-}
+    transform: scale(1.2);
+  }
 
-.content .contentBlock .contentLink{
+  main .blockPadreT .blockHijoT .content {
+    gap: 3.5rem;
+  }
 
-    text-decoration: none;
-    list-style: none;
+  main .blockPadreT .blockHijoT .content .contentAllBlock {
+    flex-flow: row nowrap;
+    gap: 7rem;
+  }
 
-    display: flex;
-    flex-flow: column nowrap;
-
-    justify-content: space-around;
-    align-items: center;
-    justify-items: center;
-    align-content: space-around;
-    
-    gap: 0.25rem;
-}
-
-.contentLink a{
-    text-decoration: none;
-}
-
-.contentLink h2{
-    font-size: 25px;
-}
-
-.contentLink a h2{
-    color:rgb(29, 29, 97);
-    border-bottom: 1.5px solid rgb(29, 29, 97);
-    transition: 0.2s;
-}
-
-.contentLink a h2:hover{
-    font-weight: bolder;
-    color:rgba(0, 0, 255, 0.8);
-    border-bottom: 3.5px solid rgba(0, 0, 255, 0.8);
-    transform: scale(1.1);
-    transition: 0.15s;
-}
-
-.content .containImg{
-    position: relative;
-    width: auto;
-    height: 19.5rem;
-    overflow: hidden;
-    object-fit: cover;
-
-    border-radius: 6px;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 50);
-}
-
-
-.content .containImg img{  
-    width: 100%;
-    height: 20rem; 
-    transition: 0.5s ease-out;
-    object-fit: cover;
-}
-
-.content .containImg .capa{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    width: 100%;
-    height: 100%;
-
-    color: whitesmoke;
-    background-color: rgba(0,103,123,0.7);
-    transition: 0.5s;
-
-    opacity: 0;
-    visibility: hidden;
-}
-
-.content .containImg:hover .capa{
-    opacity: 1;
-    visibility: visible;
-    cursor:grab;
-}
-
-.content .containImg:hover .capa h3{
-    margin-top: 100px;
-    margin-bottom: 15px;
-}
-
-.content .containImg .capa h3{
-    transition: 0.4s;
-    font-weight: 400px;
-    margin-bottom: 120px;
-    margin-top: 30px;
-}
-
-.content .containImg .capa p{
-    font-size: 20px;
-    word-spacing: 0.25rem;
-    
-    width: 100%;
-    max-width: 180px;
-    margin: auto;
-}
-
-.content .containImg .capa p{
-    margin-top: 5px;
-    margin-bottom: 75px;
-    transition: 0.4s;
-}
-
-
-.content .containImg:hover img{  
-    transform: scale(1.3);
-}
-
-
-.content .general{
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLink .imageInfoM {
     display: none;
-}
+  }
 
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg {
+    height: 24.5rem;
+  }
 
-/* mq tablet */
-@media screen and (min-width: 750px){ 
-    #iconoShop{
-        height: 3.75rem;
-    }
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg img {
+    width: auto;
+    height: 26rem;
+  }
 
-    /* CONTENEDOR DE IMAGEN-TIENDA*/
-    .presentation .imagePNGT{
-        height: 19rem;
-    }
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .imageInfoM {
+    display: none;
+  }
 
-    .presentation .imagePNGT img{
-        height: 20rem; 
-    }
+  main .blockPadreT .blockHijoT .content .general {
+    display: block;
+  }
 
-    .presentation .textoShop .texto h2{
-        font-size: 35px;
-    }
-
-    .content .containImg{
-        height: 24.5rem;
-    }
-
-    .content .containImg img{  
-        width: 35rem;
-        height: 25rem; 
-    }
-
-    .content .general{
-        display: none;
-    }
-}
-
-
-/* mq escritorio 1*/
-@media screen and (min-width: 1024px){ 
-    #iconoShop{
-        height: 4.25rem;
-    }
-
-    #iconoShop:hover{
-        transition: 0.4;
-        transform: scale(1.2);
-    }
-    
-    /* CONTENEDOR DE IMAGEN-TIENDA*/
-    .presentation .imagePNGT{
-        height: 24rem;
-    }
-    .presentation .imagePNGT img{
-        height: 25rem; 
-    }
-
-    .blockPadreT .content {        
-        gap: 3.5rem; 
-    }
-    
-    .blockHijoT .content .contentAllBlock{
-        flex-flow: row nowrap;
-        gap:7rem;
-    }  
-
-    .content .containImg img{  
-        width: auto;
-        height: 26rem; 
-    }
-
-    .content .contentAllBlock .contentBlock .imageInfoM{
-        display: none;
-    }
-
-    .content .general{
-        display: block;
-    }
+  main .blockPadreT .blockHijoT .imageInfoM {
+    margin-block-end: 1.5rem;
+    padding: 1rem;
+  }
 }
 
 /* mq escritorio 2*/
-@media screen and (min-width: 1140px){
-    .blockHijoT .content .contentAllBlock{
-        flex-flow: row nowrap;
-        gap:7rem;
-    }  
+@media screen and (min-width: 1140px) {
+  main .blockPadreT .blockHijoT .content .contentAllBlock {
+    flex-flow: row nowrap;
+    gap: 7rem;
+  }
 
-    .content .containImg{
-        height: 29.5rem;
-    }
-    
-    
-    .content .containImg img{  
-        width: 35rem;
-        height: 30rem; 
-    }
-    
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg {
+    height: 29.5rem;
+  }
 
-    .blockHijoT .content .content7AllBlock{
-        gap:25rem;
-    }
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg img {
+    width: 32.5rem;
+    height: 30rem;
+  }
 }
-
 
 /* MÚSICA */
-
-.slider{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    justify-items: center;
-
-    width: auto;
-    height: 300px;
-    overflow: hidden;
-}
-
-.slider ul{
-    display: flex;
-    animation: cambio 14s infinite alternate linear;
-    width: 400%;
-    height: auto;
-
-    /* Reseteo Bootstrap */
-    padding-left: 0rem;
-}
-
-.slider li{
-    width: 100%;
-    list-style: none;
-}
-
-.slider img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: .8;
-    filter: grayscale();
-    transition: 0.4s;
-}
-
-
-.slider img:hover{
-    transform: scale(1.1);
-    opacity: 2;
-    filter: contrast(125%);
-    transition: 0.5s;
-    cursor: grab;
-}
-
-
-/* Animación prolongada de presentación Música */
-@keyframes cambio{
-    0%{margin-left: 0;}
-    20%{margin-left: 0;}
-
-    25%{margin-left: -100%;}
-    45%{margin-left: -100%;}
-
-    50%{margin-left: -200%;}
-    70%{margin-left: -200%;}
-
-    75%{margin-left: -300%;}
-    100%{margin-left: -300%;}
-}
-
-/* Escondemos el slide en la versión mobile */
-.slider{
-    display: none;
-}
-/* ---------------------------------------- */
-
-.blockPadreM{
-    display: flex;
-    flex-flow: column nowrap;
-
-    justify-content: center;
-    align-items: center;
-    padding-top: 1.5rem;
-    padding-bottom: 4rem;
-}
-
-.blockPadreM .blockAllM{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.blockAllM .blockHijoM{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 74% 24%;
-
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-    gap: 0.25rem;
-}
-
-
-/* Contenedor imagen de cada disco */
-.blockHijoM .imageBlock{
-    width: 10rem;
-    height: auto;
-    object-fit: cover; 
-
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-}
-
-/* Imagen de cada disco */
-.blockHijoM .imageBlock img{
-    border-radius: 0.75rem;
-    width:15.5rem;
-    height: auto;
-    object-fit: cover;    
-
-    opacity: .8;
-    filter: blur(2px);
-    transition: 0.2s;
-}
-
-/* Animaciones de cada disco */
-.blockHijoM .imageBlock  img:hover{
-    cursor:grab;
-    width: 215px;
-    border-radius: 5rem;
-    border: 0.15rem groove black;
-    opacity: 1;
-    filter: contrast(120%);
-    transition: 0.4s;
-}
-
-/* Contenedor de enlaces a Listas de Youtube/Spotify */
-.blockHijoM .imageBlock .contentYS{
-    display: flex;
-    flex-flow: row nowrap;
-    
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-}
-
-.contentYS a{
-    text-decoration: none;
-}
-
-.contentYS a h2{
-    width: auto;
-    height: auto;
-    padding: 0.25rem;
-    margin: 0.1rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-content: center;
-
-    color: black;
-    text-align: center;
-}
-
-.contentYS a .youtubeDisco, .spotifyDisco{
-    margin: 0.5rem;
-    transition: 0.2s;
-}
-
-.contentYS a .youtubeDisco:hover{
-    color: crimson;
-    transform: scale(1.1);
-    transition: 0.2s;
-    filter: contrast(120%);
-}
-
-.contentYS a .spotifyDisco:hover{
-    color:chartreuse;
-    transform: scale(1.1);
-    transition: 0.2s;
-    filter: contrast(120%);
-}
-
-
-
 /* mq teléfono / adaptación 2 */
-@media screen and (min-width: 400px){     
-    /* Imagen de cada disco */
-    .blockHijoM .imageBlock img{
-        width:22.5rem;
-    }
-    /* Animaciones de cada disco */
-    .blockHijoM .imageBlock  img:hover{
-        width: 300px;
-    }
-}
+@media screen and (min-width: 400px) {
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img {
+    width: 22.5rem;
+  }
 
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
+    width: 300px;
+  }
+}
 
 /* mq tablet */
-@media screen and (min-width: 750px){     
-    .slider{
-        display: flex;
-    }
+@media screen and (min-width: 750px) {
+  main .slider {
+    display: flex;
+  }
 
-    /* Contenedor imagen de cada disco */
-    .blockHijoM .imageBlock{
-        width: 10rem;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock {
+    width: 10rem;
+  }
 
-    /* Imagen de cada disco */
-    .blockHijoM .imageBlock img{
-        width:27.5rem;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img {
+    width: 27.5rem;
+  }
 
-    /* Animaciones de cada disco */
-    .blockHijoM .imageBlock  img:hover{
-        width: 400px;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
+    width: 400px;
+  }
+
+  main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM {
+    padding: 2rem;
+  }
 }
 
 /* mq escritorio 1*/
-@media screen and (min-width: 1024px){ 
-    .slider{
-        height: 525px;
-    }
+@media screen and (min-width: 1024px) {
+  main .slider {
+    height: 525px;
+  }
 
-    .blockPadreM{
-        padding-top: 0.5rem;
-        padding-bottom: 3rem;
-    }
-    
-    .blockPadreM .blockAllM{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50% 50%;
+  main .blockPadreM {
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+  }
 
-        gap: 0rem;
-    }
+  main .blockPadreM .blockAllM {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    gap: 0rem;
+  }
 
-    .contentYS a .youtubeDisco, .spotifyDisco{
-        filter: blur(1px);
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock {
+    width: 10rem;
+    filter: blur(1px);
+  }
 
-    .contentYS a .youtubeDisco:hover{
-        border-style: solid;
-    }
-    
-    .contentYS a .spotifyDisco:hover{
-        border-style: solid;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock:hover {
+    filter: contrast(120%);
+  }
 
-    /* Contenedor imagen de cada disco */
-    .blockHijoM .imageBlock{
-        width: 10rem;
-        filter: blur(1px);
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img {
+    width: 25rem;
+    filter: sepia(75%);
+  }
 
-    /* Imagen de cada disco */
-    .blockHijoM .imageBlock img{
-        width:25rem;
-        filter: sepia(75%);
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
+    width: 350px;
+  }
 
-    /* Animaciones de cada disco */
-    .blockHijoM .imageBlock:hover{
-        filter: contrast(120%);
-    }
+  main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco {
+    filter: blur(1px);
+  }
 
-    .blockHijoM .imageBlock  img:hover{
-        width: 400px;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover {
+    border-style: solid;
+  }
+
+  main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco {
+    filter: blur(1px);
+  }
+
+  main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
+    border-style: solid;
+  }
 }
 
 /* mq escritorio 2*/
-@media screen and (min-width: 1140px){
-    .blockPadreM .blockAllM{
-        gap: 0rem;
-    }
+@media screen and (min-width: 1140px) {
+  main .blockPadreM .blockAllM {
+    gap: 0rem;
+  }
 
-    /* Contenedor imagen de cada disco */
-    .blockHijoM .imageBlock{
-        width: 10rem;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock {
+    width: 10rem;
+  }
 
-    /* Imagen de cada disco */
-    .blockHijoM .imageBlock img{
-        width:30rem;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img {
+    width: 27.5rem;
+  }
 
-    .blockHijoM .imageBlock  img:hover{
-        width: 425px;
-    }
+  main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
+    width: 400px;
+  }
 }
-
-/* CURIOSIDADES */
-
-
-
-
 
 /* GALERÍA */
-.GALERIA .blockPadreG .blockAllG .blockHijoG div img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Presentación de la GALERÍA */
-section{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-
-    width: auto;
-    height: 400px;
-}
-
-section img{
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .95;
-    transition: 0.5s;
-}
-
-section img:hover{
-    cursor:grab;
-    width: 175px;
-    opacity: 1;
-    filter: contrast(110%);
-}
-
-/* No se muestra la presentación de GALERÍA */
-.GALERIA section{
-    display: none;
-}
-
-
-.blockPadreG{
-    height: 100%;
-    width: auto;
-    display: flex;
-    flex-flow: column wrap;
-}
-
-.blockAllG{
-    height: 100%;
-    width: auto;
-
-    display: flex;
-    flex-flow: column nowrap;
-
-    align-items: center;
-}
-
-.textoGaleria{
-    padding: 2rem 0rem 0.5rem 0rem;
-    height: auto;
-    display: flex;
-    flex-flow: column nowrap;
-
-    justify-content: center;
-    align-items: center;
-}
-
-.textoGaleria .h2_galeria, .h3_galeria{
-    width: auto;
-    font-size: 22.5px;
-    text-align: center;
-
-    transition: 0.2s;
-    border-bottom: 1.5px dashed black;
-}
-
-.textoGaleria .h3_galeria{ 
-    font-size: 20px;
-}
-
-.textoGaleria .h2_galeria:hover, .h3_galeria:hover{
-    color: crimson;
-    transform: scale(1.1);
-    transition: 0.3s;
-
-    border-bottom: 3px solid crimson;
-}
-
-/* Hijo - Integrantes */
-.blockHijoG{
-    height: 100%;
-    display: grid; 
-}
-
-.blockAllG .integrantes{
-    height: 195vh;
-    margin: 0rem 2rem 2rem 2rem;
-    gap: 1.25rem;
-    padding-bottom: 1.5rem;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: 23.5% 26% 23.5% 26%;
-}
-
-.integrantes, .img-uno, .img-dos, .img-tres, .img-cuatro, .img-cinco, .img-seis, .img-siete{
-    width: 100%;
-    height: auto;
-
-    transition: 0.5s;
-}
-
-.integrantes, .img-uno img, .img-dos img, .img-tres img, .img-cuatro img, .img-cinco img, .img-seis img, .img-siete img{
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-
-    opacity: .8;
-    transition: 0.2s;
-    filter: grayscale(100%);
-    
-    border-radius: 10px;
-}
-
-.integrantes, .img-uno img:hover, .img-dos img:hover, .img-tres img:hover, .img-cuatro img:hover, .img-cinco img:hover, .img-seis img:hover, .img-siete img:hover{
-    cursor:grab;
-    opacity: 1;
-    filter: contrast(110%);
-    transform: scale(0.975);
-    transition: 0.3s;
-} 
-
-/* Ítems de main - img */
-.blockAllG .integrantes .img-tres, .img-cuatro, .img-siete{
-    display: none; /* No se muestra la imagen */
-}
-
 /* mq de tablet */
-@media screen and (min-width: 600px){
-    .GALERIA section{
-        display: flex;
-    };
+@media screen and (min-width: 600px) {
+  .GALERIA section {
+    display: flex;
+  }
 
-    .textoGaleria h2, h3{
-        font-size: 24.5px;
-    }
-    
-    .textoGaleria h3{ 
-        font-size: 22px;
-    }
+  .GALERIA .blockPadreG .blockAllG .textoGaleria .hGaleria {
+    font-size: 24.5px;
+  }
 
-    .blockAllG .integrantes .img-siete{
-        display: block;
-    }
-    
-    .blockAllG .integrantes{    
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3,33%);
-    }
-    .img-siete{
-        grid-column: span 2;
-    }
+  .GALERIA .blockPadreG .blockAllG .textoGaleria #h3Galeria {
+    font-size: 22px;
+  }
+
+  .GALERIA .blockPadreG .blockAllG .imageInfoM {
+    padding: 3rem;
+  }
+
+  .GALERIA .blockPadreG .blockAllG .integrantes {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 33%);
+    margin-bottom: 0rem;
+    padding-bottom: 4rem;
+  }
+
+  .GALERIA .blockPadreG .blockAllG .integrantes #img-siete {
+    display: block;
+    grid-column: span 2;
+  }
 }
 
 /* mq de escritorio */
 @media screen and (min-width: 1024px) {
-    .textoGaleria h2, h3{
-        font-size: 26.5px;
-    }
-    
-    .textoGaleria h3{ 
-        font-size: 24px;
-    }
+  .GALERIA .blockPadreG .blockAllG .textoGaleria .hGaleria {
+    font-size: 26.5px;
+  }
 
-    .blockAllG .integrantes .img-tres, .img-cuatro{
-        display: block;
-    }
-    
-    .blockAllG .integrantes{    
-        grid-template-columns:
-        repeat(4,1fr);
-        grid-template-rows: 27% 27% 22% 22%;
-    }
+  .GALERIA .blockPadreG .blockAllG .textoGaleria #h3Galeria {
+    font-size: 24px;
+  }
 
-    .img-cuatro{
-        grid-column: span 2;
-    }
+  .GALERIA .blockPadreG .blockAllG .integrantes {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 27% 27% 22% 22%;
+  }
 
-    .img-tres{
-        grid-column: span 2;
-    }
+  .GALERIA .blockPadreG .blockAllG .integrantes #img-tres {
+    display: block;
+    grid-column: span 2;
+  }
 
-    .img-siete{
-        grid-column: span 4;
-        grid-row: span 2;
-    }
+  .GALERIA .blockPadreG .blockAllG .integrantes #img-cuatro {
+    display: block;
+    grid-column: span 2;
+  }
+
+  .GALERIA .blockPadreG .blockAllG .integrantes #img-siete {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
 }

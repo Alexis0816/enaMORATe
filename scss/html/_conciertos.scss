@@ -1,0 +1,249 @@
+main {
+    .blockPadreC {
+        div {
+            height: auto;
+            width: auto;
+
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center; // afecta a todos
+            align-content: center;
+            justify-items: center;
+
+            text-align: center;
+
+            list-style: none;
+            text-decoration: none;
+            gap: 1.5rem;
+        }
+
+        .blockHijoC {
+            // CONTENEDOR NO-EVENTOS 
+            .noEventos {
+                height: auto;
+                width: auto;
+
+                padding: 0.25rem 1rem 0.25rem 1rem;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                justify-items: center;
+
+                gap: 1.75rem;
+
+                // CONTENEDOR DE IMAGEN-CONCIERTOS
+                .imagePNGC {
+                    width: auto;
+                    height: 15rem;
+                    overflow: hidden; // la imagen no desborda del contenedor
+                    object-fit: cover; // Ocupa el tamaño de tal manera que podemos apreciar la imagen
+                    border-radius: 6px;
+                    box-shadow: 15px 10px 15px rgb(0, 0, 0);
+                    transition: 0.6s;
+                    cursor: grab;
+
+                    &:hover {
+                        filter: contrast(110%);
+                        box-shadow: -15px -10px 15px rgb(0, 0, 0);
+                        transition: 0.4s;
+                        transform: scale(0.8);
+                        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+                    }
+
+
+                    img {
+                        width: 100%;
+                        height: 16rem;
+
+                        &:hover {
+                            cursor: grab;
+                        }
+                    }
+                }
+                // CONTENEDOR DE TEXTO ÍCONO-MUNDO 
+                .textoIcono {
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    .texto {
+                        border: $color_nav solid 0.75px;
+                        box-shadow: 0 0 25px $color_nav;
+
+                        background-color: aliceblue;
+                        margin: 0.05rem 0.05rem 0.05rem 0.05rem;
+
+                        h2 {
+                            transition: 0.35s;
+                            font-size: 30px;
+                            margin: 0.5rem;
+
+                            &:hover {
+                                transition: 0.5s;
+                                transform: scale(0.8);
+                                color: red
+                            }
+                        }
+                    }
+
+                }
+
+                .gira {
+                    display: flex;
+                    flex-flow: row wrap;
+                    margin-top: 1.5rem;
+
+                    h3 {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        font-size: 25px;
+                    }
+                }
+
+                // CONTENEDOR DE ÍCONO - MUNDO/TIENDA
+                .imageMundo {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    // ícono mundo
+                    #iconoMundo {
+                        width: auto;
+                        height: 3.25rem;
+                        object-fit: cover;
+                        transition: 0.3s;
+
+                        &:hover {
+                            cursor: grab;
+                            transition: 0.4;
+                            transform: rotate(360deg) scale(1.3);
+                        }
+                    }
+                }
+            }
+            // CONTENEDOR SÍ-EVENTOS 
+            .siEventos {
+                height: auto;
+                width: auto;
+
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center; // afecta a todos
+                align-content: center;
+                justify-items: center;
+
+                gap: 1.5rem; // igual 1
+
+                //Solo para siEventos-Conciertos
+                padding-top: 3.25rem;
+                padding-bottom: 3rem;
+
+                .eventos2023 {
+                    width: 100%;
+                    height: auto;
+
+                    display: flex;
+                    flex-flow: column nowrap;
+
+                    justify-content: space-around;
+                    align-items: center;
+                    justify-items: center;
+                    align-content: space-around;
+
+                    gap: 1.25rem; /* separa eventos*/
+
+                    //Solo para eventos2023-Conciertos
+                    border-top: 0.25px solid $color_separa_conciertos;
+                    padding-top: 1.5rem; /* igual 1*/
+
+                    .placeDate {
+                        display: flex;
+                        flex-flow: column nowrap;
+
+                        justify-content: space-around;
+                        align-items: center;
+                        justify-items: center;
+                        align-content: space-around;
+
+                        gap: 0.25rem;
+                        /* separa date y place */
+
+                        p {
+                            text-transform: uppercase;
+                            font-size: 17.5px;
+
+                            strong {
+                                display: flex;
+                                gap: 0.4rem;
+                            }
+                        }
+                    }
+
+                    .comprar {
+                        background-color: black;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        width: auto;
+
+                        font-weight: bold;
+                        color: whitesmoke;
+                        border: 1.5px solid black;
+                        background-color: black;
+                        list-style: none;
+
+                        a {
+                            text-decoration: none;
+                            color: whitesmoke;
+
+                            p {
+                                transition: 0.2s;
+                                margin: 0.25rem 0.75rem;
+                                padding: 0.25rem;
+
+                                &:hover {
+                                    transition: 0.25s;
+                                    transform: scale(1.1);
+                                    color: $color_principal;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .imageInfoM{            
+            margin-block-end: 1.5rem;
+            padding: 1rem;
+            /* M de morat */
+            img{    
+                width: 100%;
+                height: 100%;
+            }
+
+            /* ícono de morat */
+            #amongText{
+                width: auto;
+                height: 2rem;
+                object-fit: cover;
+                transition: 0.3s;
+                
+                &:hover{
+                    transition: 0.4;
+                    transform: rotate(360deg) scale(1.5);
+                }
+            }
+        }
+    }
+}

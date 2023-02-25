@@ -1,0 +1,179 @@
+main {
+    .slider {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        justify-items: center;
+
+        width: auto;
+        height: 300px;
+        overflow: hidden;
+
+        display: none;
+
+        ul {
+            display: flex;
+            animation: cambio 12s infinite alternate linear;
+            width: 400%;
+            height: auto;
+
+            // Reseteo Bootstrap */
+            padding-left: 0rem;
+
+            li {
+                width: 100%;
+                list-style: none;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    opacity: .8;
+                    filter: grayscale(100%);
+                    transition: 0.4s;
+
+                    &:hover {
+                        transform: scale(1.05);
+                        opacity: 2;
+                        filter: contrast(125%);
+                        transition: 0.5s;
+                        cursor: grab;
+                    }
+                }
+            }
+        }
+    }
+
+    @import "../html/animacion/musica";
+
+    .blockPadreM {
+        display: flex;
+        flex-flow: column nowrap;
+
+        justify-content: center;
+        align-items: center;
+        padding-top: 1.5rem;
+        padding-bottom: 4rem;
+
+        .blockAllM {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            .blockHijoM {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 74% 24%;
+
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+                align-content: center;
+                gap: 0.25rem;
+
+                .imageBlock {
+                    width: 10rem;
+                    height: auto;
+                    object-fit: cover;
+
+                    display: flex;
+                    justify-content: center;
+                    justify-items: center;
+
+                    img {
+                        border-radius: 0.75rem;
+                        width: 15.5rem;
+                        height: auto;
+                        object-fit: cover;
+
+                        opacity: .8;
+                        filter: blur(2px);
+                        transition: 0.2s;
+
+                        &:hover {
+                            cursor: grab;
+                            width: 225px;
+                            border-radius: 5rem;
+                            border: 0.15rem groove black;
+                            opacity: 1;
+                            filter: contrast(120%);
+                            transition: 0.4s;
+                        }
+                    }
+                }
+
+                .contentYS {
+                    a {
+                        text-decoration: none;
+
+                        .youtubeDisco {
+                            margin: 0.5rem;
+                            transition: 0.2s;
+
+                            &:hover {
+                                color: crimson;
+                                transform: scale(1.1);
+                                transition: 0.2s;
+                                filter: contrast(120%);
+                            }
+                        }
+
+                        .spotifyDisco {
+                            margin: 0.5rem;
+                            transition: 0.2s;
+
+                            &:hover {
+                                color: chartreuse;
+                                transform: scale(1.1);
+                                transition: 0.2s;
+                                filter: contrast(120%);
+                            }
+                        }
+
+                        h2 {
+                            width: auto;
+                            height: auto;
+                            padding: 0.25rem;
+                            margin: 0.1rem;
+                            font-size: 0.9rem;
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            justify-items: center;
+                            align-content: center;
+
+                            color: black;
+                            text-align: center;
+                        }
+                    }
+
+                    .imageInfoM {
+                        width: 100%;
+                        height: auto;
+                        margin-block-end: 1.5rem;
+                        padding: 1rem;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: center;
+
+                        #amongText {
+                            width: auto;
+                            height: 2rem;
+                            object-fit: cover;
+                            transition: 0.3s;
+
+                            &:hover {
+                                transition: 0.4;
+                                transform: rotate(360deg) scale(1.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

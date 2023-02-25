@@ -1,0 +1,168 @@
+.GALERIA {
+    section {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+
+        width: auto;
+        height: 400px;
+
+        display: none;
+
+        img {
+            width: 0px;
+            flex-grow: 1;
+            object-fit: cover;
+            opacity: .95;
+            transition: 0.5s;
+
+            &:hover {
+                cursor: grab;
+                width: 175px;
+                opacity: 1;
+                filter: contrast(110%);
+            }
+        }
+    }
+
+    .blockPadreG {
+        height: 100%;
+        width: auto;
+        display: flex;
+        flex-flow: column wrap;
+
+        .blockAllG {
+            height: 100%;
+            width: auto;
+
+            display: flex;
+            flex-flow: column nowrap;
+
+            align-items: center;
+
+            .textoGaleria {
+                padding: 2rem 0rem 0.5rem 0rem;
+                height: auto;
+                display: flex;
+                flex-flow: column nowrap;
+
+                justify-content: center;
+                align-items: center;
+
+                .hGaleria {
+                    width: auto;
+                    font-size: 22.5px;
+                    text-align: center;
+
+                    transition: 0.2s;
+                    border-bottom: 1.5px dashed black;
+
+                    &:hover {
+                        color: $color_principal;
+                        transform: scale(1.1);
+                        transition: 0.3s;
+
+                        border-bottom: 3px solid $color_principal;
+                    }
+                }
+
+                #h3Galeria {
+                    font-size: 20px;
+                }
+
+            }
+
+            .imageInfoM {
+                width: 100%;
+                height: auto;
+                margin-block-end: 1.5rem;
+                padding: 1rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+
+                /* M de morat */
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                /* ícono de morat */
+                #amongText {
+                    width: auto;
+                    height: 2rem;
+                    object-fit: cover;
+                    transition: 0.3s;
+
+                    &:hover {
+                        transition: 0.4;
+                        transform: rotate(360deg) scale(1.5);
+                    }
+                }
+            }
+
+            .blockHijoG {
+                height: 100%;
+                display: grid;
+            }
+
+            .integrantes {
+                height: 195vh;
+                gap: 1.25rem;
+
+                margin: 0rem 2rem 4rem 2rem;
+
+                padding-inline-end: 0.8rem;
+                padding-inline-start: 0.8rem;
+
+                grid-template-columns: 1fr;
+                grid-template-rows: 23.5% 26% 23.5% 26%;
+
+                .containImg {
+                    width: 100%;
+                    height: auto;
+
+                    transition: 0.5s;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                        opacity: .8;
+                        transition: 0.2s;
+                        filter: grayscale(100%);
+
+                        border-radius: 10px;
+
+                        &:hover {
+                            cursor: grab;
+                            opacity: 1;
+                            filter: contrast(110%);
+                            transform: scale(0.975);
+                            transition: 0.3s;
+                        }
+                    }
+                }
+
+                #img-tres {
+                    display: none;
+                    /* No se muestra la imagen */
+                }
+
+                #img-cuatro {
+                    display: none;
+                    /* No se muestra la imagen */
+                }
+
+                #img-siete {
+                    display: none;
+                    /* No se muestra la imagen */
+                }
+            }
+
+
+        }
+    }
+}

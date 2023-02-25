@@ -1,0 +1,42 @@
+/* Font de google */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;1,300&family=Vollkorn:wght@400;600&display=swap');
+
+// Tipografía para todos los body
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+// Reset 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vollkorn', serif;
+    font-size: 17px;
+}
+
+// Estilos del contenedor principal (header, main y footer)
+.mainContent {
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 10fr 0.1fr;
+
+    /* Estructura por áreas */
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+}
+
+// immport de cada sección
+@import "html/home";
+@import "html/banda";
+@import "html/conciertos";
+@import "html/tienda";
+@import "html/musica";
+@import "html/galeria";
+
+// import de media query
+@import "html/mdq/mdq"
