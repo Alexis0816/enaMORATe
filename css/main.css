@@ -25,6 +25,33 @@ body {
     "footer footer footer";
 }
 
+footer .redesSocialesGifts .gifts .mid,
+footer .redesSocialesGifts .rs .mid {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 13.5px;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco,
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco {
+  margin: 0.5rem;
+  transition: 0.2s;
+}
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover,
+main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
+  color: crimson;
+  filter: contrast(120%);
+  transform: scale(1.1);
+  transition: all 0.2s;
+}
+
+.GALERIA .blockPadreG .blockAllG .integrantes #img-tres,
+.GALERIA .blockPadreG .blockAllG .integrantes #img-cuatro,
+.GALERIA .blockPadreG .blockAllG .integrantes #img-siete {
+  display: none;
+}
+
 /* Estilos del header-general */
 .header {
   grid-area: header;
@@ -35,6 +62,8 @@ body {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   padding: 0.5rem;
 }
 
@@ -68,12 +97,12 @@ body {
   align-items: center;
   align-content: center;
   justify-items: center;
+  gap: 2rem;
   width: auto;
   height: auto;
   margin-inline-start: 2.5rem;
   margin-inline-end: 2.5rem;
   padding: 1rem;
-  gap: 2rem;
 }
 
 .header nav div div .navLinks li {
@@ -104,13 +133,13 @@ body {
 /* Estilos de home */
 main {
   grid-area: main;
-  height: 100%;
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 main div {
@@ -140,6 +169,8 @@ main .titulo {
   flex-flow: row wrap;
   justify-content: left;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   position: sticky;
   top: 0px;
   z-index: 1;
@@ -150,15 +181,15 @@ main .titulo h1 {
   padding-left: 1rem;
   background-color: crimson;
   color: white;
-  font-size: 18px;
-  height: auto;
+  font-size: 22px;
   width: 100%;
+  height: auto;
 }
 
 main .blockPadre {
   /* Bloque - Padre */
-  height: auto;
   width: auto;
+  height: auto;
   font-size: 20px;
   padding: 0.25rem 1rem 0.25rem 1rem;
   margin-top: 0.5rem;
@@ -174,11 +205,13 @@ main .blockPadre {
 main .blockPadre .blockHijo {
   width: auto;
   height: auto;
-  gap: 1rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
   align-content: center;
+  justify-items: center;
+  gap: 1rem;
   /* contenedor de imagen*/
 }
 
@@ -190,11 +223,11 @@ main .blockPadre .blockHijo .imagePNG {
 
 main .blockPadre .blockHijo .imagePNG img {
   width: 100%;
-  height: 17rem;
+  height: 18rem;
 }
 
 main .blockPadre .blockHijo .imagePNG .debiSuponerlo {
-  transition: 0.6s;
+  transition: all 0.6s;
 }
 
 main .blockPadre .blockHijo .imagePNG .debiSuponerlo:hover {
@@ -203,7 +236,7 @@ main .blockPadre .blockHijo .imagePNG .debiSuponerlo:hover {
 }
 
 main .blockPadre .blockHijo .imagePNG .disco4 {
-  transition: 0.6s;
+  transition: all 0.6s;
 }
 
 main .blockPadre .blockHijo .imagePNG .disco4:hover {
@@ -212,20 +245,20 @@ main .blockPadre .blockHijo .imagePNG .disco4:hover {
 }
 
 main .blockPadre .blockHijo .imagePNG .salirConVida {
-  transition: 0.6s;
+  transition: all 0.6s;
 }
 
 main .blockPadre .blockHijo .imagePNG .salirConVida:hover {
-  transition: 0.4s;
+  transition: all 0.4s;
   transform: scale(0.8);
 }
 
 main .blockPadre .blockHijo .imagePNG .juanes506 {
-  transition: 0.6s;
+  transition: all 0.6s;
 }
 
 main .blockPadre .blockHijo .imagePNG .juanes506:hover {
-  transition: 0.4s;
+  transition: all 0.4s;
   transform: scale(0.8);
 }
 
@@ -238,7 +271,9 @@ main .blockPadre .blockHijo .imageInfo {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  align-items: center;
   align-content: center;
+  justify-items: center;
   text-align: center;
 }
 
@@ -252,12 +287,12 @@ main .blockPadre .blockHijo .imageInfo div {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  justify-items: center;
   align-content: center;
+  justify-items: center;
+  gap: 0.75rem;
   margin: 0.025rem 0.025rem 0.025rem 0.025rem;
   padding: 1rem 1.5rem;
   /* Padding para los contenedores de texto */
-  gap: 0.75rem;
 }
 
 main .blockPadre .blockHijo .imageInfo div h2 {
@@ -299,6 +334,8 @@ main .blockPadre .blockHijo .imageInfoM {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   /* M de morat */
   /* ícono de morat */
 }
@@ -312,11 +349,11 @@ main .blockPadre .blockHijo .imageInfoM #amongText {
   width: auto;
   height: 2rem;
   object-fit: cover;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 main .blockPadre .blockHijo .imageInfoM #amongText:hover {
-  transition: 0.4;
+  transition: all 0.3s;
   transform: rotate(360deg) scale(1.5);
 }
 
@@ -325,8 +362,8 @@ footer {
   grid-area: footer;
   background-color: crimson;
   color: whitesmoke;
-  height: 100%;
   width: 100%;
+  height: 100%;
   /* Enlace Interno - Head */
 }
 
@@ -335,10 +372,12 @@ footer .redesSocialesGifts {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 2rem;
   width: auto;
   height: auto;
   padding: 1.25rem;
-  gap: 2rem;
   /* gifts */
 }
 
@@ -347,15 +386,14 @@ footer .redesSocialesGifts .gifts {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   gap: 0.25rem;
   width: auto;
   height: auto;
 }
 
 footer .redesSocialesGifts .gifts .mid {
-  text-align: center;
-  font-size: 12.5px;
-  text-transform: uppercase;
   margin-top: 0.5rem;
 }
 
@@ -364,6 +402,8 @@ footer .redesSocialesGifts .gifts .enlacesGifts {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   gap: 1.25rem;
   /* calendario, fotos */
 }
@@ -377,7 +417,7 @@ footer .redesSocialesGifts .gifts .enlacesGifts .calendario a:hover {
 }
 
 footer .redesSocialesGifts .gifts .enlacesGifts .calendario a img {
-  transform: 0.1s;
+  transform: all 0.1s;
 }
 
 footer .redesSocialesGifts .gifts .enlacesGifts .calendario a img:hover {
@@ -399,7 +439,7 @@ footer .redesSocialesGifts .gifts .enlacesGifts .fotos a:hover {
 }
 
 footer .redesSocialesGifts .gifts .enlacesGifts .fotos a img {
-  transform: 0.1s;
+  transform: all 0.1s;
 }
 
 footer .redesSocialesGifts .gifts .enlacesGifts .fotos a img:hover {
@@ -417,15 +457,11 @@ footer .redesSocialesGifts .rs {
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   gap: 1.25rem;
   width: auto;
   height: auto;
-}
-
-footer .redesSocialesGifts .rs .mid {
-  text-align: center;
-  font-size: 12.5px;
-  text-transform: uppercase;
 }
 
 footer .redesSocialesGifts .rs .enlacesRedes {
@@ -433,6 +469,8 @@ footer .redesSocialesGifts .rs .enlacesRedes {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
+  justify-items: center;
   gap: 1.25rem;
 }
 
@@ -445,25 +483,25 @@ footer .redesSocialesGifts .rs .enlacesRedes .redes a:hover {
 }
 
 footer .redesSocialesGifts .rs .enlacesRedes .redes a img {
-  transition: 0.1s;
+  transition: all 0.1s;
   width: 2rem;
   height: 2rem;
 }
 
 footer .redesSocialesGifts .rs .enlacesRedes .redes a img:hover {
   transform: scale(1.35);
-  transition: 0.2s;
+  transition: all 0.2s;
 }
 
 footer .fixed .Arriba .itemFixed {
   position: fixed;
   bottom: 0;
   right: 0;
-  margin: 4px 6.5px 3px 0px;
+  margin: 4px 7px 7px 0px;
   padding: 1px;
   cursor: grab;
   width: auto;
-  height: 3.25rem;
+  height: 2.75rem;
   transition: all 0.3s;
   background-color: rgba(39, 188, 211, 0.9);
   border-radius: 90%;
@@ -472,7 +510,7 @@ footer .fixed .Arriba .itemFixed {
 }
 
 footer .fixed .Arriba .itemFixed:hover {
-  transform: scale(0.75);
+  transform: scale(0.825);
 }
 
 footer .footerEnd {
@@ -480,20 +518,22 @@ footer .footerEnd {
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
+  justify-items: center;
+  gap: 1.5rem;
   text-align: center;
-  font-size: 12.5px;
+  font-size: 12.75px;
   word-spacing: 0.3rem;
   background-color: #282828;
   padding: 1rem;
-  gap: 1.5rem;
 }
 
 footer .footerEnd p strong {
-  font-size: 12.5px;
+  font-size: 12.75px;
 }
 
 footer .footerEnd p span {
-  font-size: 12.5px;
+  font-size: 12.75px;
   display: block;
   border-top: 1.75px solid rgba(128, 0, 45, 0.45);
   padding: 0.5rem;
@@ -501,13 +541,17 @@ footer .footerEnd p span {
 
 /* Estilos del main-BANDA */
 .BANDA {
-  height: auto;
   width: auto;
+  height: auto;
   background-image: url("../img/fondo_banda.jpg");
   background-position: center;
   color: aliceblue;
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
   gap: 2rem;
 }
 
@@ -527,35 +571,33 @@ footer .footerEnd p span {
 }
 
 .BANDA .blockPadreB .blockHijoB .content .biografia {
-  height: auto;
   width: auto;
-  color: whitesmoke;
+  height: auto;
+  color: aliceblue;
   display: flex;
   flex-flow: row wrap;
-  justify-items: center;
-  align-content: center;
 }
 
 .BANDA .blockPadreB .blockHijoB .content .biografia .tittleBanda {
   /* Título de la BANDA */
-  height: auto;
   width: auto;
+  height: auto;
   display: flex;
   flex-flow: row wrap;
-  font-size: 4.5rem;
+  font-size: 4.25rem;
   font-weight: bolder;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .BANDA .blockPadreB .blockHijoB .content .biografia .tittleBanda:hover {
-  color: red;
+  color: crimson;
   transform: scale(0.9);
-  transition: 0.2s;
+  transition: all 0.2s;
 }
 
 .BANDA .blockPadreB .blockHijoB .content .biografia .contentBiografia {
-  height: auto;
   width: auto;
+  height: auto;
   background-color: rgba(5, 5, 5, 0.782);
   padding: 1.75rem 1rem 1.75rem 1rem;
   letter-spacing: 0rem;
@@ -568,8 +610,8 @@ footer .footerEnd p span {
 }
 
 .BANDA .blockPadreB .blockHijoB .content .biografia .contentBiografia p {
-  height: auto;
   width: auto;
+  height: auto;
   margin-inline-start: 0.4rem;
   margin-inline-end: 0.4rem;
   display: flex;
@@ -590,8 +632,8 @@ footer .footerEnd p span {
 
 .BANDA .contentFotos .integrantesDeBanda li {
   width: 100%;
-  position: relative;
   height: 36rem;
+  position: relative;
 }
 
 .BANDA .contentFotos .integrantesDeBanda .integrante .integranteUno {
@@ -641,33 +683,26 @@ footer .footerEnd p span {
 }
 
 main .blockPadreC div {
-  height: auto;
   width: auto;
+  height: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   justify-items: center;
+  gap: 1.5rem;
   text-align: center;
   list-style: none;
   text-decoration: none;
-  gap: 1.5rem;
 }
 
 main .blockPadreC .blockHijoC .noEventos {
-  height: auto;
   width: auto;
+  height: auto;
   padding: 0.25rem 1rem 0.25rem 1rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  gap: 1.75rem;
 }
 
 main .blockPadreC .blockHijoC .noEventos .imagePNGC {
@@ -699,8 +734,6 @@ main .blockPadreC .blockHijoC .noEventos .imagePNGC img:hover {
 }
 
 main .blockPadreC .blockHijoC .noEventos .textoIcono {
-  display: flex;
-  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
 }
@@ -725,8 +758,6 @@ main .blockPadreC .blockHijoC .noEventos .textoIcono .texto h2:hover {
 }
 
 main .blockPadreC .blockHijoC .noEventos .gira {
-  display: flex;
-  flex-flow: row wrap;
   margin-top: 1.5rem;
 }
 
@@ -759,8 +790,8 @@ main .blockPadreC .blockHijoC .noEventos .imageMundo #iconoMundo:hover {
 }
 
 main .blockPadreC .blockHijoC .siEventos {
-  height: auto;
   width: auto;
+  height: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -776,11 +807,11 @@ main .blockPadreC .blockHijoC .siEventos .eventos2023 {
   width: 100%;
   height: auto;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: color nowrap;
   justify-content: space-around;
   align-items: center;
-  justify-items: center;
   align-content: space-around;
+  justify-items: center;
   gap: 1.25rem;
   /* separa eventos*/
   border-top: 0.25px solid rgba(0, 0, 0, 0.392);
@@ -790,11 +821,11 @@ main .blockPadreC .blockHijoC .siEventos .eventos2023 {
 
 main .blockPadreC .blockHijoC .siEventos .eventos2023 .placeDate {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: color nowrap;
   justify-content: space-around;
   align-items: center;
-  justify-items: center;
   align-content: space-around;
+  justify-items: center;
   gap: 0.25rem;
   /* separa date y place */
 }
@@ -814,6 +845,7 @@ main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar {
   display: flex;
   flex-flow: column nowrap;
   width: auto;
+  height: auto;
   font-weight: bold;
   color: whitesmoke;
   border: 1.5px solid black;
@@ -827,13 +859,13 @@ main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar a {
 }
 
 main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar a p {
-  transition: 0.2s;
+  transition: all 0.2s;
   margin: 0.25rem 0.75rem;
   padding: 0.25rem;
 }
 
 main .blockPadreC .blockHijoC .siEventos .eventos2023 .comprar a p:hover {
-  transition: 0.25s;
+  transition: all 0.25s;
   transform: scale(1.1);
   color: crimson;
 }
@@ -854,35 +886,32 @@ main .blockPadreC .imageInfoM #amongText {
   width: auto;
   height: 2rem;
   object-fit: cover;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 main .blockPadreC .imageInfoM #amongText:hover {
-  transition: 0.4;
+  transition: all 0.4;
   transform: rotate(360deg) scale(1.5);
 }
 
 main .blockPadreT div {
-  height: auto;
   width: auto;
+  height: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   align-content: center;
   justify-items: center;
+  gap: 1rem;
   text-align: center;
   list-style: none;
   text-decoration: none;
-  gap: 1rem;
 }
 
 main .blockPadreT .blockHijoT .presentation {
-  height: auto;
   width: auto;
-  padding: 0.25rem 1rem 0.25rem 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  height: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -890,6 +919,9 @@ main .blockPadreT .blockHijoT .presentation {
   align-content: center;
   justify-items: center;
   gap: 1.5rem;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 main .blockPadreT .blockHijoT .presentation .imagePNGT {
@@ -900,14 +932,14 @@ main .blockPadreT .blockHijoT .presentation .imagePNGT {
   border-radius: 6px;
   box-shadow: 15px 10px 15px black;
   cursor: grab;
-  transition: 0.6s;
+  transition: all 0.6s;
 }
 
 main .blockPadreT .blockHijoT .presentation .imagePNGT:hover {
   box-shadow: -15px -10px 15px black;
-  transition: 0.4s;
-  transform: scale(0.85);
   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+  transform: scale(0.85);
+  transition: all 0.4s;
 }
 
 main .blockPadreT .blockHijoT .presentation .imagePNGT img {
@@ -930,12 +962,13 @@ main .blockPadreT .blockHijoT .presentation .textoIcono .texto h2 {
   transition: 0.35s;
   font-size: 30px;
   margin: 0.5rem;
+  transition: all 0.3s;
 }
 
 main .blockPadreT .blockHijoT .presentation .textoIcono .texto h2:hover {
-  transition: 0.5s;
+  color: crimson;
   transform: scale(0.8);
-  color: red;
+  transition: all 0.5s;
 }
 
 main .blockPadreT .blockHijoT .presentation .imageShop {
@@ -949,13 +982,13 @@ main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop {
   width: auto;
   height: 3.25rem;
   object-fit: cover;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop:hover {
   cursor: grab;
-  transition: 0.4;
-  transform: scale(1.3);
+  transition: all 0.2s;
+  transform: scale(1.4);
 }
 
 main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLink {
@@ -965,8 +998,8 @@ main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLi
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
-  justify-items: center;
   align-content: space-around;
+  justify-items: center;
   gap: 0.25rem;
 }
 
@@ -986,7 +1019,7 @@ main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLi
   color: rgba(0, 0, 255, 0.8);
   border-bottom: 3.5px solid rgba(0, 0, 255, 0.8);
   transform: scale(1.1);
-  transition: 0.15s;
+  transition: all 0.15s;
 }
 
 main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg {
@@ -1005,8 +1038,8 @@ main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentIm
 main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg img {
   width: 100%;
   height: 20rem;
-  transition: 0.5s ease-out;
   object-fit: cover;
+  transition: all 0.5s ease-out;
 }
 
 main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg:hover .capa {
@@ -1028,13 +1061,13 @@ main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentIm
   height: 100%;
   color: whitesmoke;
   background-color: rgba(0, 103, 123, 0.7);
-  transition: 0.5s;
+  transition: all 0.4s;
   opacity: 0;
   visibility: hidden;
 }
 
 main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg .capa h3 {
-  transition: 0.4s;
+  transition: all 0.5s;
   font-weight: 400px;
   margin-bottom: 120px;
   margin-top: 30px;
@@ -1047,7 +1080,7 @@ main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentIm
   max-width: 180px;
   margin-top: 5px;
   margin-bottom: 75px;
-  transition: 0.4s;
+  transition: all 0.5s;
 }
 
 main .blockPadreT .blockHijoT .imageInfoM {
@@ -1066,12 +1099,12 @@ main .blockPadreT .blockHijoT .imageInfoM #amongText {
   width: auto;
   height: 2rem;
   object-fit: cover;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 main .blockPadreT .blockHijoT .imageInfoM #amongText:hover {
-  transition: 0.4;
   transform: rotate(360deg) scale(1.5);
+  transition: all 0.4s;
 }
 
 main .blockPadreT .blockHijoT .general {
@@ -1091,7 +1124,7 @@ main .slider {
 
 main .slider ul {
   display: flex;
-  animation: cambio 12s infinite alternate linear;
+  animation: cambio 12s infinite alternate-reverse backwards;
   width: 400%;
   height: auto;
   padding-left: 0rem;
@@ -1108,7 +1141,7 @@ main .slider ul li img {
   object-fit: cover;
   opacity: .8;
   filter: grayscale(100%);
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 main .slider ul li img:hover {
@@ -1165,9 +1198,9 @@ main .blockPadreM {
 main .blockPadreM .blockAllM {
   display: flex;
   flex-flow: column nowrap;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
 main .blockPadreM .blockAllM .blockHijoM {
@@ -1191,13 +1224,13 @@ main .blockPadreM .blockAllM .blockHijoM .imageBlock {
 }
 
 main .blockPadreM .blockAllM .blockHijoM .imageBlock img {
-  border-radius: 0.75rem;
   width: 15.5rem;
   height: auto;
+  border-radius: 0.75rem;
   object-fit: cover;
   opacity: .8;
   filter: blur(2px);
-  transition: 0.2s;
+  transition: all 0.2s;
 }
 
 main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
@@ -1207,40 +1240,17 @@ main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
   border: 0.15rem groove black;
   opacity: 1;
   filter: contrast(120%);
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 main .blockPadreM .blockAllM .blockHijoM .contentYS a {
   text-decoration: none;
 }
 
-main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco {
-  margin: 0.5rem;
-  transition: 0.2s;
-}
-
-main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover {
-  color: crimson;
-  transform: scale(1.1);
-  transition: 0.2s;
-  filter: contrast(120%);
-}
-
-main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco {
-  margin: 0.5rem;
-  transition: 0.2s;
-}
-
-main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
-  color: chartreuse;
-  transform: scale(1.1);
-  transition: 0.2s;
-  filter: contrast(120%);
-}
-
 main .blockPadreM .blockAllM .blockHijoM .contentYS a h2 {
   width: auto;
   height: auto;
+  color: black;
   padding: 0.25rem;
   margin: 0.1rem;
   font-size: 0.9rem;
@@ -1249,7 +1259,6 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS a h2 {
   align-items: center;
   justify-items: center;
   align-content: center;
-  color: black;
   text-align: center;
 }
 
@@ -1268,12 +1277,12 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText {
   width: auto;
   height: 2rem;
   object-fit: cover;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover {
-  transition: 0.4;
   transform: rotate(360deg) scale(1.5);
+  transition: all 0.4;
 }
 
 .GALERIA section {
@@ -1295,21 +1304,21 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
 
 .GALERIA section img:hover {
   cursor: grab;
-  width: 175px;
+  width: 150px;
   opacity: 1;
   filter: contrast(110%);
 }
 
 .GALERIA .blockPadreG {
-  height: 100%;
   width: auto;
+  height: 100%;
   display: flex;
   flex-flow: column wrap;
 }
 
 .GALERIA .blockPadreG .blockAllG {
-  height: 100%;
   width: auto;
+  height: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -1328,15 +1337,15 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
   width: auto;
   font-size: 22.5px;
   text-align: center;
-  transition: 0.2s;
   border-bottom: 1.5px dashed black;
+  transition: all 0.2s;
 }
 
 .GALERIA .blockPadreG .blockAllG .textoGaleria .hGaleria:hover {
   color: crimson;
-  transform: scale(1.1);
-  transition: 0.3s;
   border-bottom: 3px solid crimson;
+  transform: scale(1.1);
+  transition: all 0.3s;
 }
 
 .GALERIA .blockPadreG .blockAllG .textoGaleria #h3Galeria {
@@ -1365,12 +1374,12 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
   width: auto;
   height: 2rem;
   object-fit: cover;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .GALERIA .blockPadreG .blockAllG .imageInfoM #amongText:hover {
-  transition: 0.4;
   transform: rotate(360deg) scale(1.5);
+  transition: all 0.4s;
 }
 
 .GALERIA .blockPadreG .blockAllG .blockHijoG {
@@ -1386,12 +1395,13 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
   padding-inline-start: 0.8rem;
   grid-template-columns: 1fr;
   grid-template-rows: 23.5% 26% 23.5% 26%;
+  /* No se muestra la imagen */
 }
 
 .GALERIA .blockPadreG .blockAllG .integrantes .containImg {
   width: 100%;
   height: auto;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 
 .GALERIA .blockPadreG .blockAllG .integrantes .containImg img {
@@ -1410,21 +1420,6 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
   filter: contrast(110%);
   transform: scale(0.975);
   transition: 0.3s;
-}
-
-.GALERIA .blockPadreG .blockAllG .integrantes #img-tres {
-  display: none;
-  /* No se muestra la imagen */
-}
-
-.GALERIA .blockPadreG .blockAllG .integrantes #img-cuatro {
-  display: none;
-  /* No se muestra la imagen */
-}
-
-.GALERIA .blockPadreG .blockAllG .integrantes #img-siete {
-  display: none;
-  /* No se muestra la imagen */
 }
 
 /* HOME */
@@ -1545,7 +1540,6 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
     /* Bloque - Padre */
     width: auto;
     height: auto;
-    gap: 2rem;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
@@ -1559,6 +1553,7 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
   main .blockPadre .blockHijo {
     width: auto;
     height: auto;
+    display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
@@ -1582,22 +1577,22 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
 
   main .blockPadre .blockHijo .imagePNG .debiSuponerlo:hover {
     transform: skew(10deg, -10deg) scale(0.8);
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   }
 
   main .blockPadre .blockHijo .imagePNG .disco4:hover {
     transform: skew(-10deg, 10deg) scale(0.8);
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   }
 
   main .blockPadre .blockHijo .imagePNG .salirConVida:hover {
     transform: skew(10deg, -10deg) scale(0.8);
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   }
 
   main .blockPadre .blockHijo .imagePNG .juanes506:hover {
     transform: skew(-10deg, 10deg) scale(0.8);
-    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), color_news_black_trans);
+    -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
   }
 
   main .blockPadre .blockHijo .imagePNG .pngCuatro img {
@@ -1644,9 +1639,11 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 12rem;
     width: auto;
     height: auto;
-    gap: 12rem;
     /* enlaces */
   }
 
@@ -1880,8 +1877,8 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
   }
 
   main .blockPadreT .blockHijoT .presentation .imageShop #iconoShop:hover {
-    transition: 0.4;
     transform: scale(1.2);
+    transition: all 0.4s;
   }
 
   main .blockPadreT .blockHijoT .content {
@@ -2078,6 +2075,14 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
 
 /* mq de escritorio */
 @media screen and (min-width: 1024px) {
+  .GALERIA section {
+    height: 500px;
+  }
+
+  .GALERIA section img:hover {
+    width: 180px;
+  }
+
   .GALERIA .blockPadreG .blockAllG .textoGaleria .hGaleria {
     font-size: 26.5px;
   }
@@ -2092,12 +2097,12 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM #amongText:hover
   }
 
   .GALERIA .blockPadreG .blockAllG .integrantes #img-tres {
-    display: block;
+    display: none;
     grid-column: span 2;
   }
 
   .GALERIA .blockPadreG .blockAllG .integrantes #img-cuatro {
-    display: block;
+    display: none;
     grid-column: span 2;
   }
 

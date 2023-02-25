@@ -1,46 +1,27 @@
 main {
     .blockPadreC {
         div {
-            height: auto;
-            width: auto;
-
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center; // afecta a todos
-            align-content: center;
-            justify-items: center;
+            @include widthtHeightAuto;
+            @include flexParam(column, nowrap, center, center, center, center, 1.5rem);
 
             text-align: center;
-
             list-style: none;
             text-decoration: none;
-            gap: 1.5rem;
         }
 
         .blockHijoC {
+
             // CONTENEDOR NO-EVENTOS 
             .noEventos {
-                height: auto;
-                width: auto;
+                @include widthtHeightAuto;
 
                 padding: 0.25rem 1rem 0.25rem 1rem;
                 margin-top: 0.5rem;
                 margin-bottom: 0.5rem;
 
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-                justify-items: center;
-
-                gap: 1.75rem;
-
                 // CONTENEDOR DE IMAGEN-CONCIERTOS
                 .imagePNGC {
-                    width: auto;
-                    height: 15rem;
+                    @include widthtHeight(auto, 15rem);
                     overflow: hidden; // la imagen no desborda del contenedor
                     object-fit: cover; // Ocupa el tamaño de tal manera que podemos apreciar la imagen
                     border-radius: 6px;
@@ -53,23 +34,21 @@ main {
                         box-shadow: -15px -10px 15px rgb(0, 0, 0);
                         transition: 0.4s;
                         transform: scale(0.8);
-                        -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.4));
+                        -webkit-box-reflect: below 0px linear-gradient(to bottom, $color_news_black, $color_news_black_trans);
                     }
 
 
                     img {
-                        width: 100%;
-                        height: 16rem;
+                        @include widthtHeight(100%, 16rem);
 
                         &:hover {
                             cursor: grab;
                         }
                     }
                 }
+
                 // CONTENEDOR DE TEXTO ÍCONO-MUNDO 
                 .textoIcono {
-                    display: flex;
-                    flex-flow: column wrap;
                     justify-content: center;
                     align-items: center;
 
@@ -96,8 +75,6 @@ main {
                 }
 
                 .gira {
-                    display: flex;
-                    flex-flow: row wrap;
                     margin-top: 1.5rem;
 
                     h3 {
@@ -111,15 +88,13 @@ main {
 
                 // CONTENEDOR DE ÍCONO - MUNDO/TIENDA
                 .imageMundo {
-                    display: flex;
-                    flex-flow: row nowrap;
+                    @include flexFlowNoGap(row, nowrap);
                     justify-content: center;
                     align-items: center;
 
                     // ícono mundo
                     #iconoMundo {
-                        width: auto;
-                        height: 3.25rem;
+                        @include widthtHeight(auto, 3.25rem);
                         object-fit: cover;
                         transition: 0.3s;
 
@@ -131,52 +106,28 @@ main {
                     }
                 }
             }
+
             // CONTENEDOR SÍ-EVENTOS 
             .siEventos {
-                height: auto;
-                width: auto;
-
-                display: flex;
-                flex-flow: column nowrap;
-                justify-content: center;
-                align-items: center; // afecta a todos
-                align-content: center;
-                justify-items: center;
-
-                gap: 1.5rem; // igual 1
-
+                @include widthtHeightAuto;
+                @include flexParam(column, nowrap, center, center, center, center, 1.5rem);
                 //Solo para siEventos-Conciertos
                 padding-top: 3.25rem;
                 padding-bottom: 3rem;
 
                 .eventos2023 {
-                    width: 100%;
-                    height: auto;
+                    @include widthtHeight(100%,auto);
 
-                    display: flex;
-                    flex-flow: column nowrap;
-
-                    justify-content: space-around;
-                    align-items: center;
-                    justify-items: center;
-                    align-content: space-around;
-
-                    gap: 1.25rem; /* separa eventos*/
+                    @include flexParam(color, nowrap, space-around, center, space-around, center, 1.25rem);
+                    /* separa eventos*/
 
                     //Solo para eventos2023-Conciertos
                     border-top: 0.25px solid $color_separa_conciertos;
-                    padding-top: 1.5rem; /* igual 1*/
+                    padding-top: 1.5rem;
+                    /* igual 1*/
 
                     .placeDate {
-                        display: flex;
-                        flex-flow: column nowrap;
-
-                        justify-content: space-around;
-                        align-items: center;
-                        justify-items: center;
-                        align-content: space-around;
-
-                        gap: 0.25rem;
+                        @include flexParam(color, nowrap, space-around, center, space-around, center, 0.25rem);
                         /* separa date y place */
 
                         p {
@@ -192,27 +143,27 @@ main {
 
                     .comprar {
                         background-color: black;
-                        display: flex;
-                        flex-flow: column nowrap;
-                        width: auto;
+                        @include flexFlowNoGap(column, nowrap);
+                        
+                        @include widthtHeightAuto;
 
                         font-weight: bold;
-                        color: whitesmoke;
+                        color: $color_letra_footer;
                         border: 1.5px solid black;
                         background-color: black;
                         list-style: none;
 
                         a {
                             text-decoration: none;
-                            color: whitesmoke;
+                            color: $color_letra_footer;
 
                             p {
-                                transition: 0.2s;
+                                transition: all 0.2s;
                                 margin: 0.25rem 0.75rem;
                                 padding: 0.25rem;
 
                                 &:hover {
-                                    transition: 0.25s;
+                                    transition: all 0.25s;
                                     transform: scale(1.1);
                                     color: $color_principal;
                                 }
@@ -223,24 +174,21 @@ main {
             }
         }
 
-        .imageInfoM{            
+        .imageInfoM {
             margin-block-end: 1.5rem;
             padding: 1rem;
+
             /* M de morat */
-            img{    
-                width: 100%;
-                height: 100%;
+            img {
+                @include widthtHeightSame(100%);
             }
 
             /* ícono de morat */
-            #amongText{
-                width: auto;
-                height: 2rem;
-                object-fit: cover;
-                transition: 0.3s;
-                
-                &:hover{
-                    transition: 0.4;
+            #amongText {
+                @include amongText(auto, 2rem, cover, 0.3s);
+
+                &:hover {
+                    transition: all 0.4;
                     transform: rotate(360deg) scale(1.5);
                 }
             }

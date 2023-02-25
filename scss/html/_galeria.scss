@@ -4,8 +4,7 @@
         justify-content: center;
         justify-items: center;
 
-        width: auto;
-        height: 400px;
+        @include widthtHeight(auto, 400px);
 
         display: none;
 
@@ -18,7 +17,7 @@
 
             &:hover {
                 cursor: grab;
-                width: 175px;
+                width: 150px;
                 opacity: 1;
                 filter: contrast(110%);
             }
@@ -26,26 +25,18 @@
     }
 
     .blockPadreG {
-        height: 100%;
-        width: auto;
-        display: flex;
-        flex-flow: column wrap;
+        @include widthtHeight(auto, 100%);
+        @include flexFlowNoGap(column, wrap);
 
         .blockAllG {
-            height: 100%;
-            width: auto;
-
-            display: flex;
-            flex-flow: column nowrap;
-
+            @include widthtHeight(auto, 100%);
+            @include flexFlowNoGap(column, nowrap);
             align-items: center;
 
             .textoGaleria {
                 padding: 2rem 0rem 0.5rem 0rem;
                 height: auto;
-                display: flex;
-                flex-flow: column nowrap;
-
+                @include flexFlowNoGap(column, nowrap);
                 justify-content: center;
                 align-items: center;
 
@@ -53,16 +44,14 @@
                     width: auto;
                     font-size: 22.5px;
                     text-align: center;
-
-                    transition: 0.2s;
                     border-bottom: 1.5px dashed black;
+                    transition: all 0.2s;
 
                     &:hover {
                         color: $color_principal;
-                        transform: scale(1.1);
-                        transition: 0.3s;
-
                         border-bottom: 3px solid $color_principal;
+                        transform: scale(1.1);
+                        transition: all 0.3s;
                     }
                 }
 
@@ -73,31 +62,25 @@
             }
 
             .imageInfoM {
-                width: 100%;
-                height: auto;
+                @include widthtHeight(100%, auto);
                 margin-block-end: 1.5rem;
                 padding: 1rem;
-                display: flex;
-                flex-flow: column nowrap;
+
+                @include flexFlowNoGap(column, nowrap);
                 justify-content: center;
                 align-items: center;
 
                 /* M de morat */
                 img {
-                    width: 100%;
-                    height: 100%;
+                    @include widthtHeightSame(100%);
                 }
 
                 /* ícono de morat */
                 #amongText {
-                    width: auto;
-                    height: 2rem;
-                    object-fit: cover;
-                    transition: 0.3s;
-
+                    @include amongText(auto, 2rem, cover, 0.3s);
                     &:hover {
-                        transition: 0.4;
                         transform: rotate(360deg) scale(1.5);
+                        transition: all 0.4s;
                     }
                 }
             }
@@ -110,7 +93,6 @@
             .integrantes {
                 height: 195vh;
                 gap: 1.25rem;
-
                 margin: 0rem 2rem 4rem 2rem;
 
                 padding-inline-end: 0.8rem;
@@ -120,14 +102,11 @@
                 grid-template-rows: 23.5% 26% 23.5% 26%;
 
                 .containImg {
-                    width: 100%;
-                    height: auto;
-
-                    transition: 0.5s;
+                    @include widthtHeight(100%, auto);
+                    transition: all 0.5s;
 
                     img {
-                        width: 100%;
-                        height: 100%;
+                        @include widthtHeightSame(100%);
                         object-fit: cover;
 
                         opacity: .8;
@@ -145,24 +124,19 @@
                         }
                     }
                 }
-
+                /* No se muestra la imagen */
                 #img-tres {
-                    display: none;
-                    /* No se muestra la imagen */
+                    @extend %displayNone;
                 }
 
                 #img-cuatro {
-                    display: none;
-                    /* No se muestra la imagen */
+                    @extend %displayNone;
                 }
 
                 #img-siete {
-                    display: none;
-                    /* No se muestra la imagen */
+                    @extend %displayNone;
                 }
             }
-
-
         }
     }
 }

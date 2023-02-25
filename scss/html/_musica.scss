@@ -1,21 +1,18 @@
 main {
     .slider {
-        display: flex;
-        flex-flow: column nowrap;
+        @include flexFlowNoGap(column, nowrap);
         justify-content: center;
         justify-items: center;
-
-        width: auto;
-        height: 300px;
+        
+        @include widthtHeight(auto, 300px);
+        
         overflow: hidden;
-
         display: none;
 
         ul {
             display: flex;
-            animation: cambio 12s infinite alternate linear;
-            width: 400%;
-            height: auto;
+            animation: cambio 12s infinite alternate-reverse backwards;
+            @include widthtHeight(400%, auto);
 
             // Reseteo Bootstrap */
             padding-left: 0rem;
@@ -25,12 +22,11 @@ main {
                 list-style: none;
 
                 img {
-                    width: 100%;
-                    height: 100%;
+                    @include widthtHeightSame(100%);
                     object-fit: cover;
                     opacity: .8;
                     filter: grayscale(100%);
-                    transition: 0.4s;
+                    transition: all 0.4s;
 
                     &:hover {
                         transform: scale(1.05);
@@ -47,20 +43,16 @@ main {
     @import "../html/animacion/musica";
 
     .blockPadreM {
-        display: flex;
-        flex-flow: column nowrap;
-
+        @include flexFlowNoGap(column, nowrap);
         justify-content: center;
         align-items: center;
         padding-top: 1.5rem;
         padding-bottom: 4rem;
 
         .blockAllM {
-            display: flex;
-            flex-flow: column nowrap;
+            @include flexFlow(column, nowrap, 2rem);
             justify-content: center;
             align-items: center;
-            gap: 2rem;
 
             .blockHijoM {
                 display: grid;
@@ -74,8 +66,7 @@ main {
                 gap: 0.25rem;
 
                 .imageBlock {
-                    width: 10rem;
-                    height: auto;
+                    @include widthtHeight(10rem, auto);
                     object-fit: cover;
 
                     display: flex;
@@ -83,14 +74,13 @@ main {
                     justify-items: center;
 
                     img {
+                        @include widthtHeight(15.5rem, auto);
                         border-radius: 0.75rem;
-                        width: 15.5rem;
-                        height: auto;
                         object-fit: cover;
 
                         opacity: .8;
                         filter: blur(2px);
-                        transition: 0.2s;
+                        transition: all 0.2s;
 
                         &:hover {
                             cursor: grab;
@@ -99,7 +89,7 @@ main {
                             border: 0.15rem groove black;
                             opacity: 1;
                             filter: contrast(120%);
-                            transition: 0.4s;
+                            transition: all 0.4s;
                         }
                     }
                 }
@@ -109,32 +99,24 @@ main {
                         text-decoration: none;
 
                         .youtubeDisco {
-                            margin: 0.5rem;
-                            transition: 0.2s;
+                            @extend %spotifyYoutubeDisco;
 
                             &:hover {
-                                color: crimson;
-                                transform: scale(1.1);
-                                transition: 0.2s;
-                                filter: contrast(120%);
+                                @extend %potifyYoutubeDiscoAnimation;
                             }
                         }
 
                         .spotifyDisco {
-                            margin: 0.5rem;
-                            transition: 0.2s;
+                            @extend %spotifyYoutubeDisco;
 
                             &:hover {
-                                color: chartreuse;
-                                transform: scale(1.1);
-                                transition: 0.2s;
-                                filter: contrast(120%);
+                                @extend %potifyYoutubeDiscoAnimation;
                             }
                         }
 
                         h2 {
-                            width: auto;
-                            height: auto;
+                            @include widthtHeightAuto;
+                            color: black;
                             padding: 0.25rem;
                             margin: 0.1rem;
                             font-size: 0.9rem;
@@ -144,31 +126,25 @@ main {
                             align-items: center;
                             justify-items: center;
                             align-content: center;
-
-                            color: black;
                             text-align: center;
                         }
                     }
 
                     .imageInfoM {
-                        width: 100%;
-                        height: auto;
+                        @include widthtHeight(100%, auto);
                         margin-block-end: 1.5rem;
                         padding: 1rem;
-                        display: flex;
-                        flex-flow: column nowrap;
+                        
+                        @include flexFlowNoGap(column, nowrap);
                         justify-content: center;
                         align-items: center;
 
                         #amongText {
-                            width: auto;
-                            height: 2rem;
-                            object-fit: cover;
-                            transition: 0.3s;
+                            @include amongText(auto, 2rem, cover, 0.3s);
 
                             &:hover {
-                                transition: 0.4;
                                 transform: rotate(360deg) scale(1.5);
+                                transition: all 0.4;
                             }
                         }
                     }

@@ -1,0 +1,27 @@
+// Home
+// - footer
+%footerMid {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13.5px;
+}
+
+// Musica
+// - main
+%spotifyYoutubeDisco {
+    margin: 0.5rem;
+    transition: 0.2s;
+}
+
+%potifyYoutubeDiscoAnimation {
+    color: $color_principal;
+    filter: contrast(120%);
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+// Galería
+// - main
+%displayNone {
+    display: none;
+}
