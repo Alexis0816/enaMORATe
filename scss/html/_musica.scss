@@ -11,7 +11,7 @@ main {
 
         ul {
             display: flex;
-            animation: cambio 12s infinite alternate-reverse backwards;
+            animation: cambio 14s infinite alternate-reverse backwards;
             @include widthtHeight(400%, auto);
 
             // Reseteo Bootstrap */
