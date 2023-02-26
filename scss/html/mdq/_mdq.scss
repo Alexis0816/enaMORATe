@@ -703,13 +703,14 @@
                     // Contenedor imagen de cada disco
                     .imageBlock {
                         width: 10rem;
-
+                        
                         // Imagen de cada disco
                         img {
                             width: 27.5rem;
 
                             //Animaciones de cada disco
                             &:hover {
+                                border-radius: 5.5rem;
                                 width: 400px;
                             }
                         }

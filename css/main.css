@@ -29,7 +29,6 @@ main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco, main .block
   transition: 0.2s; }
 
 main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover, main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
-  color: crimson;
   filter: contrast(120%);
   transform: scale(1.1);
   transition: all 0.2s; }
@@ -927,13 +926,17 @@ main .blockPadreM {
             transition: all 0.4s; }
       main .blockPadreM .blockAllM .blockHijoM .contentYS a {
         text-decoration: none; }
+        main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover {
+          color: crimson; }
+        main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
+          color: chartreuse; }
         main .blockPadreM .blockAllM .blockHijoM .contentYS a h2 {
           width: auto;
           height: auto;
           color: black;
           padding: 0.25rem;
           margin: 0.1rem;
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1409,6 +1412,7 @@ main .blockPadreM {
     main .blockPadreM .blockAllM .blockHijoM .imageBlock img {
       width: 27.5rem; }
       main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
+        border-radius: 5.5rem;
         width: 400px; }
   main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM {
     padding: 2rem; } }

@@ -102,7 +102,8 @@ main {
                             @extend %spotifyYoutubeDisco;
 
                             &:hover {
-                                @extend %potifyYoutubeDiscoAnimation;
+                                color: $color_principal;
+                                @extend %spotifyYoutubeDiscoAnimation;
                             }
                         }
 
@@ -110,7 +111,8 @@ main {
                             @extend %spotifyYoutubeDisco;
 
                             &:hover {
-                                @extend %potifyYoutubeDiscoAnimation;
+                                color: $color_spotify_disco;
+                                @extend %spotifyYoutubeDiscoAnimation;
                             }
                         }
 
