@@ -81,30 +81,9 @@
 
         <main class="main">
             <h1> Estamos trabajando en una actualización. </h1>
-
-            <!-- Crea un elemento de contenedor para el video de YouTube -->
-            <div id="player"></div>
-
-
-            <script>
-                // Crea un objeto de reproductor de YouTube
-                var player;
-                function onYouTubeIframeAPIReady() {
-                    player = new YT.Player('player', {
-                        height: '360',
-                        width: '640',
-                        videoId: '4xWETGFEXWs',
-                        events: {
-                            'onReady': onPlayerReady
-                        }
-                    });
-                }
-
-                // Cuando el reproductor esté listo, reproduzca el video
-                function onPlayerReady(event) {
-                    event.target.playVideo();
-                }
-            </script>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4xWETGFEXWs" frameborder="0"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"allowfullscreen>
+            </iframe>
 
         </main>
 
