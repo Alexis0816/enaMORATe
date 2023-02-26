@@ -1493,10 +1493,10 @@ main .blockPadreM {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 27% 27% 22% 22%; }
     .GALERIA .blockPadreG .blockAllG .integrantes #img-tres {
-      display: none;
+      display: block;
       grid-column: span 2; }
     .GALERIA .blockPadreG .blockAllG .integrantes #img-cuatro {
-      display: none;
+      display: block;
       grid-column: span 2; }
     .GALERIA .blockPadreG .blockAllG .integrantes #img-siete {
       grid-column: span 4;
