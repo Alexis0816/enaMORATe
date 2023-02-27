@@ -1063,6 +1063,87 @@ main .blockPadreM {
             transform: scale(0.975);
             transition: 0.3s; }
 
+.VIDEOS div {
+  height: auto; }
+
+.VIDEOS .mainVideo {
+  width: auto;
+  height: 100%;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: rgba(0, 0, 0, 0.78);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  display: none; }
+  .VIDEOS .mainVideo .contentVideo {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    .VIDEOS .mainVideo .contentVideo .videoIframe {
+      display: flex;
+      justify-content: center; }
+      .VIDEOS .mainVideo .contentVideo .videoIframe iframe {
+        height: 100%; }
+
+.VIDEOS .blockPadreV {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  text-align: center; }
+  .VIDEOS .blockPadreV div {
+    width: 100%;
+    height: 100%; }
+  .VIDEOS .blockPadreV .blockAllV {
+    width: auto;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 3.25rem;
+    text-align: center; }
+    .VIDEOS .blockPadreV .blockAllV .blockHijoV {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      justify-items: center;
+      gap: 0.85rem;
+      text-align: center; }
+      .VIDEOS .blockPadreV .blockAllV .blockHijoV .video {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        text-align: center; }
+        .VIDEOS .blockPadreV .blockAllV .blockHijoV .video iframe {
+          width: 100%;
+          height: 15rem;
+          object-fit: cover; }
+      .VIDEOS .blockPadreV .blockAllV .blockHijoV h2 {
+        font-size: 15px; }
+
 /* HOME */
 /* mq tablet */
 @media screen and (min-width: 750px) {
@@ -1460,6 +1541,66 @@ main .blockPadreM {
         main .blockPadreM .blockAllM .blockHijoM .imageBlock img:hover {
           width: 400px; } }
 
+/* VIDEOS */
+/* mq de tablet */
+@media screen and (min-width: 700px) {
+  .VIDEOS .mainVideo {
+    display: block;
+    width: auto; }
+    .VIDEOS .mainVideo .contentVideo .videoIframe {
+      width: 100%;
+      height: 20.5rem; }
+      .VIDEOS .mainVideo .contentVideo .videoIframe iframe {
+        width: 100%; }
+  .VIDEOS .blockPadreV .blockAllV {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: auto; }
+    .VIDEOS .blockPadreV .blockAllV .blockHijoV .videoTitle .titleV {
+      font-size: 17.5px; } }
+
+@media screen and (min-width: 1024px) {
+  .VIDEOS .mainVideo .contentVideo .videoIframe {
+    padding-bottom: 30%;
+    height: 0;
+    overflow: hidden;
+    position: relative; }
+    .VIDEOS .mainVideo .contentVideo .videoIframe iframe {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 80%; }
+  .VIDEOS .blockPadreV {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+    .VIDEOS .blockPadreV .blockAllV {
+      grid-template-columns: 0.5fr 0.5fr 0.5fr;
+      grid-template-rows: auto;
+      gap: 2rem; }
+      .VIDEOS .blockPadreV .blockAllV .blockHijoV .videoTitle .titleV {
+        font-size: 18px; } }
+
+/* mq de escritorio 2*/
+@media screen and (min-width: 1140px) {
+  .VIDEOS .blockPadreV .blockAllV {
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+    gap: 1.75rem; }
+    .VIDEOS .blockPadreV .blockAllV .blockHijoV {
+      padding-bottom: 0.75rem; }
+      .VIDEOS .blockPadreV .blockAllV .blockHijoV .video {
+        width: 20rem; }
+        .VIDEOS .blockPadreV .blockAllV .blockHijoV .video iframe {
+          width: 19.5rem;
+          height: 13.5rem; }
+      .VIDEOS .blockPadreV .blockAllV .blockHijoV .videoTitle h3 {
+        font-size: 1.5rem; } }
+
+/* CURIOSIDADES */
 /* GALERÍA */
 /* mq de tablet */
 @media screen and (min-width: 600px) {

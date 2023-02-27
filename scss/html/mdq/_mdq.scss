@@ -1,6 +1,7 @@
 /* HOME */
 /* mq tablet */
 @media screen and (min-width: 750px) {
+
     /* header - logo */
     .header {
         .logo {
@@ -260,6 +261,7 @@
         .redesSocialesGifts {
             @include flexParam(row, wrap, center, center, center, center, 12rem);
             @include widthtHeightAuto;
+
             /* enlaces */
             .gifts {
                 .enlacesGifts {
@@ -291,7 +293,7 @@
 
                 /* contenedor de info*/
                 .imageInfo div {
-                    @include widthtHeight(35rem, 22rem);    
+                    @include widthtHeight(35rem, 22rem);
                     padding: 1rem 3.25rem;
                 }
             }
@@ -304,8 +306,9 @@
 /* mq tablet */
 @media screen and (min-width: 400px) {
     main {
-        .blockPadreT {    
-            .blockHijoT {    
+        .blockPadreT {
+            .blockHijoT {
+
                 // CONTENEIDO 
                 .content {
                     .contentAllBlock {
@@ -313,7 +316,7 @@
                             .contentImg {
                                 img {
                                     @include widthtHeight(100%, 20rem);
-                                    
+
                                 }
                             }
                         }
@@ -322,7 +325,7 @@
             }
         }
     }
-    
+
 }
 
 @media screen and (min-width: 800px) {
@@ -720,7 +723,7 @@
                     // Contenedor imagen de cada disco
                     .imageBlock {
                         width: 10rem;
-                        
+
                         // Imagen de cada disco
                         img {
                             width: 27.5rem;
@@ -831,6 +834,119 @@
     }
 }
 
+/* VIDEOS */
+/* mq de tablet */
+@media screen and (min-width: 700px) {
+    .VIDEOS {
+        .mainVideo {
+            display: block;
+            width: auto;
+
+            .contentVideo {
+                .videoIframe {
+                    @include widthtHeight(100%, 20.5rem);
+
+                    iframe {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .blockPadreV {
+            .blockAllV {
+                display: grid;
+                grid-template-columns: 0.5fr 0.5fr;
+                grid-template-rows: auto;
+
+                .blockHijoV {
+                    .videoTitle {
+                        .titleV {
+                            font-size: 17.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .VIDEOS {
+        .mainVideo {
+            .contentVideo {
+                .videoIframe {
+                    padding-bottom: 30%;
+                    height: 0;
+                    overflow: hidden;
+                    position: relative;
+
+                    iframe {
+                        position: absolute;
+                        top: 0;
+                        height: 100%;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        .blockPadreV {
+            @include widthtHeight(100%, auto);
+            @include flexFlowNoGap(column, nowrap);
+            justify-content: center;
+            align-items: center;
+
+            .blockAllV {
+                grid-template-columns: 0.5fr 0.5fr 0.5fr;
+                grid-template-rows: auto;
+                gap: 2rem;
+
+                .blockHijoV {
+                    .videoTitle {
+                        .titleV {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mq de escritorio 2*/
+@media screen and (min-width: 1140px) {
+    .VIDEOS {
+        .blockPadreV {
+            .blockAllV {
+                padding-top: 2.5rem;
+                padding-bottom: 3rem;
+                gap: 1.75rem;
+
+                .blockHijoV {
+                    padding-bottom: 0.75rem;
+
+                    .video {
+                        width: 20rem;
+
+                        iframe {
+                            @include widthtHeight(19.5rem, 13.5rem);
+                        }
+                    }
+                    .videoTitle{
+                        h3{
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* CURIOSIDADES */
+
 
 /* GALERÍA */
 /* mq de tablet */
@@ -875,10 +991,10 @@
 /* mq de escritorio */
 @media screen and (min-width: 1024px) {
     .GALERIA {
-        section{
+        section {
             height: 500px;
-            
-            img {    
+
+            img {
                 &:hover {
                     width: 180px;
                 }

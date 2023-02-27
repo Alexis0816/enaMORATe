@@ -1,0 +1,78 @@
+.VIDEOS {
+    div {
+        height: auto;
+    }
+
+    .mainVideo {
+        @include widthtHeight(auto, 100%);
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+
+        background-color: rgba(0, 0, 0, 0.78);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+
+        display: none;
+
+        .contentVideo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .videoIframe {
+                display: flex;
+                justify-content: center;
+
+                iframe {
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .blockPadreV {
+        @include widthtHeight(100%, auto);
+        @include flexParamNoGap(row, wrap, center, center, center, center);
+        text-align: center;
+
+        div {
+            @include widthtHeight100;
+        }
+
+        .blockAllV {
+            @include widthtHeightAuto;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+            padding: 1rem;
+            @include flexParam(row, wrap, center, center, center, center, 3.25rem);
+            text-align: center;
+
+            .blockHijoV {
+                @include widthtHeight(100%, auto);
+                @include flexParam(row, wrap, center, center, center, center, 0.85rem);
+                text-align: center;
+
+                .video {
+                    width: 100%;
+                    @include flexParamNoGap(column, nowrap, center, center, center, center);
+                    text-align: center;
+
+                    iframe {
+                        @include widthtHeight(100%, 15rem);
+                        object-fit: cover;
+                    }
+                }
+
+                h2{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
