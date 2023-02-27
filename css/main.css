@@ -765,7 +765,6 @@ main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentLi
 
 main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg {
   position: relative;
-  height: 19.5rem;
   overflow: hidden;
   object-fit: cover;
   border-radius: 6px;
@@ -774,7 +773,7 @@ main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentIm
     transform: scale(1.3); }
   main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg img {
     width: 100%;
-    height: 20rem;
+    height: 16rem;
     object-fit: cover;
     transition: all 0.5s ease-out; }
   main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg:hover .capa {
@@ -1087,12 +1086,11 @@ main .blockPadreM {
     height: auto; }
     main .blockPadre .blockHijo .imagePNG img {
       width: 38rem;
-      height: 17rem; }
+      height: 20rem; }
   main .blockPadre .blockHijo .imageInfo div {
     justify-content: center;
     align-items: center;
     width: 38rem;
-    gap: 1.5rem;
     padding: 3rem;
     padding: 1rem 3rem; }
   main .blockPadre .blockHijo .imageInfoM {
@@ -1191,7 +1189,6 @@ main .blockPadreM {
         main .blockPadre .blockHijo .imageInfo div {
           width: 28rem;
           height: 22rem;
-          gap: 0.9rem;
           padding: 1rem 1.5rem;
           justify-content: center;
           background-color: aliceblue;
@@ -1230,11 +1227,15 @@ main .blockPadreM {
       main .blockPadre .blockHijo .imageInfo div {
         width: 35rem;
         height: 22rem;
-        gap: 1.5rem;
         padding: 1rem 3.25rem; } }
 
 /* BANDA */
 /* mq tablet */
+@media screen and (min-width: 400px) {
+  main .blockPadreT .blockHijoT .content .contentAllBlock .contentBlock .contentImg img {
+    width: 100%;
+    height: 20rem; } }
+
 @media screen and (min-width: 800px) {
   .BANDA .blockPadreB .blockHijoB .content .biografia {
     padding-inline-start: 3.5rem;

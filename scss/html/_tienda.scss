@@ -120,7 +120,7 @@ main {
 
                         .contentImg {
                             position: relative;
-                            height: 19.5rem;
+
                             overflow: hidden;
                             object-fit: cover;
 
@@ -132,7 +132,7 @@ main {
                             }
 
                             img {
-                                @include widthtHeight(100%, 20rem);
+                                @include widthtHeight(100%, 16rem);
                                 object-fit: cover;
                                 transition: all 0.5s ease-out;
                             }
