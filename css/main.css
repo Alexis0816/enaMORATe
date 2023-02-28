@@ -1268,7 +1268,7 @@ main .blockPadreM {
         main .blockPadre .blockHijo .imagePNG .pngTres img {
           box-shadow: -1rem 1rem 7.5px rgba(56, 55, 55, 0.901), 1rem -1rem 7.5px #c5975f; }
       main .blockPadre .blockHijo .imageInfo {
-        margin-block-end: 0rem; }
+        margin-block-end: -0.5rem; }
         main .blockPadre .blockHijo .imageInfo div {
           width: 28rem;
           height: 22rem;
