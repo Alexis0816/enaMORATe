@@ -10,6 +10,8 @@
     <!-- CDN: Link css Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- CDN: Link css AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Archivo: Link css Boostrap -->
     <!-- <link rel="stylesheet" href="../css/css/bootstrap.min.css"> -->
     <!-- link main.css -->
@@ -72,17 +74,17 @@
             <div class="slider">
                 <ul>
                     <li>
-                        <img src="../img/sobre_el_amor_y_sus_efectos_secundarios.jpg" alt="Disco 1">
+                        <img src="../img/sobre_el_amor_y_sus_efectos_secundarios.jpg" alt="Imagen 1 del slide">
                     </li>
                     <li>
-                        <img src="../img/morat_concierto2.jpg" alt="Disco 2">
+                        <img src="../img/morat_concierto2.jpg" alt="Imagen 2 del slide">
                     </li>
                     <li>
-                        <img src="../img/adv_pruebita.jpg" alt="Disco 3">
+                        <img src="../img/adv_pruebita.jpg" alt="Imagen 3 del slide">
                     </li>
                     <li>
                         <img src="https://www.universalmusic.com.co/files/2022/11/Morat-prensa-22_0129-scaled.jpg"
-                            alt="Disco 4">
+                            alt="Imagen 4 del slide">
                     </li>
                 </ul>
             </div>
@@ -92,88 +94,104 @@
             <div class="blockPadreM">
                 <div class="blockAllM">
                     <div class="blockHijoM uno">
-                        <div class="imageBlock">
+                        <div data-aos="zoom-in-down" class="imageBlock">
                             <img src="../img/disco1.jpg" alt="Disco 1">
                         </div>
-                        <div class="contentYS">
-                            <a href="https://www.youtube.com/watch?v=4xWETGFEXWs&list=OLAK5uy_nOSWGLSt_0uQdTREMfIRr-XGzonfcRjyg"
-                                target="_blank">
-                                <h2 class="youtubeDisco">
-                                    SOBRE EL AMOR Y SUS EFECTOS SECUNDARIOS
-                                </h2>
-                            </a>
-                            <a href="https://open.spotify.com/album/50eHcXc4qede9mUKCYOuoz?si=rQqrMIGsT_eNsiuwkiu04Q"
-                                target="_blank">
-                                <h2 class="spotifyDisco">
-                                    SOBRE EL AMOR Y SUS EFECTOS SECUNDARIOS
-                                </h2>
-                            </a>
+                        <div data-aos="zoom-in-up" class="contentYS">
+                            <abbr title="Playlist en Youtube">
+                                <a href="https://www.youtube.com/watch?v=4xWETGFEXWs&list=OLAK5uy_nOSWGLSt_0uQdTREMfIRr-XGzonfcRjyg"
+                                    target="_blank">
+                                    <h2 class="youtubeDisco">
+                                        SOBRE EL AMOR Y SUS EFECTOS SECUNDARIOS
+                                    </h2>
+                                </a>
+                            </abbr>
+                            <abbr title="Playlist en Spotify">
+                                <a href="https://open.spotify.com/album/50eHcXc4qede9mUKCYOuoz?si=rQqrMIGsT_eNsiuwkiu04Q"
+                                    target="_blank">
+                                    <h2 class="spotifyDisco">
+                                        SOBRE EL AMOR Y SUS EFECTOS SECUNDARIOS
+                                    </h2>
+                                </a>
+                            </abbr>
                             <div class="imageInfoM">
                                 <img id="amongText" src="../img/mDeMorat.png" alt="Ícono m de morat">
                             </div>
                         </div>
                     </div>
                     <div class="blockHijoM dos">
-                        <div class="imageBlock">
+                        <div data-aos="zoom-in-down" class="imageBlock">
                             <img src="../img/disco2.jpg" alt="Disco 2">
                         </div>
-                        <div class="contentYS">
-                            <a href="https://www.youtube.com/watch?v=F-_77cuLBgQ&list=OLAK5uy_nRIbdBegpWnaETkPhKBPnZ6vo3ZeB8LPg"
-                                target="_blank">
-                                <h2 class="youtubeDisco">
-                                    BALAS PERDIDAS
-                                </h2>
-                            </a>
-                            <a href="https://open.spotify.com/album/43mAHKPa4iB2er88lxD9Q8?si=0QY4RljvTG2jGv8YZ73T8A"
-                                target="_blank">
-                                <h2 class="spotifyDisco">
-                                    BALAS PERDIDAS
-                                </h2>
-                            </a>
+                        <div data-aos="zoom-in-up" class="contentYS">
+                            <abbr title="Playlist en Youtube">
+                                <a href="https://www.youtube.com/watch?v=F-_77cuLBgQ&list=OLAK5uy_nRIbdBegpWnaETkPhKBPnZ6vo3ZeB8LPg"
+                                    target="_blank">
+                                    <h2 class="youtubeDisco">
+                                        BALAS PERDIDAS
+                                    </h2>
+                                </a>
+                            </abbr>
+                            <abbr title="Playlist en Spotify">
+                                <a href="https://open.spotify.com/album/43mAHKPa4iB2er88lxD9Q8?si=0QY4RljvTG2jGv8YZ73T8A"
+                                    target="_blank">
+                                    <h2 class="spotifyDisco">
+                                        BALAS PERDIDAS
+                                    </h2>
+                                </a>
+                            </abbr>
                             <div class="imageInfoM">
                                 <img id="amongText" src="../img/mDeMorat.png" alt="Ícono m de morat">
                             </div>
                         </div>
                     </div>
                     <div class="blockHijoM tres">
-                        <div class="imageBlock">
+                        <div data-aos="zoom-in-down" class="imageBlock">
                             <img src="../img/disco3.jpg" alt="Disco 3">
                         </div>
-                        <div class="contentYS">
-                            <a href="https://www.youtube.com/watch?v=TYrcdhots80&list=OLAK5uy_njQL410gaThb0brXzOLlp4nS-NfhkwdM4"
-                                target="_blank">
-                                <h2 class="youtubeDisco">
-                                    A DÓNDE VAMOS
-                                </h2>
-                            </a>
-                            <a href="https://open.spotify.com/album/01R2vYq9iDhn4ZXtM5dd7i?si=AFQrl-r3TaePYWkN4wHf7A"
-                                target="_blank">
-                                <h2 class="spotifyDisco">
-                                    A DÓNDE VAMOS
-                                </h2>
-                            </a>
+                        <div data-aos="zoom-in-up" class="contentYS">
+                            <abbr title="Playlist en Youtube">
+                                <a href="https://www.youtube.com/watch?v=TYrcdhots80&list=OLAK5uy_njQL410gaThb0brXzOLlp4nS-NfhkwdM4"
+                                    target="_blank">
+                                    <h2 class="youtubeDisco">
+                                        A DÓNDE VAMOS
+                                    </h2>
+                                </a>
+                            </abbr>
+                            <abbr title="Playlist en Spotify">
+                                <a href="https://open.spotify.com/album/01R2vYq9iDhn4ZXtM5dd7i?si=AFQrl-r3TaePYWkN4wHf7A"
+                                    target="_blank">
+                                    <h2 class="spotifyDisco">
+                                        A DÓNDE VAMOS
+                                    </h2>
+                                </a>
+                            </abbr>
                             <div class="imageInfoM">
                                 <img id="amongText" src="../img/mDeMorat.png" alt="Ícono m de morat">
                             </div>
                         </div>
                     </div>
                     <div class="blockHijoM cuatro">
-                        <div class="imageBlock">
+                        <div data-aos="zoom-in-down" class="imageBlock">
                             <img src="../img/disco4.jpg" alt="Disco 4">
                         </div>
-                        <div class="contentYS">
-                            <a href="https://www.youtube.com/watch?v=4IzYE_e5POg&list=OLAK5uy_mIARUpXWHVeOkhpsI-4IthRwh_deA4rq4"
-                                target="_blank">
-                                <h2 class="youtubeDisco">
-                                    SI AYER FUERA HOY
-                                </h2>
-                            </a>
-                            <a href="https://open.spotify.com/album/1BUb9ayIoyy6T3iwMscDts?si=3a7fd57333754551"
-                                target="_blank">
-                                <h2 class="spotifyDisco">
-                                    SI AYER FUERA HOY
-                                </h2>
-                            </a>
+                        <div data-aos="zoom-in-up" class="contentYS">
+                            <abbr title="Playlist en Youtube">
+                                <a href="https://www.youtube.com/watch?v=4IzYE_e5POg&list=OLAK5uy_mIARUpXWHVeOkhpsI-4IthRwh_deA4rq4"
+                                    target="_blank">
+                                    <h2 class="youtubeDisco">
+                                        SI AYER FUERA HOY
+                                    </h2>
+                                </a>
+                            </abbr>
+                            <abbr title="Playlist en Spotify">
+                                <a href="https://open.spotify.com/album/1BUb9ayIoyy6T3iwMscDts?si=3a7fd57333754551"
+                                    target="_blank">
+                                    <h2 class="spotifyDisco">
+                                        SI AYER FUERA HOY
+                                    </h2>
+                                </a>
+                            </abbr>
                             <div class="imageInfoM">
                                 <img id="amongText" src="../img/mDeMorat.png" alt="Ícono m de morat">
                             </div>
@@ -283,6 +301,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Archivo: Link js Bootstrap, -->
     <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
 </body>

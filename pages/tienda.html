@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tienda de morat, encuentra el disco de vinilo de Si Ayer Fuera Hoy, Balas Perdidas y mucho más">
-    <meta name="keywords"
-        content="tienda, shop, merch, disco, vinilo, morat, black, collection, collección">
+    <meta name="description"
+        content="Tienda de morat, encuentra el disco de vinilo de Si Ayer Fuera Hoy, Balas Perdidas y mucho más">
+    <meta name="keywords" content="tienda, shop, merch, disco, vinilo, morat, black, collection, collección">
     <!-- CDN: Link css Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- CDN: Link css AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Archivo: Link css Boostrap -->
     <!-- <link rel="stylesheet" href="../css/css/bootstrap.min.css"> -->
     <!-- link main.css -->
@@ -79,7 +81,7 @@
             <div class="blockPadreT">
                 <div class="blockHijoT uno">
                     <div class="presentation">
-                        <div class="imagePNGT">
+                        <div data-aos="zoom-in-up" class="imagePNGT">
                             <abbr title="THE BLACK COLLECTION">
                                 <a href="https://morat.shop/collections/the-black-collection" target="_blank">
                                     <img class="shop2023"
@@ -89,18 +91,18 @@
                             </abbr>
                         </div>
                         <div class="textoIcono">
-                            <div class="texto">
+                            <div data-aos="zoom-in-up" class="texto">
                                 <h2>MORAT SHOP</h2>
                             </div>
                         </div>
-                        <div class="imageShop">
+                        <div data-aos="zoom-in-up" class="imageShop">
                             <abbr title="TIENDA OFICIAL">
                                 <a href="https://morat.shop/" target="_blank">
                                     <img id="iconoShop" src="../img/tienda.png" alt="Ícono tienda">
                                 </a>
                             </abbr>
                         </div>
-                        <div class="imageInfoM">
+                        <div data-aos="zoom-in-up" class="imageInfoM">
                             <img id="amongText" src="../img/mDeMorat.png" alt="Ícono m de morat">
                         </div>
                     </div>
@@ -109,32 +111,32 @@
                     <div class="content">
                         <div class="contentAllBlock">
                             <div class="contentBlock">
-                                <div class="contentLink">
+                                <div data-aos="zoom-in-down" class="contentLink">
                                     <a href="https://morat.shop/collections/musica" target="_blank">
-                                        <h2>COLLECCIÓN DE DISCOS</h2>
+                                        <h2>DISCOGRAFÍA</h2>
                                     </a>
                                 </div>
-                                <div class="contentImg">
+                                <div data-aos="zoom-in-up" class="contentImg">
                                     <a href="https://morat.shop/collections/musica" target="_blank">
                                         <img src="../img/4discos.jpg" alt="discos">
 
                                         <div class="capa">
-                                            <h3> DISCOS </h3>
-                                            <p>Encuentra los 4 álbumes de la banda y mucho más ...</p>
+                                            <h3> ÁLBUMES </h3>
+                                            <p>Encuentra los cuatro discos de la banda y mucho más ...</p>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="imageInfoM uno">
+                                <div data-aos="zoom-in-up" class="imageInfoM uno">
                                     <img id="amongText" src="../img/mDeMorat.png" alt="Ícono de morat">
                                 </div>
                             </div>
                             <div class="contentBlock">
-                                <div class="contentLink">
+                                <div data-aos="zoom-in-down" class="contentLink">
                                     <a href="https://morat.shop/collections/merchandising" target="_blank">
                                         <h2>MERCHANDISING</h2>
                                     </a>
                                 </div>
-                                <div class="contentImg">
+                                <div data-aos="zoom-in-up" class="contentImg">
                                     <a href="https://morat.shop/collections/merchandising" target="_blank">
                                         <img src="https://pbs.twimg.com/ext_tw_video_thumb/1331169681445679105/pu/img/KytkNMLZ118UCQne.jpg"
                                             alt="Merch">
@@ -144,12 +146,12 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="imageInfoM dos">
+                                <div data-aos="zoom-in-up" class="imageInfoM dos">
                                     <img id="amongText" src="../img/mDeMorat.png" alt="Ícono de morat">
                                 </div>
                             </div>
                         </div>
-                        <div class="imageInfoM general">
+                        <div data-aos="zoom-in-up" class="imageInfoM general">
                             <img id="amongText" src="../img/mDeMorat.png" alt="Ícono de morat">
                         </div>
                     </div>
@@ -256,6 +258,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <!-- CDN: Link js AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Archivo: Link js Bootstrap, -->
     <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
 </body>

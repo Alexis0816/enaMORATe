@@ -3,9 +3,9 @@ main {
         @include flexFlowNoGap(column, nowrap);
         justify-content: center;
         justify-items: center;
-        
+
         @include widthtHeight(auto, 300px);
-        
+
         overflow: hidden;
         display: none;
 
@@ -40,7 +40,7 @@ main {
         }
     }
 
-    @import "../html/animacion/musica";
+    @import "animacion/musica";
 
     .blockPadreM {
         @include flexFlowNoGap(column, nowrap);
@@ -95,40 +95,45 @@ main {
                 }
 
                 .contentYS {
-                    a {
-                        text-decoration: none;
 
-                        .youtubeDisco {
-                            @extend %spotifyYoutubeDisco;
+                    abbr {
+                        @extend %decoration;
 
-                            &:hover {
-                                color: $color_principal;
-                                @extend %spotifyYoutubeDiscoAnimation;
+                        a {
+                            @extend %decoration;
+
+                            .youtubeDisco {
+                                @extend %spotifyYoutubeDisco;
+
+                                &:hover {
+                                    color: $color_principal;
+                                    @extend %spotifyYoutubeDiscoAnimation;
+                                }
                             }
-                        }
 
-                        .spotifyDisco {
-                            @extend %spotifyYoutubeDisco;
+                            .spotifyDisco {
+                                @extend %spotifyYoutubeDisco;
 
-                            &:hover {
-                                color: $color_spotify_disco;
-                                @extend %spotifyYoutubeDiscoAnimation;
+                                &:hover {
+                                    color: $color_spotify_disco;
+                                    @extend %spotifyYoutubeDiscoAnimation;
+                                }
                             }
-                        }
 
-                        h2 {
-                            @include widthtHeightAuto;
-                            color: black;
-                            padding: 0.25rem;
-                            margin: 0.1rem;
-                            font-size: 0.8rem;
+                            h2 {
+                                @include widthtHeightAuto;
+                                color: black;
+                                padding: 0.25rem;
+                                margin: 0.1rem;
+                                font-size: 0.8rem;
 
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            justify-items: center;
-                            align-content: center;
-                            text-align: center;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                justify-items: center;
+                                align-content: center;
+                                text-align: center;
+                            }
                         }
                     }
 
@@ -136,7 +141,7 @@ main {
                         @include widthtHeight(100%, auto);
                         margin-block-end: 1.5rem;
                         padding: 1rem;
-                        
+
                         @include flexFlowNoGap(column, nowrap);
                         justify-content: center;
                         align-items: center;

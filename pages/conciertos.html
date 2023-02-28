@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Conciertos en España y el mundo, encuentra las entradas del World Tour 2023: Si Ayer Fuera Hoy">
+    <meta name="description"
+        content="Conciertos en España y el mundo, encuentra las entradas del World Tour 2023: Si Ayer Fuera Hoy">
     <meta name="keywords" content="conciertos, mundo, disco, world, tour, 2023, entradas, gira">
     <!-- CDN: Link css Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- CDN: Link css AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Archivo: Link css Boostrap -->
     <!-- <link rel="stylesheet" href="../css/css/bootstrap.min.css"> -->
     <!-- link main.css -->
@@ -78,7 +81,7 @@
             <div class="blockPadreC">
                 <div class="blockHijoC uno">
                     <div class="noEventos">
-                        <div class="imagePNGC">
+                        <div data-aos="zoom-in-up" class="imagePNGC">
                             <abbr title="ÁLBUM: SI AYER FUERA HOY">
                                 <a href="https://www.youtube.com/watch?v=4IzYE_e5POg&list=OLAK5uy_mIARUpXWHVeOkhpsI-4IthRwh_deA4rq4"
                                     target="_blank">
@@ -87,14 +90,14 @@
                             </abbr>
                         </div>
                         <div class="textoIcono">
-                            <div class="texto">
+                            <div data-aos="zoom-in-up" class="texto">
                                 <h2>SI AYER FUERA HOY: WORLD TOUR 2023</h2>
                             </div>
                         </div>
-                        <div class="gira">
+                        <div data-aos="zoom-in-up" data-aos="zoom-in-down" class="gira">
                             <h3>GIRA ESPAÑA 2023</h3>
                         </div>
-                        <div class="imageMundo">
+                        <div data-aos="zoom-in-up" class="imageMundo">
                             <abbr title="PRÓXIMOS CONCIERTOS">
                                 <a href="https://moratoficial.com/eventos/" target="_blank">
                                     <img id="iconoMundo" src="../img/world-removebg-preview (1).png" alt="Ícono mundo">
@@ -105,7 +108,7 @@
                 </div>
                 <div class="blockHijoC dos">
                     <div class="siEventos">
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     A CORUÑA
@@ -131,7 +134,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     MADRID
@@ -160,7 +163,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     CÓRDOBA
@@ -188,7 +191,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     GRAN CANARIA
@@ -217,7 +220,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     MURCIA
@@ -245,7 +248,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     GRANADA
@@ -273,7 +276,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     ALICANTE
@@ -301,7 +304,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     FUENGIROLA
@@ -329,7 +332,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     BARCELONA
@@ -358,7 +361,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="eventos2023">
+                        <div data-aos="zoom-in-up" class="eventos2023">
                             <div class="placeDate">
                                 <p>
                                     BILBAO
@@ -493,6 +496,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
+    <!-- CDN: Link js AOS (Animate On Scroll) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <!-- Archivo: Link js Bootstrap, -->
     <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
 </body>

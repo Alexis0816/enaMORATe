@@ -24,11 +24,14 @@ footer .redesSocialesGifts .gifts .mid, footer .redesSocialesGifts .rs .mid {
   text-transform: uppercase;
   font-size: 13.5px; }
 
-main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco, main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco {
+main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a .youtubeDisco, main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a .spotifyDisco {
   margin: 0.5rem;
   transition: 0.2s; }
 
-main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover, main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
+main .blockPadreM .blockAllM .blockHijoM .contentYS abbr, main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a {
+  text-decoration: none; }
+
+main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a .youtubeDisco:hover, main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a .spotifyDisco:hover {
   filter: contrast(120%);
   transform: scale(1.1);
   transition: all 0.2s; }
@@ -923,25 +926,23 @@ main .blockPadreM {
             opacity: 1;
             filter: contrast(120%);
             transition: all 0.4s; }
-      main .blockPadreM .blockAllM .blockHijoM .contentYS a {
-        text-decoration: none; }
-        main .blockPadreM .blockAllM .blockHijoM .contentYS a .youtubeDisco:hover {
-          color: crimson; }
-        main .blockPadreM .blockAllM .blockHijoM .contentYS a .spotifyDisco:hover {
-          color: chartreuse; }
-        main .blockPadreM .blockAllM .blockHijoM .contentYS a h2 {
-          width: auto;
-          height: auto;
-          color: black;
-          padding: 0.25rem;
-          margin: 0.1rem;
-          font-size: 0.8rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          justify-items: center;
-          align-content: center;
-          text-align: center; }
+      main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a .youtubeDisco:hover {
+        color: crimson; }
+      main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a .spotifyDisco:hover {
+        color: #489000; }
+      main .blockPadreM .blockAllM .blockHijoM .contentYS abbr a h2 {
+        width: auto;
+        height: auto;
+        color: black;
+        padding: 0.25rem;
+        margin: 0.1rem;
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+        text-align: center; }
       main .blockPadreM .blockAllM .blockHijoM .contentYS .imageInfoM {
         width: 100%;
         height: auto;

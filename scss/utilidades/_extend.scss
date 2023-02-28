@@ -13,6 +13,10 @@
     transition: 0.2s;
 }
 
+%decoration{
+    text-decoration: none;
+}
+
 %spotifyYoutubeDiscoAnimation {
     filter: contrast(120%);
     transform: scale(1.1);
