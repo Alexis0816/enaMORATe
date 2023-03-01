@@ -7,12 +7,9 @@
         @include widthtHeight(auto, 100%);
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
-        padding-left: 4rem;
-        padding-right: 4rem;
-
-        background: rgb(180, 32, 32);
-        background: radial-gradient(circle, rgba(189, 124, 124, 0.733) 63%, rgba(102, 170, 183, 0.8128501400560224) 81%);
-        
+        padding-left: 2rem;
+        padding-right: 2rem;        
+        background-color: rgba(0, 0, 0, 0.9);
         display: flex;
         justify-content: center;
         align-items: center;

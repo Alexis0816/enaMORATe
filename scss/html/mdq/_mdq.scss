@@ -877,13 +877,10 @@
             .contentVideo {
                 .videoIframe {
                     padding-bottom: 30%;
-                    height: 0;
-                    overflow: hidden;
                     position: relative;
 
                     iframe {
                         position: absolute;
-                        top: 0;
                         height: 100%;
                         width: 80%;
                     }

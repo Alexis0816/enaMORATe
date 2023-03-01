@@ -1072,10 +1072,9 @@ main .blockPadreM {
   height: 100%;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  background: #b42020;
-  background: radial-gradient(circle, rgba(189, 124, 124, 0.733) 63%, rgba(102, 170, 183, 0.81285) 81%);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1564,12 +1563,9 @@ main .blockPadreM {
 @media screen and (min-width: 1024px) {
   .VIDEOS .mainVideo .contentVideo .videoIframe {
     padding-bottom: 30%;
-    height: 0;
-    overflow: hidden;
     position: relative; }
     .VIDEOS .mainVideo .contentVideo .videoIframe iframe {
       position: absolute;
-      top: 0;
       height: 100%;
       width: 80%; }
   .VIDEOS .blockPadreV {
