@@ -21,7 +21,7 @@ main {
 
                 // CONTENEDOR DE IMAGEN-CONCIERTOS
                 .imagePNGC {
-                    @include widthtHeight(auto, 15rem);
+                    @include widthtHeight(auto, 13rem);
                     overflow: hidden; // la imagen no desborda del contenedor
                     object-fit: cover; // Ocupa el tamaño de tal manera que podemos apreciar la imagen
                     border-radius: 6px;
@@ -39,7 +39,7 @@ main {
 
 
                     img {
-                        @include widthtHeight(100%, 16rem);
+                        @include widthtHeight(100%, 13rem);
 
                         &:hover {
                             cursor: grab;

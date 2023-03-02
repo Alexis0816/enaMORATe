@@ -1,6 +1,41 @@
 /* HOME */
-/* mq tablet */
-@media screen and (min-width: 750px) {
+/* mq tablet 1 */
+@media screen and (min-width: 475px) {
+    /* Estilos de main */
+    main {
+        // Sin  modificaciones en el Bloque Padre 
+        .blockPadre {
+
+            // Bloque Hijo 
+            .blockHijo {
+
+                // contenedor de imagen
+                .imagePNG {
+                    width: 24rem;
+                    height: auto;
+
+                    img {
+                        width: 24rem;
+                        height: 15rem;
+                    }
+                }
+
+                // contenedor de info
+                .imageInfo {
+                    div {
+                        justify-content: center;
+                        align-items: center;
+
+                        width: 24rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* mq tablet 2 */
+@media screen and (min-width: 700px) {
 
     /* header - logo */
     .header {

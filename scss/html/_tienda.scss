@@ -19,7 +19,7 @@ main {
                 margin-bottom: 0.5rem;
 
                 .imagePNGT {
-                    @include widthtHeight(auto, 15rem);
+                    @include widthtHeight(auto, 13rem);
 
                     overflow: hidden;
                     object-fit: cover;
@@ -37,7 +37,7 @@ main {
                     }
 
                     img {
-                        @include widthtHeight(100%, 16rem);
+                        @include widthtHeight(100%, 14rem);
 
                         &:hover {
                             cursor: grab;
