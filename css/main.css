@@ -485,7 +485,7 @@ footer {
       background: url(https://i.pinimg.com/736x/35/4e/56/354e56def4d962b41334eef28633cf52.jpg) center no-repeat;
       background-size: cover; }
     .BANDA .contentFotos .integrantesDeBanda .integrante .integranteCuatro {
-      background: url(./../img/martin_vargas_banda.jpg) center no-repeat;
+      background: url("../img/martin_vargas_banda.jpg") center no-repeat;
       background-size: cover; }
     .BANDA .contentFotos .integrantesDeBanda .integrante .integranteInfo {
       display: flex;
