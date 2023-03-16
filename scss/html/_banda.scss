@@ -11,7 +11,8 @@
 
     .blockPadreB {
         /* centro todo el bloque de texto */
-        max-width: 1210px;
+        padding-top: 1.5rem;
+        max-width: 1450px;
         margin: 0 auto;
 
         /* Desenfoque */
@@ -26,7 +27,7 @@
 
                 .biografia {
                     @include widthtHeightAuto;
-                    color: $color_info_home;
+                    color: $color_letra_footer;
                     @include flexFlowNoGap(row, wrap);
 
                     .tittleBanda {
@@ -34,27 +35,15 @@
                         @include widthtHeightAuto;
                         @include flexFlowNoGap(row, wrap);
 
-                        font-size: 4.25rem;
-                        font-weight: bolder;
-                        transition: all 0.3s;
-
-                        &:hover {
-                            color: $color_principal;
-                            transform: scale(0.9);
-                            transition: all 0.2s;
-                        }
+                        font-size: 4.3rem;
+                        font-weight: 900;
                     }
 
                     .contentBiografia {
                         @include widthtHeightAuto;
-
+                        @include flexFlow(row, wrap, 0.75rem);
                         background-color: $bg_content_biografia;
                         padding: 1.75rem 1rem 1.75rem 1rem;
-                        letter-spacing: 0rem;
-                        word-spacing: 0.25rem;
-
-                        @include flexFlow(row, wrap, 1rem);
-
                         padding-inline-start: 0.5rem;
                         padding-inline-end: 0.5rem;
 
@@ -64,7 +53,9 @@
                             margin-inline-end: 0.4rem;
 
                             @include flexFlowNoGap(row, wrap);
-                            font-size: 0.9rem;
+                            font-size: 1.05rem;
+                            line-height: 1.2rem;
+                            word-spacing: 5px;
                         }
                     }
                 }
