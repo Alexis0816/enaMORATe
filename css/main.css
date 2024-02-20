@@ -636,17 +636,17 @@ footer .footerEnd p span {
 }
 
 .BANDA .contentFotos .integrantesDeBanda .integrante .integranteUno {
-  background: url(https://arritmo.es/wp-content/uploads/2022/09/DSC_9502-1.jpg) center no-repeat;
+  background: url("https://i.pinimg.com/originals/47/c4/c2/47c4c2a489834fbad2bf755da0ba2b17.jpg") center no-repeat;
   background-size: cover;
 }
 
 .BANDA .contentFotos .integrantesDeBanda .integrante .integranteDos {
-  background: url(https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/NZLDD5VFBRLDTCQLYSVVX4NAVY.jpg) center no-repeat;
+  background: url("https://cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/NZLDD5VFBRLDTCQLYSVVX4NAVY.jpg") center no-repeat;
   background-size: cover;
 }
 
 .BANDA .contentFotos .integrantesDeBanda .integrante .integranteTres {
-  background: url(https://i.pinimg.com/736x/35/4e/56/354e56def4d962b41334eef28633cf52.jpg) center no-repeat;
+  background: url("https://i.pinimg.com/736x/35/4e/56/354e56def4d962b41334eef28633cf52.jpg") center no-repeat;
   background-size: cover;
 }
 
